@@ -1,0 +1,13 @@
+<div class="example-pop2">
+	{{#if image}}<img src="content/{{courseId}}/images/{{image}}" />{{/if}}
+	<div class="small">
+	{{#if lists}}
+		{{#lists}}
+		<h3>{{title}}</h3>
+		<ul>
+			{{#items}}<li>{{{text}}}</li>{{/items}}
+		</ul>
+		{{/lists}}
+	{{/if}}
+	</div>
+</div>

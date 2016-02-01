@@ -1,0 +1,120 @@
+<div class="template-text">
+
+	<script>
+
+	//this is how we get the unique screen id and template id from inside the template
+    var screenId = '#template-' + $('.content:last .template').attr('data-id');
+
+    //called once per screen when initialised before any other events.
+    $(screenId).on('onCreation', function(event, id, contentData){
+        this.screenId = id;
+
+        if(event.contentData){
+            var m = event.contentData.send_method;
+            var e = event.contentData.contact_email;
+            var s = event.contentData.service_url;
+        }
+
+        //contact form.
+        var $contactForm = $('#contact-form');
+        $contactForm.submit(function(event) {
+            event.preventDefault();
+            $.ajax({
+                url: s+e,
+                method: m,
+                data: $(this).serialize(),
+                dataType: 'json',
+                beforeSend: function() {
+                    //make inputs readonly. disabled the submit and show message.
+                    $contactForm.find('input,textarea').attr('readonly', '');
+                    $contactForm.find('#submit-btn').attr('disabled', '');
+                    $contactForm.find('#contact-sending').removeClass('hide').addClass('in');
+                    $contactForm.find('#contact-success').addClass('hide');
+                    $contactForm.find('#contact-error').addClass('hide');
+                },
+                success: function(data) {
+                    //clear all the inputs, enable the submit and show success message
+                    $('input, textarea, #contact-form').val('');
+                    $contactForm.find('input,textarea').removeAttr('readonly');
+                    $contactForm.find('#submit-btn').removeAttr('disabled');
+                    $contactForm.find('#contact-sending').addClass('hide');
+                    $contactForm.find('#contact-success').removeClass('hide').addClass('in');
+                },
+                error: function(err) {
+                    $contactForm.find('input,textarea').removeAttr('readonly');
+                    $contactForm.find('#submit-btn').removeAttr('disabled');
+                    $contactForm.find('#contact-sending').addClass('hide');
+                    $contactForm.find('#contact-error').removeClass('hide').addClass('in');
+                }
+            });
+        });
+    });
+
+    $(screenId).on('onShowStart', function(event){
+        $(screenId).find('.nav-btn').hide();
+        if(event.previousId){
+            $('#contact-'+event.previousId).show();
+        }else{
+            $('#contact-main').show();
+        }
+    });
+
+    $(screenId).on('onHideStart', function(event){
+    });
+
+    $(screenId).on('onShowComplete', function(event){
+    });
+
+    $(screenId).on('onHideComplete', function(event){
+    });
+
+	</script>
+
+    {{#if title}}<h2>{{title}}</h2>{{/if}}
+
+    <div id="template-wrapper" class="{{classes}}">
+
+        <div class="main-text">
+            {{{text}}}
+        </div>
+
+        <a id="contact-projects" class="action-toScreen nav-btn go-up hide-on-small-only hide" href="#{{courseId}}/projects"
+        data-transition="scroll-3d" data-direction="back">
+            <span class="lbl">Profile</span>
+        </a>
+        <a id="contact-main" class="action-toScreen nav-btn go-up hide-on-small-only hide" href="#{{courseId}}/main"
+        data-transition="scroll-3d" data-direction="back">
+            <span class="lbl">Main</span>
+        </a>
+        <a id="contact-skills" class="action-toScreen nav-btn go-up hide-on-small-only hide" href="#{{courseId}}/skills"
+        data-transition="scroll-3d" data-direction="back">
+            <span class="lbl">Skills</span>
+        </a>
+
+        <form id="contact-form" class="form-horizontal">
+            <div class="input-field col s10">
+                <input type="email" name="_replyto" class="validate" id="inputEmail3">
+                <label for="inputEmail3">Email</label>
+            </div>
+
+            <div class="input-field col s10">
+                <textarea name="name" class="materialize-textarea" rows="3" ></textarea>
+                <label for="inputMessage">Message</label>
+            </div>
+
+            <input type="hidden" name="_subject" value="Portfolio: contact" />
+            <input type="text" name="_gotcha" class="hide" />
+
+            <div class="offset-s2 col s10">
+                <button id="submit-btn" type="submit" class="btn btn-primary" >Send</button>
+            </div>
+
+            <div id="contact-sending" class="offset-s2 col s10 hide fade out alert alert-info" role="alert">{{{sending_message}}}</div>
+            <div id="contact-success" class="offset-s2 col s10 hide fade out alert alert-success" role="alert">{{{success_message}}}</div>
+            <div id="contact-error" class="soffset-s2 col s10 hide fade out alert alert-danger" role="alert">{{{error_message}}}</div>
+
+        </form>
+
+    </div>
+
+</div>

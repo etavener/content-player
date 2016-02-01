@@ -1,0 +1,1188 @@
+[
+	{
+		"id":"INTRO",
+		"hide_title": "true",
+		"hide_footer": "true",
+		"template":"templates/intro",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"transition": {
+			"type":"slide",
+			"duration":"1"
+		},
+		"background":"",
+		"content":{
+			"title":"Outsourcing",
+			"text":"Welcome to Outsoucing......",
+			"buttons": [
+				{"id":"", "offset":"", "screen":"MENU", "label":"Begin the module...."}
+			]
+		}
+	},
+	{
+		"id":"MENU",
+		"hide_footer": "true",
+		"template":"templates/menu",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"nextScreenId": "false",
+		"transition": {
+			"type":"slide",
+			"duration":"1"
+		},
+		"background":"",
+		"content":{
+			"title":"",
+			"text":"",
+			"options":[
+				{"id":"1", "label":"1. Vendor scenario Strategy", "screen":"FRAME-01A", "transition":"slide", "keycode": "49", "offset":"-100", "complete":"FRAME-01A"},
+				{"id":"2", "label":"2. Vendor Selection", "screen":"FRAME-02A", "transition":"slide", "keycode": "50", "offset":"-400", "complete":"FRAME-02A"},
+				{"id":"3", "label":"3. Vendor Selection Summary", "screen":"FRAME-03A", "transition":"slide", "keycode": "51", "offset":"-800", "complete":"FRAME-03A"},
+				{"id":"4", "label":"4a. Vendor Managemnt", "screen":"FRAME-04A", "transition":"slide", "keycode": "52", "offset":"-100", "complete":"FRAME-04A"},
+				{"id":"5", "label":"4b. Vendor Managment Problems", "screen":"FRAME-05A", "transition":"slide", "keycode": "53", "offset":"-400", "complete":"FRAME-05A"},
+				{"id":"6", "label":"5. Bayer Strategy Alignment", "screen":"FRAME-06A", "transition":"slide", "keycode": "54", "offset":"-800", "complete":"FRAME-06A"},
+				{"id":"7", "label":"6a. Marking Your Success Factors", "screen":"FRAME-07A", "transition":"slide", "keycode": "55", "offset":"-100", "complete":"FRAME-07A"},
+				{"id":"8", "label":"6b. Success Behaviours & Defining Activities", "screen":"FRAME-08A", "transition":"slide", "keycode": "", "offset":"-400", "complete":"FRAME-08A"},
+				{"id":"9", "label":"6c. Operationalise", "screen":"FRAME-09A", "transition":"slide", "keycode": "", "offset":"-800", "complete":"FRAME-09A"},
+				{"id":"10", "label":"6d. Summary", "screen":"FRAME-10A", "transition":"slide", "keycode": "", "offset":"-100", "complete":"FRAME-10A"},
+				{"id":"11", "label":"7. End Result", "screen":"COMPLETE", "transition":"slide", "keycode": "", "offset":"-400", "complete":""}
+			]
+		}
+	},
+	{
+		"id":"FRAME-01A",
+		"template":"templates/text",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"backScreenId":"false",
+		"nextScreenId": "FRAME-01B",
+		"transition": {
+			"type":"scroll",
+			"duration":"1"
+		},
+		"background":"",
+		"scroll-menu":[
+			{"id":"FRAME-01A"},
+			{"id":"FRAME-01B"},
+			{"id":"FRAME-01C"}
+		],
+		"content":{
+			"title":"Vendor scenario Strategy",
+			"text":"Outsourcing Strategy – Why have a strategy?",
+			"boxes":[
+				{
+					"id":"01a-01", "w":"485", "y":"245", "classes":"", "offset": "-50",
+					"text":"For Outsourcing to be successful, you need to have a strategy, this can be defined by the following:"
+				},
+				{
+					"id":"01a-02", "w":"580", "y":"325", "classes":"font-lrg center-text", "offset": "200",
+					"text":"Leverage vendor capabilities and capacity to attain best in class operational delivery, efficiency and quality"
+				}
+			]
+		}
+	},
+	{
+		"id":"FRAME-01B",
+		"template":"templates/text",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"backScreenId":"FRAME-01A",
+		"nextScreenId": "FRAME-01C",
+		"transition": {
+			"type":"scroll",
+			"duration":"1"
+		},
+		"background":"",
+		"scroll-menu":[
+			{"id":"FRAME-01A"},
+			{"id":"FRAME-01B"},
+			{"id":"FRAME-01C"}
+		],
+		"content":{
+			"title":"Vendor scenario Strategy",
+			"text":"Bayer Strategy – mark your success factors",
+			"boxes":[
+				{
+					"id":"01b-01", "w":"100%", "y":"245", "classes":"", "offset": "-200",
+					"image":"image_01B_01.png",
+					"text":"Secrets of Success - each project is different, there are many aspects that will have an effect on your project.<br/><br/>To ensure continued success you need a good understanding of critical success factors for each of the following:<ul><li>Study</li><li>Vendor choice/selection</li><li>Team (internal/external)</li></ul>In this module we will walk you through examples of how and what can go wrong and what Bayer does to avoid this"
+				}
+			]
+		}
+	},
+	{
+		"id":"FRAME-01C",
+		"template":"templates/text",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"backScreenId":"FRAME-01B",
+		"nextScreenId": "false",
+		"transition": {
+			"type":"scroll",
+			"duration":"1"
+		},
+		"background":"",
+		"scroll-menu":[
+			{"id":"FRAME-01A"},
+			{"id":"FRAME-01B"},
+			{"id":"FRAME-01C"}
+		],
+		"content":{
+			"title":"Vendor scenario Strategy",
+			"text":"Bayer Strategy – problems of Unclear Strategy",
+			"boxes":[
+				{
+					"id":"01c-01", "w":"565", "y":"375", "classes":"", "offset": "-300",
+					"text":"Let’s first look at what might go wrong without a clear strategy..."
+				}
+			]
+		}
+	},
+	{
+		"id":"FRAME-02A",
+		"template":"templates/text",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"backScreenId":"false",
+		"nextScreenId": "FRAME-02B",
+		"transition": {
+			"type":"scroll",
+			"duration":"0.5"
+		},
+		"background":"",
+		"scroll-menu":[
+			{"id":"FRAME-02A"},
+			{"id":"FRAME-02B"}
+		],
+		"content":{
+			"title":"Scenario 1 - Vendor Selection",
+			"text":"<span class='header_2a clearfix'><span class='title_2a'>AIM</span> <span class='line_2a'>We aim to outsource <b>50%</b> of our projects </span><span class='line_2a'>potentially with an aim to save <b>25%</b> in cost of projects </span></span>To help explain some of these issues you see when there is no clear strategy, we have devised a scenario to help you understand some of the problem areas/pitfalls/issues.<br/><br/>Let’s first look at one possible scenario, Thomas, CEO of PharmaCo calls a meeting with his senior management team, Susanne Head of Clinical Pharmacology, Olaf Head of Regulatory Affairs, James Head of Clinical Development, Zoe Head of Quality, Monika Head of Medical Affairs, and Daniel Head of Market Access…. This is what he says",
+			"classes":"font-med left-align",
+			"boxes":[
+				{
+					"id":"02a-01", "w":"740", "y":"300", "classes":"speach", "offset": "-100",
+					"text":"We need a new strategy. We need to work smarter. We can’t do everything ourselves, all the time, we’re not keeping up with our competitors, and time is money! We must concentrate our limited and valuable internal resources on the highest value added activities.  I want you all to outsource half of your work. I know we will need some internal resources to oversee vendors but I still expect to see an decrease in cost and increase in efficiency as a result."
+				},
+				{
+					"id":"02a-02", "w":"550", "y":"450", "classes":"font-med", "offset": "-300",
+					"text":"The team look around nervously but agree to try and achieve this objective. They leave the meeting thinking about their own people and activities."
+				}
+			]
+		}
+	},
+	{
+		"id":"FRAME-02B",
+		"template":"templates/tabs",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"backScreenId":"FRAME-02A",
+		"nextScreenId": "false",
+		"transition": {
+			"type":"scroll",
+			"duration":"0.5"
+		},
+		"background":"",
+		"scroll-menu":[
+			{"id":"FRAME-02A"},
+			{"id":"FRAME-02B"}
+		],
+		"content":{
+			"title":"Scenario 1 - Vendor Selection",
+			"text":"Text frame 02B here.",
+			"options":[
+				{"id":"2-1", 
+				"label":"Intro",
+				"columns": [
+					{"title":"Team 1", "content":"Back at her office Susanne, Head Team 1 calls all her direct reports to a meeting.<br/><br/><span class='speach'>We have a great team of scientists in this group, intelligent and technically skilled but they spend a lot of their time on tasks that could be done be less skilled, and lets face it, lower paid staff, but we don’t have enough of them.<br/><br/>Those are the activities we should outsource. I need you all to make a list of the activities your teams spend their time on, then sort them, into those that require the specialist skills within your group and those that do not.</span>"},
+					{"title":"Team 2", "content":"Olaf Head of Team 2 is also thinking about his team and their activities.<br/><br/><span class='speach'>What’s most expensive in this department? It’s the small niche projects, the ones we don’t do a lot of work in but when we do, they need very specific knowledge. We have this in house, we have recruited excellent but also expensive specialists in their fields but we are not utilising their knowledge and skills all of the time. Maybe we should outsource all our niche projects to specialist providers and put in house knowledge to better use elsewhere, on larger or more consistently active project areas?</span>"}
+				],
+				"foot":"Functions decide their tasks working in isolation"
+				},
+				{"id":"2-2", 
+				"label":"Key Experiences", 
+				"columns": [
+					{"title":"Team 1", "content":"When outsourcing “administrative” type activities, a lack of understanding that these are critical support activities in order to meet the requirements of specialist projects may result in increased error rates or unacceptable delays in projects.<br/><br/>The vendor may be asked to assign more people or more experienced people to these activities, resulting in higher costs and scope creep, plus the activity need to correct any past mistakes or rush activities in order to meet critical deadlines."},
+					{"title":"Team 2", "content":"Not fully understanding the CRO process, team 2 requests that certain internal templates are used for recording and reporting activities and results.<br/><br/>To abide by there own established procedures, the vendor also completes and provides their own templates and reports, resulting in multiple documents being produced and possibly conflicting or confusing information being shared as each party is unfamiliar with underlying processes. "}
+				]
+				},
+				{"id":"2-3", 
+				"label":"Key Outcomes", 
+				"columns": [
+					{"title":"Team 1", "content":"Team 1 run into the following problems, the scope creeps. This means an increase in time and cost, to maintain the required quality.<br/><br/>Relationships could also be damaged."},
+					{"title":"Team 2", "content":"Key Outcomes: Process Inefficiencies and/or duplication of effort<br/><br/>Team 2 are working with very inefficient processes, or requiring duplication of effort to comply with standards expected by both vendor procedures and sponsor procedures."}
+				]
+				},
+				{"id":"2-4", 
+				"label":"Counter Measures", 
+				"columns": [
+					{"title":"Team 1", "content":"A counter measure to that could be: ensuring the vendor understands the strict regulatory environment we work in and the critical nature of tasks that may otherwise appear administrative."},
+					{"title":"Team 2", "content":"A counter measure to that could be: upfront agreement on which procedures will be applied in the project."}
+				]
+				}
+			]
+		}
+	},
+	{
+		"id":"FRAME-03A",
+		"template":"templates/text",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"backScreenId":"false",
+		"nextScreenId": "FRAME-03B",
+		"transition": {
+			"type":"scroll",
+			"duration":"0.5"
+		},
+		"background":"",
+		"scroll-menu":[
+			{"id":"FRAME-03A"},
+			{"id":"FRAME-03B"},
+			{"id":"FRAME-03C"}
+		],
+		"content":{
+			"title":"Vendor Selection Summary",
+			"text":"",
+			"boxes":[
+				{
+					"id":"03a-01", "w":"550", "y":"215", "classes":"", "offset": "-100",
+					"title":"Bayer Strategy /Established Partners",
+					"text":"It is important to understand the characteristics needed from your vendor partner, for your specific project. Success factors to keep in mind should be:<br/><br/><ul><li>Scientific Competency</li><li>Operational Expertise</li><li>Organizational Strength (processes)</li><li>High Engagement</li></ul>"
+				}
+			]
+
+		}
+	},
+	{
+		"id":"FRAME-03B",
+		"template":"templates/text",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"backScreenId":"FRAME-03A",
+		"nextScreenId": "FRAME-03C",
+		"transition": {
+			"type":"scroll",
+			"duration":"0.5"
+		},
+		"background":"",
+		"scroll-menu":[
+			{"id":"FRAME-03A"},
+			{"id":"FRAME-03B"},
+			{"id":"FRAME-03C"}
+		],
+		"content":{
+			"title":"Vendor Selection Summary",
+			"text":"",
+			"boxes":[
+				{
+					"id":"03b-01", "w":"100%", "y":"100", "classes":"font-med", "offset": "-100",
+					"title":"Bayer prefered vendors",
+					"text":"To reduce the burden of vendor selection for each individual project, Bayer has established strategic partnerships with two vendors who meet these success factors for clinical development activities: Covance and INC<br/><br/>In addition we have preferred partners for many other activities including IxRS, Drug Distribution, Central Labs (also Covance), Imaging, and ePRO to name just a few<br/><br/>These vendors have gone through a rigorous selection process are continual assessed to ensure they continue to meet Bayer’s requirements and expectations<br/><br/>In most cases these vendors will be able to meet specific needs of individual projects but there are times when very specialist knowledge or capabilities may be required. Other vendors can be used and it is critically important to use a robust vendor selection process. <br/><br/>Involve Strategic sourcing and Procurement as soon as possible to support you in this process."
+				}
+			]
+			
+		}
+	},
+	{
+		"id":"FRAME-03C",
+		"template":"templates/text_table",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"backScreenId":"FRAME-03B",
+		"nextScreenId": "false",
+		"transition": {
+			"type":"scroll",
+			"duration":"0.5"
+		},
+		"background":"",
+		"scroll-menu":[
+			{"id":"FRAME-03A"},
+			{"id":"FRAME-03B"},
+			{"id":"FRAME-03C"}
+		],
+		"content":{
+			"title":"Vendor Selection Summary",
+			"text":"",
+			"boxes":[
+				{
+					"id":"03b-01", "w":"100%", "y":"60", "classes":"font-med", "offset": "400",
+					"title":"Why have a strategic partners",
+					"text":"Successful strategic outsourcing is business critical to achieve our business objectives of timely delivery of high quality dates, at competetive costs for regulatory approvals.<br/><br/>Focus limited internal resources on most value-adding activities<br/><br/>Implement and further develop CRO-established innovative techniques, tools and processes",
+					"rows":[
+						{
+						"cols":[
+							{"title":"CROs"},
+							{"title":"Large Biopharmas"}
+						]
+						},
+						{
+						"cols":[
+							{"text":"Improved visibility, allowing for long term planning"},
+							{"text":"Reduced level of required sponsor oversight"}
+						]
+						},
+						{
+						"cols":[
+							{"text":"Higher network utilisation"},
+							{"text":"Reduced fixed costs / increases variable costs"}
+						]
+						},
+						{
+						"cols":[
+							{"text":"Opens doors for collaboration in other areas"},
+							{"text":"Access to capabilities not found internally. Improved global reach. Accelerated time to market. Reduced overall development costs"}
+						]
+						}
+					]
+				}
+			]
+			
+		}
+	},
+	{
+		"id":"FRAME-04A",
+		"template":"templates/text",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"backScreenId":"false",
+		"nextScreenId": "FRAME-04B",
+		"transition": {
+			"type":"scroll",
+			"duration":"0.5"
+		},
+		"background":"",
+		"scroll-menu":[
+			{"id":"FRAME-04A"},
+			{"id":"FRAME-04B"}
+		],
+		"content":{
+			"title":"Scenario 2 - Vendor Management",
+			"text":"",
+			"boxes":[
+				{
+					"id":"03b-01", "w":"700", "y":"200", "classes":"", "offset": "-100",
+					"title":"Vendor Management Introduction",
+					"text":"Whilst getting vendor selection right is critical, this alone will not guarantee success of your project<br/><br/>Once selected you must work together with your vendor to ensure successful project implementation and delivery<br/><br/>To help explain some of these issues you see when this is not done well, we have devised a scenario to help you understand some of the problem areas/pitfalls/issues."
+				}
+			]
+			
+		}
+	},
+	{
+		"id":"FRAME-04B",
+		"template":"templates/tabs",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"backScreenId":"FRAME-04A",
+		"nextScreenId": "false",
+		"transition": {
+			"type":"scroll",
+			"duration":"0.5"
+		},
+		"background":"",
+		"scroll-menu":[
+			{"id":"FRAME-04A"},
+			{"id":"FRAME-04B"}
+		],
+		"content":{
+			"title":"Scenario 2 - Vendor Management",
+			"text":"",
+			"options":[
+				{"id":"4-1", 
+				"label":"Intro",
+				"columns": [
+					{"title":"Team 3", "content":"A vendor has been selected to perform clinical monitoring activities. Metrics are agreed regarding delivery and quality of visit reports.<br/><br/>As part of their internal procedures all visit reports are reviewed by a manager before being signed off.However, the sponsor company request full review of all trip reports as well, also prior to sign off.<br/><br/>Sponsor company also requires a high proportion of site audits to be conducted, both by the vendor and by the sponsor<br/><br/>"},
+					{"title":"Team 4", "content":"Pharmacovigilance activities are outsourced whilst Regulatory activities are planned to be kept in house, including all submissions to Health Authorities"}
+				],
+				"foot":""
+				},
+				{"id":"4-2", 
+				"label":"Key Experiences", 
+				"columns": [
+					{"title":"Team 3", "content":"Team 3 are duplicating the effort of the vendor in reviewing visit reports.<br/><br/>Timelines start to slip as monitors first have to correct reports following internal vendor review and then again following sponsor review.  Metrics surrounding the timeliness of report finalisation are impacted and sponsor holds vendor accountability for these.<br/><br/>The increased workload for monitors means they are not able to manage as many sites as usual, quality may suffer, staff turnover may increase also adding to costs/ timelines.  Additional staff need to be brought onto the project.<br/><br/>Sponsor resource  is also higher than expected as they start to micromanagement"},
+					{"title":"Team 4", "content":"Team 4 run into the following problems, there was poor communication, things get missed and gaps open up.<br/><br/>Different internal structures may result in unclear ownership of activities. Assumptions made on both sides (that the activity is being completed by the other party) can result in significant gaps opening up.<br/><br/>Take for example annual safety reporting to regulatory authorities, in some organisations this is owned by the Pharmacovigilance group, as the owner of safety information, however in others it may be owned by the regulatory group, as owner of the health authority interactions.<br/><br/>"}
+				]
+				},
+				{"id":"4-3", 
+				"label":"Key Outcomes", 
+				"columns": [
+					{"title":"Team 3", "content":"Duplication of effort"},
+					{"title":"Team 4", "content":"Creation of Gaps – lack of resource/ownership"}
+				]
+				},
+				{"id":"4-4", 
+				"label":"Counter Measures", 
+				"columns": [
+					{"title":"Team 3", "content":"A counter measure to that could be:<br/><br/>Agree up front, percentage of reports to be reviewed and appropriate timelines.<br/><br/>Monitor quality and timeliness, build trust in the team and adjust reviews as necessary<br/><br/>Agree issue escalation routes beyond visit reports<br/><br/>"},
+					{"title":"Team 4", "content":"A counter measure to that could be:"}
+				]
+				}
+			]
+		}
+	},
+	{
+		"id":"FRAME-05A",
+		"template":"templates/text",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"backScreenId":"false",
+		"nextScreenId": "false",
+		"transition": {
+			"type":"scroll",
+			"duration":"0.5"
+		},
+		"background":"",
+		"content":{
+			"title":"Vendor Management Problems",
+			"text":"",
+			"boxes":[
+				{
+					"id":"05a-01", "w":"100%", "y":"70", "classes":"font-med small-title", "offset": "-100",
+					"text":"<ul><li>Misaligned and/or unclear scopes (overlaps and gaps)</li><li>Unrealistic expectations or over promising about delivery</li><li>Unclear roles & responsibilities, and process inefficiencies</li><li>Scope creep/ increases, cycle time slippages - contract change orders</li></ul><h4>More outcomes</h4><ul><li>Time is spent “firefighting” as issues arise  or mediating between partners</li><li>Time is spent managing handovers/ interactions / interdependences between different departments and/or vendors.</li><li>Long working hours, Lack of motivation on both sides (should include this personal/emotional aspect)</li><li>Ultimately trust is broken down (or never built ) and there may be a lack of commitment from the team</li><li>Micromanagement increases - Internal resource needs increased (time and costs)</li><li>This bad experience affects future plans to outsource – people are unwilling or expecting it to fail.</li></ul>"
+				}
+			]
+			
+		}
+	},
+	{
+		"id":"FRAME-06A",
+		"template":"templates/text",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"backScreenId":"false",
+		"nextScreenId": "FRAME-06B",
+		"transition": {
+			"type":"scroll",
+			"duration":"0.5"
+		},
+		"background":"",
+		"scroll-menu":[
+			{"id":"FRAME-06A"},
+			{"id":"FRAME-06B"},
+			{"id":"FRAME-06C"}
+		],
+		"content":{
+			"title":"Bayer Strategy Alignment",
+			"text":"",
+			"boxes":[
+				{
+					"id":"06a-01", "w":"700", "y":"200", "classes":"", "offset": "-100",
+					"title":"Bayer Strategy /Established Partners",
+					"text":"Having seen examples of what can go wrong, lets look at Bayer’<br/><br/>We explained earlier why it’s important to have a Strategy<br/><br/>Leverage vendor capabilities and capacity to attain best in class operational delivery, efficiency and quality<br/><br/>And why Bayer have established two key strategic partnerships (Covance and INC)"
+				}
+			]
+		}
+	},
+	{
+		"id":"FRAME-06B",
+		"template":"templates/text",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"backScreenId":"FRAME-06A",
+		"nextScreenId": "FRAME-06C",
+		"transition": {
+			"type":"scroll",
+			"duration":"0.5"
+		},
+		"background":"",
+		"scroll-menu":[
+			{"id":"FRAME-06A"},
+			{"id":"FRAME-06B"},
+			{"id":"FRAME-06C"}
+		],
+		"content":{
+			"title":"Bayer Strategy Alignment",
+			"text":"",
+			"boxes":[
+				{
+					"id":"06b-01", "w":"700", "y":"200", "classes":"", "offset": "-100",
+					"title":"Why invest in Outsourcing Partnerships for clinical research?",
+					"text":"Successful strategic outsourcing is business critical to achieve our business objectives of timely delivery of high quality data, at competitive costs for regulatory approvals<br/><br/>Focus our limited internal resources on most value-adding activities<br/><br/>Implement and further develop CRO-established innovative techniques and processes"
+				}
+			]
+		}
+	},
+	{
+		"id":"FRAME-06C",
+		"template":"templates/text",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"backScreenId":"FRAME-06B",
+		"nextScreenId": "false",
+		"transition": {
+			"type":"scroll",
+			"duration":"0.5"
+		},
+		"background":"",
+		"scroll-menu":[
+			{"id":"FRAME-06A"},
+			{"id":"FRAME-06B"},
+			{"id":"FRAME-06C"}
+		],
+		"content":{
+			"title":"Bayer Strategy Alignment",
+			"text":"",
+			"boxes":[
+				{
+					"id":"06c-01", "w":"700", "y":"200", "classes":"", "offset": "-100",
+					"title":"Why Change / Have one?",
+					"text":"Lets take a look at the Vision behind this strategy.  The Vision of Strategic Partnership: To create a truly strategic engagement between Bayer and its main clinical services supplier and strategic partner Covance in order to: <br/><br/><ul><li>recognise mutual incremental value in the relationship;</li><li>to enhance reliability and shared accountability;</li><li>to deliver according to expected quality, timeline and budget expectations;</li><li>to accelerate efficiency and effectiveness;</li><li>to share expertise;</li><li>to support Bayer broader strategies and vision</li></ul>"
+				}
+			]
+		}
+	},
+	{
+		"id":"FRAME-07A",
+		"template":"templates/text",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"backScreenId":"false",
+		"nextScreenId": "FRAME-07B",
+		"transition": {
+			"type":"scroll",
+			"duration":"0.5"
+		},
+		"background":"",
+		"scroll-menu":[
+			{"id":"FRAME-07A"},
+			{"id":"FRAME-07B"},
+			{"id":"FRAME-07C"}
+		],
+		"content":{
+			"title":"Marking your Success factors",
+			"text":"",
+			"boxes":[
+				{
+					"id":"07a-01", "w":"700", "y":"200", "classes":"", "offset": "-100",
+					"title":"Critical Success Factors - Study",
+					"text":"Describe standard success factors common to both outsourced and internally run studies  (eg, appropriate planning, study design, realistic timelines, appropriate resources, adequate processes etc…)"
+				}
+			]
+		}
+	},
+	{
+		"id":"FRAME-07B",
+		"template":"templates/text_columns",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"backScreenId":"FRAME-07A",
+		"nextScreenId": "FRAME-07C",
+		"transition": {
+			"type":"scroll",
+			"duration":"0.5"
+		},
+		"background":"",
+		"scroll-menu":[
+			{"id":"FRAME-07A"},
+			{"id":"FRAME-07B"},
+			{"id":"FRAME-07C"}
+		],
+		"content":{
+			"title":"Marking your Success factors",
+			"boxes":[
+				{
+					"id":"07b-01", "w":"100%", "y":"70", "classes":"", "offset": "-100",
+					"title":"Critical Success Factors - Team",
+					"text":"Specific Team Dynamics working with a Third Party: CRO Partner or CRO<br/><br/>Common goals setting – working as one team Managing expectations through openness, constructive feedback, transparency of information sharing<br/><br/>Establishing trustful relationships and mutual understanding<br/><br/>Understanding the difference between micro management and oversight (trust and verify)<br/><br/><h4>Trust</h4>Built through open and honest two way communication “doing what you say”",
+					"text_2":"<h4>Communication</h4>Add text<br/><br/><h4>Delivery</h4>Basic service delivery needs to meet key requirements and demonstrate additional elements to underline a special relationship<br/><br/><h4>Collaboration</h4>Fully engaged broad ranging teams / functions working together with a flexible approach to meet partnership goals rather than individual company goals"
+				}
+			]
+		}
+	},
+	{
+		"id":"FRAME-07C",
+		"template":"templates/text_columns",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"backScreenId":"FRAME-07B",
+		"nextScreenId": "false",
+		"transition": {
+			"type":"scroll",
+			"duration":"0.5"
+		},
+		"background":"",
+		"scroll-menu":[
+			{"id":"FRAME-07A"},
+			{"id":"FRAME-07B"},
+			{"id":"FRAME-07C"}
+		],
+		"content":{
+			"title":"Marking your Success factors",
+			"boxes":[
+				{
+					"id":"07c-01", "w":"100%", "y":"70", "classes":"", "offset": "-100",
+					"title":"Critical Success Factors - Vendor",
+					"text":"<h4>Scientific Competency</h4>Scientific competency and know-how Operational and technical expertise and skills (for the services outsourced)<br/><br/><h4>Operational Expertise</h4>Organization - Strong processes (in project / study management and other functions, including in quality and compliance)<br/><br/><h4>Organisational Strength (Processes)</h4>Understanding of the outsourcing technicalities (Outsourcing/Partnership QSD Landscape)<br/><br/><li>Outsourcing/Partnership Organization (reporting, escalations, support available)</li><li>Outsourcing Team structure, Roles and Responsibilities</li><li>CRO Selection and Management / CRO Partner engagement & collaboration processes & tools</li><li>Financial management & reporting specificities for outsourced studies</li>",
+					"text_2":"<h4>High Engagement</h4><li>Good adequacy of the CRO team with the study/project specifics (expertise, experience, soft skills)</li><li>Understanding of the study requirements and challenges - Adequate training on the study requirements</li><li>Autonomy, Accountability, Openness and pro-activeness of the CRO study team</li>"
+				}
+			]
+		}
+	},
+		{
+		"id":"FRAME-08A",
+		"template":"templates/text",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"backScreenId":"false",
+		"nextScreenId": "false",
+		"transition": {
+			"type":"scroll",
+			"duration":"0.5"
+		},
+		"background":"",
+		"content":{
+			"title":"",
+			"text":"",
+			"boxes":[
+				{
+					"id":"07a-01", "w":"500", "y":"20", "classes":"off-right", "offset": "-300",
+					"title":"Bayer Strategy - Success Behaviours & Defining Activities",
+					"text":"This is all about working with people establishing relationships understanding needs and requirement – behaviors on both sides<br/><br/>"
+				},
+				{
+					"id":"08a-02", "w":"500", "y":"225", "classes":"center-text off-left", "offset": "0",
+					"title":"Secrets of Success, some examples",
+					"text":"Management of mutual expectations</br>Good collaboration</br>Open communication</br>Transparency</br>Clear accountability and shared responsibilities"
+				}
+			]
+		}
+	},
+	{
+		"id":"FRAME-09A",
+		"template":"templates/text",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"backScreenId":"false",
+		"nextScreenId": "FRAME-09A-2",
+		"transition": {
+			"type":"scroll",
+			"duration":"0.5"
+		},
+		"background":"",
+		"scroll-menu":[
+			{"id":"FRAME-09A"},
+			{"id":"FRAME-09A-2"}
+		],
+		"sub-menu":[
+			{"id":"FRAME-09A"},
+			{"id":"FRAME-09B"},
+			{"id":"FRAME-09C"},
+			{"id":"FRAME-09D"},
+			{"id":"FRAME-09E"},
+			{"id":"FRAME-09F"}
+		],
+		"label":"Governance",
+		"content":{
+			"title":"Operationalise",
+			"text":"",
+			"classes":"submenu-offset",
+			"boxes":[
+				{
+					"id":"09a-01", "w":"100%", "y":"", "x":"", "classes":"font-med", "offset": "-100",
+					"title":"Governance",
+					"text":"<h5>Governance Structure</h5><ul><li>Links to issue escalation</li><li>Links to management / oversight</li></ul>Governance Structure and Charter appropriate for the specific outsourcing arrangement.<br/><br/>I.E <i>Smaller projects may not need formal governance beyond routine oversight and issue escalation</i>"
+				}
+			]
+		}
+	},
+	{
+		"id":"FRAME-09A-2",
+		"template":"templates/text",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"backScreenId":"FRAME-09A",
+		"nextScreenId": "FRAME-09B",
+		"transition": {
+			"type":"scroll",
+			"duration":"0.5"
+		},
+		"background":"",
+		"scroll-menu":[
+			{"id":"FRAME-09A"},
+			{"id":"FRAME-09A-2"}
+		],
+		"sub-menu":[
+			{"id":"FRAME-09A-2"},
+			{"id":"FRAME-09B"},
+			{"id":"FRAME-09C"},
+			{"id":"FRAME-09D"},
+			{"id":"FRAME-09E"},
+			{"id":"FRAME-09F"}
+		],
+		"label":"Governance",
+		"content":{
+			"title":"Operationalise",
+			"text":"",
+			"classes":"submenu-offset",
+			"boxes":[
+				{
+					"id":"09a-01", "w":"100%", "y":"", "classes":"font-med", "offset": "-100",
+					"title":"Strategic Partnership Governance Structure",
+					"image":"image_09A_02.png",
+					"text":"<h5>Executive Committee</h5><ul><li>Set partnership vision, values, behaviours and strategy direction</li></ul><h5>Operations committee</h5><ul><li>Implement strategy</li><li>Identify/oversees critical initiatives</li><li>Monitor financials, KPIs & scorecard</li><li>Identify tradeoffs and new service line opportunities</li></ul><h5>Functional Work Streams</h5><ul><li>Oversee project/service level execution</li><li>Forecast future work</li><li>Develop/monitor KPIs</li><li>Resolve operational/business specific issues</li><li>Foster functional understanding & alignment</li></ul>"
+				}
+			]
+		}
+	},
+	{
+		"id":"FRAME-09B",
+		"template":"templates/text",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"backScreenId":"FRAME-09A-2",
+		"nextScreenId": "FRAME-09B-2",
+		"transition": {
+			"type":"scroll",
+			"duration":"0.5"
+		},
+		"background":"",
+		"scroll-menu":[
+			{"id":"FRAME-09B"},
+			{"id":"FRAME-09B-2"},
+			{"id":"FRAME-09B-3"},
+			{"id":"FRAME-09B-4"},
+			{"id":"FRAME-09B-5"}
+		],
+		"sub-menu":[
+			{"id":"FRAME-09A"},
+			{"id":"FRAME-09B"},
+			{"id":"FRAME-09C"},
+			{"id":"FRAME-09D"},
+			{"id":"FRAME-09E"},
+			{"id":"FRAME-09F"}
+		],
+		"label":"Section Oversight",
+		"content":{
+			"title":"Operationalise",
+			"text":"",
+			"classes":"submenu-offset",
+			"boxes":[
+				{
+					"id":"09b-01", "w":"540", "y":"100", "classes":"center-text", "offset": "-100",
+					"title":"Oversight - Context of ICH GCP",
+					"text":"A sponsor may transfer any or all of the sponsor's trial-related duties and functions to a CRO, but the ultimate responsibility for the quality and integrity of the trial data always resides with the sponsor."
+				}
+			]
+		}
+	},
+	{
+		"id":"FRAME-09B-2",
+		"template":"templates/text",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"backScreenId":"FRAME-09B",
+		"nextScreenId": "FRAME-09B-3",
+		"transition": {
+			"type":"scroll",
+			"duration":"0.5"
+		},
+		"background":"",
+		"scroll-menu":[
+			{"id":"FRAME-09B"},
+			{"id":"FRAME-09B-2"},
+			{"id":"FRAME-09B-3"},
+			{"id":"FRAME-09B-4"},
+			{"id":"FRAME-09B-5"}
+		],
+		"sub-menu":[
+			{"id":"FRAME-09A"},
+			{"id":"FRAME-09B-2"},
+			{"id":"FRAME-09C"},
+			{"id":"FRAME-09D"},
+			{"id":"FRAME-09E"},
+			{"id":"FRAME-09F"}
+		],
+		"label":"Section Oversight",
+		"content":{
+			"title":"Operationalise",
+			"text":"",
+			"classes":"submenu-offset",
+			"boxes":[
+				{
+					"id":"09b-01", "w":"650", "y":"", "classes":"", "offset": "-100",
+					"title":"Oversight - Section",
+					"text":"Definitions*: <br/>Oversight - The action of overseeing something<br/>Oversee - Supervise (a person or work), especially in an official capacity<br/>Management - The process of dealing with or controlling things or people<br/><br/>*Oxford University Press<br/><br/><br/><br/>"
+				},
+				{
+					"id":"09b-02", "w":"600", "y":"250", "classes":"font-med center-text", "offset": "0",
+					"title":"Simple examples",
+					"text":"'You must deliver clean data on a per patient basis within X weeks of a patients last visit – we expect to see regular reports in the form of percentage data to ensure this expectation is being met/ monitored and exited upon if necessary' = oversight<br/><br/>“You must deliver clean data on a per patient basis within X weeks of last visit – we expect you to visit all sites every Y weeks to ensure this is achieved” = management (and not necessarily effective management as this may not ensure the expectation is met!)"
+				}
+			]
+		}
+	},
+	{
+		"id":"FRAME-09B-3",
+		"template":"templates/text",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"backScreenId":"FRAME-09B-2",
+		"nextScreenId": "FRAME-09B-4",
+		"transition": {
+			"type":"scroll",
+			"duration":"0.5"
+		},
+		"background":"",
+		"scroll-menu":[
+			{"id":"FRAME-09B"},
+			{"id":"FRAME-09B-2"},
+			{"id":"FRAME-09B-3"},
+			{"id":"FRAME-09B-4"},
+			{"id":"FRAME-09B-5"}
+		],
+		"sub-menu":[
+			{"id":"FRAME-09A"},
+			{"id":"FRAME-09B-3"},
+			{"id":"FRAME-09C"},
+			{"id":"FRAME-09D"},
+			{"id":"FRAME-09E"},
+			{"id":"FRAME-09F"}
+		],
+		"label":"Section Oversight",
+		"content":{
+			"title":"Operationalise",
+			"text":"",
+			"classes":"submenu-offset",
+			"boxes":[
+				{
+					"id":"09b-01", "w":"500", "y":"50", "classes":"center-text", "offset": "-100",
+					"title":"Oversight - Bayer Sponsor",
+					"text":"Consistent and targeted approach, flexible enough to account for study differences but intended to be universally used<br/><br/>Delivered via an efficient, structured and consistent reporting and sampling framework, which will ensure consistent and robust Sponsor Oversight by Bayer."
+				}
+			]
+		}
+	},
+	{
+		"id":"FRAME-09B-4",
+		"template":"templates/text",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"backScreenId":"FRAME-09B-3",
+		"nextScreenId": "FRAME-09B-5",
+		"transition": {
+			"type":"scroll",
+			"duration":"0.5"
+		},
+		"background":"",
+		"scroll-menu":[
+			{"id":"FRAME-09B"},
+			{"id":"FRAME-09B-2"},
+			{"id":"FRAME-09B-3"},
+			{"id":"FRAME-09B-4"},
+			{"id":"FRAME-09B-5"}
+		],
+		"sub-menu":[
+			{"id":"FRAME-09A"},
+			{"id":"FRAME-09B-4"},
+			{"id":"FRAME-09C"},
+			{"id":"FRAME-09D"},
+			{"id":"FRAME-09E"},
+			{"id":"FRAME-09F"}
+		],
+		"label":"Section Oversight",
+		"content":{
+			"title":"Operationalise",
+			"text":"",
+			"classes":"submenu-offset",
+			"boxes":[
+				{
+					"id":"09b-01", "w":"100%", "y":"", "classes":"center-text", "offset": "-100",
+					"title":"Oversight - Reporting",
+					"text":"Milestone and performance Data and Information focused on Operational Delivery<br/><br/>Metric Results and Related Vendor Activities for Quality Sponsor Oversight<br/><br/>Regular reports providing an overview of key milestone data and information (i.e. focused on tracking operational delivery of the study) and metric results and related vendor actions (i.e. for Bayer oversight purposes)<br/><br/>",
+					"resource-links": [
+						{"id":"9B4-example-1", "label":"Example 1"},
+						{"id":"9B4-example-2", "label":"Example 2"},
+						{"id":"9B4-example-3", "label":"Example 3"}
+					]
+				}
+			]
+		}
+	},
+	{
+		"id":"FRAME-09B-5",
+		"template":"templates/text",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"backScreenId":"FRAME-09B-4",
+		"nextScreenId": "FRAME-09C",
+		"transition": {
+			"type":"scroll",
+			"duration":"0.5"
+		},
+		"background":"",
+		"scroll-menu":[
+			{"id":"FRAME-09B"},
+			{"id":"FRAME-09B-2"},
+			{"id":"FRAME-09B-3"},
+			{"id":"FRAME-09B-4"},
+			{"id":"FRAME-09B-5"}
+		],
+		"sub-menu":[
+			{"id":"FRAME-09A"},
+			{"id":"FRAME-09B-5"},
+			{"id":"FRAME-09C"},
+			{"id":"FRAME-09D"},
+			{"id":"FRAME-09E"},
+			{"id":"FRAME-09F"}
+		],
+		"label":"Section Oversight",
+		"content":{
+			"title":"Operationalise",
+			"text":"",
+			"classes":"submenu-offset",
+			"boxes":[
+				{
+					"id":"09b-01", "w":"100%", "y":"", "classes":"", "offset": "-100",
+					"title":"Oversight - Sampling",
+					"text":"Sampling – Two types<br/><ul><li>Routine Sampling</li><li>Triggered Sampling</li></ul>Routine sampling examples:  Activities performed by Bayer and the rationale.  These are standard expectations across all studies<br/><br/><b>IP</b> = Investigator Package (for “regulatory green light “ to release drug)<br/><br/><b>TMF</b> = Trial Master File<br/><br/>",
+					"resource-links": [
+						{"id":"9B5-example-1", "label":"Example 1"},
+						{"id":"9B5-example-2", "label":"Example 2"}
+					]
+				}
+			]
+		}
+	},
+	{
+		"id":"FRAME-09C",
+		"template":"templates/text",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"backScreenId":"FRAME-09B-5",
+		"nextScreenId": "FRAME-09D",
+		"transition": {
+			"type":"scroll",
+			"duration":"0.5"
+		},
+		"background":"",
+		"scroll-menu":[
+			{"id":"FRAME-09C"}
+		],
+		"sub-menu":[
+			{"id":"FRAME-09A"},
+			{"id":"FRAME-09B"},
+			{"id":"FRAME-09C"},
+			{"id":"FRAME-09D"},
+			{"id":"FRAME-09E"},
+			{"id":"FRAME-09F"}
+		],
+		"label":"Communication Plan",
+		"content":{
+			"title":"Operationalise",
+			"text":"",
+			"classes":"submenu-offset",
+			"boxes":[
+				{
+					"id":"09c-01", "w":"100%", "y":"", "classes":"center-text", "offset": "-100",
+					"title":"Communication Plan",
+					"text":"Agree Standards & Best Practice for communication, aligned with the project scope, roles and responsibilities, governance, oversight and issue escalation processes<br/><br/>Document the agreements! Ensure everyone is aware and on board<br/><br/>Tackle any miscommunication, misunderstanding immediately, before it becomes an issue<br/><br/>Be honest, open and transparent and deliver on your agreements<br/><br/>’Say what you’ll do and do what you say’"
+				}
+			]
+		}
+	},
+	{
+		"id":"FRAME-09D",
+		"template":"templates/text",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"backScreenId":"FRAME-09C",
+		"nextScreenId": "FRAME-09E",
+		"transition": {
+			"type":"scroll",
+			"duration":"0.5"
+		},
+		"background":"",
+		"scroll-menu":[
+			{"id":"FRAME-09D"}
+		],
+		"sub-menu":[
+			{"id":"FRAME-09A"},
+			{"id":"FRAME-09B"},
+			{"id":"FRAME-09C"},
+			{"id":"FRAME-09D"},
+			{"id":"FRAME-09E"},
+			{"id":"FRAME-09F"}
+		],
+		"label":"Roles & Responsibilities",
+		"content":{
+			"title":"Operationalise",
+			"text":"",
+			"classes":"submenu-offset",
+			"boxes":[
+				{
+					"id":"09d-01", "w":"100%", "y":"", "classes":"", "offset": "-100",
+					"title":"Roles & Responsibilities",
+					"text":"<b>Team Roles and Responsivities for Bayer and Vendor</b><br/><br/>The Vendor Project Lead assumes full accountability and leadership of the Study Management sub-team, and is fully accountable for the appropriate oversight and leadership of the monitoring sub-team.<br/><br/> The risk of confusion in roles, micro-management or unnecessary duplication of efforts is eliminated.<br/><br/> The Vendor Project Lead assumes leadership of the whole study team, reporting into the Bayer Global Clinical Team (or Study Team) and will be the primary contact partner for Bayer Project Lead."
+				}
+			]
+		}
+	},
+	{
+		"id":"FRAME-09E",
+		"template":"templates/text",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"backScreenId":"FRAME-09D",
+		"nextScreenId": "FRAME-09F",
+		"transition": {
+			"type":"scroll",
+			"duration":"0.5"
+		},
+		"background":"",
+		"scroll-menu":[
+			{"id":"FRAME-09E"}
+		],
+		"sub-menu":[
+			{"id":"FRAME-09A"},
+			{"id":"FRAME-09B"},
+			{"id":"FRAME-09C"},
+			{"id":"FRAME-09D"},
+			{"id":"FRAME-09E"},
+			{"id":"FRAME-09F"}
+		],
+		"label":"Issue Escalation",
+		"content":{
+			"title":"Operationalise",
+			"text":"",
+			"classes":"submenu-offset",
+			"boxes":[
+				{
+					"id":"09e-01", "w":"100%", "y":"", "classes":"", "offset": "-100",
+					"title":"Issue Escalation",
+					"text":"Clear and agreed parameters, reporting procedures and communication routes within Vendor and Bayer<br/><br/>’Dig deep (identify route cause), Flag early’<br/><br/>Renee Perroncel: Example of CRO-side members, best practices in terms of communication, team meetings; deep dig into study issues, how to flag them early on.<br/><br/>",
+					"resource-links": [
+						{"id":"unknown", "label":"Partnership Issue Transparency Flowchart"}
+					]
+				}
+			]
+		}
+	},
+	{
+		"id":"FRAME-09F",
+		"template":"templates/text",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"backScreenId":"FRAME-09E",
+		"nextScreenId": "FRAME-09F-2",
+		"transition": {
+			"type":"scroll",
+			"duration":"0.5"
+		},
+		"background":"",
+		"scroll-menu":[
+			{"id":"FRAME-09F"},
+			{"id":"FRAME-09F-2"}
+		],
+		"sub-menu":[
+			{"id":"FRAME-09A"},
+			{"id":"FRAME-09B"},
+			{"id":"FRAME-09C"},
+			{"id":"FRAME-09D"},
+			{"id":"FRAME-09E"},
+			{"id":"FRAME-09F"}
+		],
+		"label":"Scope Setting",
+		"content":{
+			"title":"Operationalise",
+			"text":"",
+			"classes":"submenu-offset",
+			"boxes":[
+				{
+					"id":"09e-01", "w":"100%", "y":"", "classes":"", "offset": "-100",
+					"title":"Scope Setting",
+					"text":""
+				}
+			]
+		}
+	},
+	{
+		"id":"FRAME-09F-2",
+		"template":"templates/text",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"backScreenId":"FRAME-09F",
+		"nextScreenId": "false",
+		"transition": {
+			"type":"scroll",
+			"duration":"0.5"
+		},
+		"background":"",
+		"scroll-menu":[
+			{"id":"FRAME-09F"},
+			{"id":"FRAME-09F-2"}
+		],
+		"sub-menu":[
+			{"id":"FRAME-09A"},
+			{"id":"FRAME-09B"},
+			{"id":"FRAME-09C"},
+			{"id":"FRAME-09D"},
+			{"id":"FRAME-09E"},
+			{"id":"FRAME-09F-2"}
+		],
+		"label":"Scope Setting",
+		"content":{
+			"title":"Operationalise",
+			"text":"",
+			"classes":"submenu-offset",
+			"boxes":[
+				{
+					"id":"09e-02", "w":"100%", "y":"", "classes":"", "offset": "-100",
+					"title":"Scope Setting",
+					"text":""
+				}
+			]
+		}
+	},
+	{
+		"id":"FRAME-10A",
+		"template":"templates/text",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"backScreenId":"FRAME-09F",
+		"nextScreenId": "false",
+		"transition": {
+			"type":"scroll",
+			"duration":"0.5"
+		},
+		"background":"",
+		"label":"Summary",
+		"content":{
+			"title":"Summary",
+			"text":"",
+			"classes":"",
+			"boxes":[
+				{
+					"id":"10a-02", "w":"100%", "y":"", "classes":"", "offset": "-100",
+					"title":"",
+					"text":""
+				}
+			]
+		}
+	},
+	{
+		"id":"COMPLETE",
+		"template":"templates/text",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"backScreenId":"FRAME-09F",
+		"nextScreenId": "false",
+		"transition": {
+			"type":"scroll",
+			"duration":"0.5"
+		},
+		"background":"",
+		"label":"End Result",
+		"content":{
+			"title":"End Result",
+			"text":"",
+			"classes":"",
+			"boxes":[
+				{
+					"id":"11a-02", "w":"100%", "y":"", "classes":"", "offset": "-100",
+					"title":"",
+					"text":""
+				}
+			]
+		}
+	}
+]
+

@@ -1,0 +1,497 @@
+[
+	{
+		"id":"splash",
+		"template":"templates/splash",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"screen_indicator":" ",
+		"transition": {
+			"type":"fade",
+			"duration":"1"
+		},
+		"content":{
+			"title":"Knowledge Check for Copanlisib Virtual Patient Modules 1, 2 and 3",
+			"text":"",
+			"image":"content/copanlisib_kc/images/copanlisib.png"
+		}
+	},
+	{
+		"id":"intro",
+		"template":"templates/intro",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"screen_indicator":" ",
+		"transition": {
+			"type":"slide",
+			"duration":"1"
+		},
+		"background": "content/copanlisib_kc/images/backgrounds/intro.png",
+		"content":{
+			"title":"Introduction",
+			"text":"<p>This module is part of the Copanlisib learning program, aimed to increase the knowledge of the drug Copanlisib.</p><p>The purpose of this module is to reinforce your knowledge gained from the first three Copanlisib Virtual Patient modules that focus on non-Hodgkin lymphoma, from initial symptoms to diagnosis and treatment:</p><ul><li><b>1 Copanlisib Virtual Patient Module - Presentation, Signs and Symptoms of NHL</b></li><li><b>2 Copanlisib Virtual Patient Module - Diagnosis and Staging of NHL</b></li><li><b>3 Copanlisib Virtual Patient Module - Treatment of NHL</b></li></ul><p>This knowledge check should be used to identify possible gaps in your knowledge. You can then seek further information and support as necessary from your line manager.  You can also review the e-learning modules at any time by accessing your ‘Completed Work’ on BayLearn.</p><p>Please answer the following 15 questions.  You will have an opportunity to review your answers and refer to the modules if needed.</p><p>Only you will see the results and no record of the results will be taken or kept.</p>",
+			"instruction":"Click the start button to continue"
+		}
+	},
+	{
+		"id":"q1",
+		"template":"templates/checkbox",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"screen_indicator":" ",
+		"transition": {
+			"type":"slide",
+			"duration":"1"
+		},
+		"background": "content/copanlisib_kc/images/backgrounds/lab.png",
+		"content":{
+			"title":"Question 1 of 15",
+			"text":"Which of the following may be signs/symptoms of non-Hodgkin lymphoma?",
+			"instruction":"Select one or more choices, and click submit.",
+			"min-required":"1",
+			"options":[
+				{"type":"checkbox", "value":"true", "label":"Painless swelling of a superficial lymph node (e.g., neck, groin, axilla)"},
+				{"type":"checkbox", "value":"true", "label":"Night sweats"},
+				{"type":"checkbox", "value":"true", "label":"Fever"},
+				{"type":"checkbox", "value":"true", "label":"Fatigue"}
+			],
+			"feedback": "<p>The classical and often first sign of non-Hodgkin lymphoma is a painless swelling of a superficial lymph node (e.g., neck, groin, axilla).</p><ul><li>Other typical symptoms include fever, night sweats, and unexplained weight loss (B symptoms)</li><li>Other symptoms might be: itchiness, fatigue, loss of appetite</li><li>Less often, the secondary effects of lymphoma on critical organs (such as bone marrow, lung, spleen, liver or kidneys) can be symptomatic</li></ul>",
+			"correct_feedback": "You are correct. Well done!",
+			"incorrect_feedback": "Sorry, that is not correct. The correct answers are:",
+			"partial_feedback": "You are partially correct. The correct answers are:"
+		}
+	},
+	{
+		"id":"q2",
+		"hide_title": "true",
+		"template":"templates/checkbox",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"screen_indicator":" ",
+		"transition": {
+			"type":"slide",
+			"duration":"1"
+		},
+		"background": "content/copanlisib_kc/images/backgrounds/sofa.png",
+		"content":{
+			"title":"Question 2 of 15",
+			"text":"What factors may delay the diagnosis of a patient with non-Hodgkin lymphoma?",
+			"instruction":"Select an answer and click submit.",
+			"options":[
+				{"type":"radio", "value":"false", "label":"Enlarged lymph nodes or splenomegaly may be incidental findings during evaluation for other medical conditions"},
+				{"type":"radio", "value":"false", "label":"There may be a delay in the patient seeking a medical appointment"},
+				{"type":"radio", "value":"false", "label":"A swollen lymph node may initially be assessed as a sign of infection, and antibiotics may be given to the patient first"},
+				{"type":"radio", "value":"true", "label":"Any or all of the above may occur"}
+			],
+			"feedback": "<p>Because of the non-specific nature of the symptoms, enlarged lymph nodes may be incidental findings in a physical examination, the patient may delay reporting the symptoms, or an enlarged lymph node may be assessed as being caused by an infection and may be treated with antibiotics first.</p>",
+			"correct_feedback": "You are correct. Well done!",
+			"incorrect_feedback": "Sorry, that is not correct. The correct answer is ",
+			"partial_feedback": "Sorry, that is not correct. The correct answer is "
+		}
+	},
+	{
+		"id":"q3",
+		"hide_title": "true",
+		"template":"templates/checkbox",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"screen_indicator":" ",
+		"transition": {
+			"type":"slide",
+			"duration":"1"
+		},
+		"background": "content/copanlisib_kc/images/backgrounds/sofa.png",
+		"content":{
+			"title":"Question 3 of 15",
+			"text":"How is the final diagnosis of lymphoma confirmed?",
+			"instruction":"Select an answer and click submit.",
+			"options":[
+				{"type":"radio", "value":"false", "label":"Bone marrow biopsy"},
+				{"type":"radio", "value":"false", "label":"Fine-needle aspirate"},
+				{"type":"radio", "value":"true", "label":"Lymph node excision or core biopsy"},
+				{"type":"radio", "value":"false", "label":"All of the above"}
+			],
+			"feedback": "<p>The final diagnosis must be made by the laboratory study of tissue obtained by taking a biopsy of the patients 'lump'. The lump is often a swollen lymph node, and a lymph node excision or adequate core biopsy is the most common technique applied for diagnosis, preferably the easiest accessible peripheral node. If not available: spleen, liver, gut, skin and bone marrow are examples of extranodal sites if they are involved.</p><p>A fine-needle aspirate of a lymph node is inadequate for initial diagnosis, because it almost always results in insufficient or inadequate material and therefore a core biopsy is recommended.</p><p>A bone marrow biopsy is usually not indicated for diagnosis, but it is for tumor staging (evaluation of bone marrow involvement).</p>",
+			"correct_feedback": "You are correct. Well done!",
+			"incorrect_feedback": "Sorry, that is not correct. The correct answer is ",
+			"partial_feedback": "Sorry, that is not correct. The correct answer is "
+		}
+	},
+	{
+		"id":"q4",
+		"hide_title": "true",
+		"template":"templates/checkbox",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"screen_indicator":" ",
+		"transition": {
+			"type":"slide",
+			"duration":"1"
+		},
+		"background": "content/copanlisib_kc/images/backgrounds/sofa.png",
+		"content":{
+			"title":"Question 4 of 15",
+			"text":"Lymphoma staging may detect nodal and/or extranodal lesions.  Which of the following lesions is considered an 'extranodal lesion'?",
+			"instruction":"Select an answer and click submit.",
+			"options":[
+				{"type":"radio", "value":"false", "label":"Hilar lymph node"},
+				{"type":"radio", "value":"false", "label":"Hepatic lymph node"},
+				{"type":"radio", "value":"true", "label":"Hepatic mass"},
+				{"type":"radio", "value":"false", "label":"Cervical lymph node"}
+			],
+			"feedback": "<p>Extranodal lesions refer to lymphomatous infiltration of anatomic sites other than the lymph nodes.  Note that with respect to the answers relating to the liver, ’hepatic lymph node’ is a lymph node involvement and ’hepatic mass’ is an organ involvement.</p>",
+			"correct_feedback": "You are correct. Well done!",
+			"incorrect_feedback": "Sorry, that is not correct. The correct answer is ",
+			"partial_feedback": "Sorry, that is not correct. The correct answer is "
+		}
+	},
+	{
+		"id":"q5",
+		"hide_title": "true",
+		"template":"templates/checkbox",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"screen_indicator":" ",
+		"transition": {
+			"type":"slide",
+			"duration":"1"
+		},
+		"background": "content/copanlisib_kc/images/backgrounds/sofa.png",
+		"content":{
+			"title":"Question 5 of 15",
+			"text":"Classification (grading) and staging systems are applied for Follicular Lymphoma. Which of the following is the correct definition of 'staging' and 'grade' for this sub-type of lymphoma?",
+			"instruction":"Select an answer and click submit.",
+			"options":[
+				{"type":"radio", "value":"false", "label":"'Staging' refers to NHL sub-type and 'grade' refers to the evaluation of sites involved by lymphoma"},
+				{"type":"radio", "value":"false", "label":"'Staging' and 'grade' are the same evaluation"},
+				{"type":"radio", "value":"false", "label":"'Staging' refers to imaging results and 'grade' refers to laboratory results"},
+				{"type":"radio", "value":"true", "label":"'Staging' refers to the evaluation of tumor distribution and sites involved by lymphoma; 'grade' refers to cell appearance/morphology"}
+			],
+			"feedback": "<p>Significant morphologic variability among cases of follicular lymphoma led to a specific classification for this sub-type of NHL.</p><p>The World Health Organisation (WHO) classifies follicular lymphoma into three different ‘grades’ based upon how the lymphoma cells appear/look under the microscope, and the number of large cells (centroblasts) per high-power field of magnification.</p><p>'Staging' applies to all NHL sub-types, evaluating the sites involved by lymphoma and the extent of the disease.</p>",
+			"correct_feedback": "You are correct. Well done!",
+			"incorrect_feedback": "Sorry, that is not correct. The correct answer is ",
+			"partial_feedback": "Sorry, that is not correct. The correct answer is "
+		}
+	},
+	{
+		"id":"q6",
+		"hide_title": "true",
+		"template":"templates/checkbox",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"screen_indicator":" ",
+		"transition": {
+			"type":"slide",
+			"duration":"1"
+		},
+		"background": "content/copanlisib_kc/images/backgrounds/sofa.png",
+		"content":{
+			"title":"Question 6 of 15",
+			"text":"Read the following statements about 'splenomegaly'. One of these statements is incorrect.",
+			"instruction":"Select the incorrect statement and click submit.",
+			"options":[
+				{"type":"radio", "value":"false", "label":"An enlarged spleen is commonly referred to as ‘splenomegaly’ "},
+				{"type":"radio", "value":"true", "label":"Patients with spleen involvement by lymphoma always have splenomegaly"},
+				{"type":"radio", "value":"false", "label":"A spleen may be enlarged as a result of other medical conditions (e.g. variations in blood volume, use of hematopoietic growth factors, etc.)"},
+				{"type":"radio", "value":"false", "label":"On CT scan, splenomegaly is defined as an increase in vertical length > 13 cm"}
+			],
+			"feedback": "<p>An enlarged spleen is commonly referred to as ‘splenomegaly’</p><p>There may be pathologic enlargement of the spleen due to lymphoma but in some patients their spleen may be of normal size and still contain lymphoma</p><p>A spleen may be enlarged as a result of other medical conditions (e.g. variations in blood volume, use of hematopoietic growth factors, etc.)</p><p>On CT scan, splenomegaly is defined as an increase in vertical length > 13 cm and splenic involvement can also be characterized by either focal lesions or disseminated infiltration.</p>",
+			"correct_feedback": "You are correct. Well done! That was the incorrect statement.",
+			"incorrect_feedback": "Sorry, that is not correct. The correct answer (and therefore the statement that was incorrect) is ",
+			"partial_feedback": "Sorry, that is not correct. The correct answer (and therefore the statement that was incorrect) is "
+		}
+	},
+	{
+		"id":"q7",
+		"hide_title": "true",
+		"template":"templates/checkbox",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"screen_indicator":" ",
+		"transition": {
+			"type":"slide",
+			"duration":"1"
+		},
+		"background": "content/copanlisib_kc/images/backgrounds/sofa.png",
+		"content":{
+			"title":"Question 7 of 15",
+			"text":"One of the key differences between lymphoma and solid tumor is the origin of the cancer/tumor. In which of the following can lymphoma originate?",
+			"instruction":"Select an answer and click submit.",
+			"options":[
+				{"type":"radio", "value":"false", "label":"Liver"},
+				{"type":"radio", "value":"false", "label":"Cervical lymph nodes"},
+				{"type":"radio", "value":"false", "label":"Appendix"},
+				{"type":"radio", "value":"true", "label":"All of the above"}
+			],
+			"feedback": "<p>Lymphoma originates in the lymph nodes or organs in the lymphatic system, such as adenoids, tonsils, thymus, spleen, liver, the lining of the small intestine, appendix or bone marrow. Because blood, bone marrow, and the lymphatic system are intimately connected, a disease affecting one hematological system may affect the others as well, allowing for a disseminated disease.</p>",
+			"correct_feedback": "You are correct. Well done!",
+			"incorrect_feedback": "Sorry, that is not correct. The correct answer is ",
+			"partial_feedback": "Sorry, that is not correct. The correct answer is "
+		}
+	},
+	{
+		"id":"q8",
+		"hide_title": "true",
+		"template":"templates/multiple",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"screen_indicator":" ",
+		"transition": {
+			"type":"slide",
+			"duration":"1"
+		},
+		"background": "content/copanlisib_kc/images/backgrounds/sofa.png",
+		"content":{
+			"title":"Question 8 of 15",
+			"text":"‘Aggressive’ and ‘Indolent’ are the two groups in which the >60 sub-types of lymphoma can be categorized.",
+			"instruction":"For these two groups, match the characteristics provided, to the correct group, and then click submit.",
+			"options":[
+				{"type":"radio", "valueA":"true", "valueB":"false", "labelA": "Aggressive", "labelB": "Indolent", "label":"Grow rapidly"},
+				{"type":"radio", "valueA":"true", "valueB":"false", "labelA": "Aggressive", "labelB": "Indolent", "label":"Account for 65% of all non-Hodgkin lymphomas"},
+				{"type":"radio", "valueA":"false", "valueB":"true", "labelA": "Aggressive", "labelB": "Indolent", "label":"Have fewer symptoms"},
+				{"type":"radio", "valueA":"true", "valueB":"false", "labelA": "Aggressive", "labelB": "Indolent", "label":"Are potentially curable"},
+				{"type":"radio", "valueA":"false", "valueB":"true", "labelA": "Aggressive", "labelB": "Indolent", "label":"Remission can be achieved but often relapse after treatment"},
+				{"type":"radio", "valueA":"false", "valueB":"true", "labelA": "Aggressive", "labelB": "Indolent", "label":"Become refractory to treatment and prognosis is poorer</br>at each relapse"}
+			],
+			"feedback_1": "<p>Aggressive NHL (intermediate/high grade NHL)<ul><li>Grow rapidly</li><li>Have severe symptoms</li><li><u>Are potentially curable</u></li><li>Account for 65% of all non-Hodgkin lymphomas</li><li><b>Diffuse large B-cell lymphoma</b> is the most common (30-58%)</li><li><b>Mantle cell lymphoma</b> (3-10%)</li><li><b>T-cell lymphoma</b> (2-6%)*</li></ul></p>",
+			"feedback_2": "<p>Indolent NHL<ul><li>Have severe symptoms</li><li>Grow slower</li><li>Have fewer symptoms</li><li>iNHL sub-types in advanced clinical stages are usually considered incurable</li><li>Remission can be achieved but often relapse after treatment</li><li>Become refractory to treatment and prognosis is poorer at each relapse</li><li>Account for ~35% of all non‑Hodgkin lymphomas</li><li><b>Follicular lymphoma</b> is the most common (20-30%)*</li></ul></p>",
+			"feedback_3": "*There is a large variation in the incidence and geographical distribution of NHL types, with a higher proportion of follicular and diffuse lymphoma in North America and Europe, and a higher proportion of T-cell lymphoma in Asia.</p>",
+			"correct_feedback": "You are correct. Well done!",
+			"incorrect_feedback": "Sorry, that is not correct.",
+			"partial_feedback": "You are partially correct."
+		}
+	},
+	{
+		"id":"q9",
+		"hide_title": "true",
+		"template":"templates/multiple",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"screen_indicator":" ",
+		"transition": {
+			"type":"slide",
+			"duration":"1"
+		},
+		"background": "content/copanlisib_kc/images/backgrounds/sofa.png",
+		"content":{
+			"title":"Question 9 of 15",
+			"text":"For each item listed, confirm if the procedure/examination is used for staging or for diagnosing lymphoma.",
+			"instruction":"For each item, select the best response and click submit.",
+			"options":[
+				{"type":"radio", "valueA":"true", "valueB":"false", "labelA": "Staging", "labelB": "Diagnosis", "label":"Physical examination"},
+				{"type":"radio", "valueA":"true", "valueB":"false", "labelA": "Staging", "labelB": "Diagnosis", "label":"Bone marrow biopsy"},
+				{"type":"radio", "valueA":"false", "valueB":"true", "labelA": "Staging", "labelB": "Diagnosis", "label":"Lymph node biopsy"},
+				{"type":"radio", "valueA":"true", "valueB":"false", "labelA": "Staging", "labelB": "Diagnosis", "label":"Pleural fluid sampling"},
+				{"type":"radio", "valueA":"true", "valueB":"false", "labelA": "Staging", "labelB": "Diagnosis", "label":"Lumbar puncture"}
+			],
+			"feedback_3": "<p>Diagnosis of lymphoma must be made by the laboratory study of tissue obtained from a Lymph Node Excision or a Core Biopsy.</p><p>Tests that can be performed to gather information about staging include:</p><ul><li>Medical history</li><li>Physical examination</li><li>Blood tests</li><li>Peripheral blood immunophenotyping if circulating tumor cells are suspected</li><li>Imaging tests such as X-rays, CT scans, MRI or PET-CT</li><li>Bone marrow aspiration (inadequate for assessment of bone marrow involvement and does not replace the need of a bone marrow biopsy for staging)</li><li>Bone marrow biopsy (often but not always performed)</li><li>Lumbar puncture (or spinal tap). This test, with specific indication, looks for lymphoma cells in the cerebrospinal fluid (CSF)</li><li>Pleural or peritoneal fluid sampling (if effusion is present)</li></ul>",
+			"correct_feedback": "You are correct. Well done!",
+			"incorrect_feedback": "Sorry, that is not correct.",
+			"partial_feedback": "You are partially correct."
+		}
+	},
+	{
+		"id":"q10",
+		"hide_title": "true",
+		"template":"templates/checkbox",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"screen_indicator":" ",
+		"transition": {
+			"type":"slide",
+			"duration":"1"
+		},
+		"background": "content/copanlisib_kc/images/backgrounds/sofa.png",
+		"content":{
+			"title":"Question 10 of 15",
+			"text":"Read the following statements about performing imaging to determine the staging of non-Hodgkin lymphoma. One of these statements is incorrect.",
+			"instruction":"Select the incorrect statement and click submit.",
+			"options":[
+				{"type":"radio", "value":"false", "label":"Magnetic Resonance Imaging (MRI) has the disadvantage of many image acquisition variables which greatly impact the image quality, lesion conspicuity, and measurement"},
+				{"type":"radio", "value":"false", "label":"PET-CT (Positron Emission Tomography–Computed Tomography) combines the PET assessment of fluorodeoxyglucose (FDG) uptake in lymphoma lesions with a CT scan for anatomical information. It is recommended for FDG-avid lymphomas"},
+				{"type":"radio", "value":"true", "label":"Ultrasound is the preferred method for measuring/assessing lesion size for response in lymphoma"},
+				{"type":"radio", "value":"false", "label":"Computerized Tomography (CT) is the best radiological modality for measuring lymphoma lesions selected for response assessment"}
+			],
+			"feedback": "<p>Computerized Tomography (CT) is the preferred method for measuring/assessing lesion size for response in lymphoma.</p>",
+			"correct_feedback": "You are correct. Well done!",
+			"incorrect_feedback": "Sorry, that is not correct. The correct answer (and therefore the statement that was incorrect) is ",
+			"partial_feedback": "Sorry, that is not correct. The correct answer (and therefore the statement that was incorrect) is "
+		}
+	},
+	{
+		"id":"q11",
+		"hide_title": "true",
+		"template":"templates/checkbox",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"screen_indicator":" ",
+		"transition": {
+			"type":"slide",
+			"duration":"1"
+		},
+		"background": "content/copanlisib_kc/images/backgrounds/sofa.png",
+		"content":{
+			"title":"Question 11 of 15",
+			"text":"Why should a bone marrow biopsy be performed on a patient with non-Hodgkin lymphoma?",
+			"instruction":"Select an answer and click submit.",
+			"options":[
+				{"type":"radio", "value":"false", "label":"For initial diagnosis of lymphoma, histological diagnosis"},
+				{"type":"radio", "value":"true", "label":"To investigate if the lymphoma has infiltrated the bone marrow"},
+				{"type":"radio", "value":"false", "label":"To investigate anemia"},
+				{"type":"radio", "value":"false", "label":"For biomarker analysis"}
+			],
+			"feedback": "<p>A lymph node biopsy is performed to confirm the initial histological diagnosis of a patient with non-Hodgkin lymphoma.</p><p>A bone marrow biopsy is often performed after lymphoma has been diagnosed for staging of non-Hodgkin lymphoma, in order to help determine if the lymphoma has reached the bone marrow.</p>",
+			"correct_feedback": "You are correct. Well done!",
+			"incorrect_feedback": "Sorry, that is not correct. The correct answer is ",
+			"partial_feedback": "Sorry, that is not correct. The correct answer is "
+		}
+	},
+	{
+		"id":"q12",
+		"hide_title": "true",
+		"template":"templates/checkbox",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"screen_indicator":" ",
+		"transition": {
+			"type":"slide",
+			"duration":"1"
+		},
+		"background": "content/copanlisib_kc/images/backgrounds/sofa.png",
+		"content":{
+			"title":"Question 12 of 15",
+			"text":"What is the correct Ann Arbor staging of the following lymphoma status?<br/><br/>A patient has lymphoma in the lymph nodes in their neck (cervical lymph nodes) and their underarms (axillary lymph nodes).",
+			"instruction":"Select an answer and click submit.",
+			"options":[
+				{"type":"radio", "value":"false", "label":"Stage IE"},
+				{"type":"radio", "value":"true", "label":"Stage II"},
+				{"type":"radio", "value":"false", "label":"Stage IIIS"},
+				{"type":"radio", "value":"false", "label":"Stage IV"}
+			],
+			"feedback": "<p>Either of the following means the disease is stage II:</p><p>- The lymphoma is in two or more groups of lymph nodes on the same side of (above or below) the diaphragm (the thin band of muscle that separates the chest and abdomen). For example, this might include nodes in the underarm and neck area but not the combination of underarm and groin nodes (II).</p><p>- The lymphoma extends from a single group of lymph node(s) into a nearby organ (IIE). It may also affect other groups of lymph nodes on the same side of the diaphragm.</p><p>Note that lymphomas that affect an organ outside the lymphatic system (i.e. an extranodal organ) have <b>E</b> added to their stage (for example, stage IIE), whilst those lymphomas affecting the spleen have an <b>S</b> added.</p>",
+			"correct_feedback": "You are correct. Well done!",
+			"incorrect_feedback": "Sorry, that is not correct. The correct answer is ",
+			"partial_feedback": "Sorry, that is not correct. The correct answer is "
+		}
+	},
+	{
+		"id":"q13",
+		"hide_title": "true",
+		"template":"templates/checkbox",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"screen_indicator":" ",
+		"transition": {
+			"type":"slide",
+			"duration":"1"
+		},
+		"background": "content/copanlisib_kc/images/backgrounds/sofa.png",
+		"content":{
+			"title":"Question 13 of 15",
+			"text":"Is the following statement true or false?<br/><br/>Traditional chemotherapy consists of cytotoxic drugs and kills cancer cells and healthy cells. Newer anti-cancer drugs include target therapy, with specifically directed effects on proteins that are abnormally expressed in cancer cells. This therapy can be administered as a single agent or alongside traditional chemotherapy.",
+			"instruction":"Select an answer and click submit.",
+			"options":[
+				{"type":"radio", "value":"true", "label":"true"},
+				{"type":"radio", "value":"false", "label":"false"}
+			],
+			"feedback": "<p>Traditional chemotherapy consists of cytotoxic drugs and kills cells that divide rapidly, one of the main properties of most cancer cells. Unfortunately, other fast growing healthy cells are also usually affected, which manifest as the side effects of treatment.</p><p>Newer anti-cancer drugs include target therapy, with specifically directed effects on proteins that are abnormally expressed in cancer cells. This therapy can be administered as a single agent or alongside traditional chemotherapy.</p>",
+			"correct_feedback": "You are correct. Well done!",
+			"incorrect_feedback": "Sorry, that is not correct. The correct answer is ",
+			"partial_feedback": "Sorry, that is not correct. The correct answer is "
+		}
+	},
+	{
+		"id":"q14",
+		"hide_title": "true",
+		"template":"templates/checkbox",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"screen_indicator":" ",
+		"transition": {
+			"type":"slide",
+			"duration":"1"
+		},
+		"background": "content/copanlisib_kc/images/backgrounds/sofa.png",
+		"content":{
+			"title":"Question 14 of 15",
+			"text":"Why are steroids given in some chemotherapy regimens?",
+			"instruction":"Select one or more choices, and click submit.",
+			"options":[
+				{"type":"checkbox", "value":"true", "label":"Reduce swelling"},
+				{"type":"checkbox", "value":"false", "label":"Prevent apoptosis"},
+				{"type":"checkbox", "value":"true", "label":"Anti-inflammatory properties"},
+				{"type":"checkbox", "value":"false", "label":"Reduce pain"}
+			],
+			"feedback": "<p>Steroids can be used for many therapeutic targets, due to their anti-inflammatory properties and their ability to alter immune system responses.</p><p>For example, prednisone helps prevent white blood cells from travelling to areas of the body where they might add to swelling problems - such as around tumors. It also seems to help with the treatment of certain blood cancers - such as leukemias and lymphomas - by causing apoptosis of some cancerous white blood cells.</p><p>The most common steroids administered along with chemotherapy are prednisone and dexamethasone.</p>",
+			"correct_feedback": "You are correct. Well done!",
+			"incorrect_feedback": "Sorry, that is not correct. The correct answers are:",
+			"partial_feedback": "Sorry, that is not correct. The correct answers are: "
+		}
+	},
+	{
+		"id":"q15",
+		"hide_title": "true",
+		"template":"templates/checkbox",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"screen_indicator":" ",
+		"transition": {
+			"type":"slide",
+			"duration":"1"
+		},
+		"background": "content/copanlisib_kc/images/backgrounds/sofa.png",
+		"content":{
+			"title":"Question 15 of 15",
+			"text":"Which of the following statements is the correct definition of Rituximab?",
+			"instruction":"Select an answer and click submit.",
+			"options":[
+				{"type":"radio", "value":"false", "label":"It is a type of chemotherapy agent and inhibits DNA and RNA synthesis"},
+				{"type":"radio", "value":"true", "label":"It is a monoclonal antibody agent that targets the CD20 antigen, a protein found on the surface of B lymphocytes"},
+				{"type":"radio", "value":"false", "label":"It is an histone deacetylase inhibitor and suppresses cell proliferation"},
+				{"type":"radio", "value":"false", "label":"It is a steroid therapy and causes apoptosis of some cancerous white blood cells"}
+			],
+			"feedback": "<p>Rituximab is an immunotherapy; a monoclonal antibody designed to attack the specific target CD20 antigen, a protein found on the surface of B lymphocytes.</p>",
+			"correct_feedback": "You are correct. Well done!",
+			"incorrect_feedback": "Sorry, that is not correct. The correct answer is ",
+			"partial_feedback": "Sorry, that is not correct. The correct answer is "
+		}
+	},
+	{
+		"id":"summary",
+		"hide_title": "true",
+		"template":"templates/summary",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"screen_indicator":" ",
+		"transition": {
+			"type":"slide",
+			"duration":"1"
+		},
+		"background": "content/copanlisib_kc/images/backgrounds/trees.png",
+		"content":{
+			"title":"Results",
+			"text":"<p>Below are your results. Click on each result to review your answer.</p>",
+			"instruction":"Once you have completed your review, click the Complete button.",
+			"modules":[ {"title":"Please refer to <i>1 Copanlisib Virtual Patient Module - Presentation, Signs and Symptoms of NHL</i>", "map":[{"id":"q1", "num":"1."}, {"id":"q2", "num":"2."}, {"id":"q3", "num":"3."}, {"id":"q4", "num":"4."}, {"id":"q5", "num":"5."}, {"id":"q6", "num":"6."}, {"id":"q7", "num":"7."}, {"id":"q8", "num":"8."}] },
+						{"title":"Please refer to <i>2 Copanlisib Virtual Patient Module - Diagnosis and Staging of NHL</i>", "map":[{"id":"q9", "num":"9."}, {"id":"q10", "num":"10."}, {"id":"q11", "num":"11."}, {"id":"q12", "num":"12."}] },
+						{"title":"Please refer to <i>3 Copanlisib Virtual Patient Module - Treatment of NHL</i>", "map":[{"id":"q13", "num":"13."}, {"id":"q14", "num":"14."}, {"id":"q15", "num":"15."}] }]
+		}
+	},
+	{
+		"id":"complete",
+		"hide_title": "true",
+		"template":"templates/complete",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"screen_indicator":" ",
+		"transition": {
+			"type":"slide",
+			"duration":"1"
+		},
+		"background": "content/copanlisib_kc/images/backgrounds/trees.png",
+		"content":{
+			"title":"Complete",
+			"text":"Congratulations.  You have completed the module. <br/> Please remember to verify the training in BayLearn."
+		}
+	}
+]
+

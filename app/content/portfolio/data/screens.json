@@ -1,0 +1,185 @@
+[
+	{
+		"id":"welcome",
+		"hide_title": "true",
+		"hide_footer": "true",
+		"template":"templates/welcome",
+		"transition": {
+			"type":"none",
+			"duration":"1"
+		},
+		"label": "Welcome",
+		"backScreenId":"false",
+		"nextScreenId": "false",
+		"background":"",
+		"mobile-menu":[
+			{"id":"main"},
+			{"id":"skills"},
+			{"id":"projects"},
+			{"id":"contact"}
+		],
+		"content":{
+			"title":"Hello",
+			"text":"Welcome to my website"
+		}
+	},
+	{
+		"id":"main",
+		"hide_title": "true",
+		"hide_footer": "true",
+		"template":"templates/main",
+		"transition": {
+			"type":"scroll-3d",
+			"duration":"1"
+		},
+		"label": "Profile",
+		"backScreenId":"false",
+		"nextScreenId": "false",
+		"background":"",
+		"mobile-menu":[
+			{"id":"main"},
+			{"id":"skills"},
+			{"id":"projects"},
+			{"id":"contact"}
+		],
+		"content":{
+			"title":"Ewan Tavener",
+			"text":"Javascript Developer & Front-end Developer",
+			"loading_message": "loading status from twitter",
+			"twitter_feed": {
+				"wid": "679104709131661312",
+				"user": "@ewanTavener",
+				"max": "1",
+				"url":"https://twitter.com/ewantavener"
+			},
+			"linked_in": {
+				"url":"http://www.linkedin.com/pub/ewan-tavener/1b/17b/6",
+				"text":"Ewan is one of the best developers I've ever met. He helped me research, design and build a pure JavaScript QTI content player based on Web Components... With his informal approach and relentless pace, he also helped direct a team of ten developers."
+			}
+		}
+	},
+	{
+		"id":"skills",
+		"hide_title": "true",
+		"hide_footer": "true",
+		"template":"templates/skills",
+		"transition": {
+			"type":"scroll-3d",
+			"duration":"1"
+		},
+		"label": "Skills",
+		"backScreenId":"false",
+		"nextScreenId": "false",
+		"background":"",
+		"mobile-menu":[
+			{"id":"main"},
+			{"id":"skills"},
+			{"id":"projects"},
+			{"id":"contact"}
+		],
+		"content":{
+			"title":"Skills",
+			"text":"I'm always keen to pick up and learn new and cool things. Here is a list of my skills:",
+			"skills": [
+				{"text": "Javascript", "weight": "1"},
+				{"text": "CSS and SASS", "weight": "1"},
+				{"text": "HTML", "weight": "1", "weight": "1"},
+				{"text": "OO Javascript", "weight": "1"},
+				{"text": "Javascript Frameworks", "weight": "1"},
+				{"text": "Javascript Libraries", "weight": "1"},
+				{"text": "Web Components", "weight": "1"},
+				{"text": "Git and SVN", "weight": "1"},
+				{"text": "Gulp and Grunt", "weight": "1"}
+			]
+		}
+	},
+	{
+		"id":"projects",
+		"hide_title": "true",
+		"hide_footer": "true",
+		"template":"templates/projects",
+		"transition": {
+			"type":"scroll-3d",
+			"duration":"1"
+		},
+		"label": "Projects",
+		"backScreenId":"false",
+		"nextScreenId": "false",
+		"background":"",
+		"mobile-menu":[
+			{"id":"main"},
+			{"id":"skills"},
+			{"id":"projects"},
+			{"id":"contact"}
+		],
+		"content":{
+			"title":"Projects",
+			"text":"Here are just a few examples of some of my Javascript development",
+			"projects": [
+				{
+					"id": "project_1", "title": "Content Player",
+					"summary": "Backbone Application",
+					"detail": "More information coming soon.",
+					"tech": "BackboneJS, Handlebars, Javascript, SASS, CSS, HTML",
+					"links": [
+						{"label":"Demo", "href":"#"}
+					]
+				},
+				{
+					"id": "project_2", "title": "QTI Player",
+					"summary": "Polymer Application",
+					"detail": "More information coming soon.",
+					"tech": "Polymer Web components, OO Javascript, SASS, HTML",
+					"links": [
+						{"label":"Code", "href":"#"},
+						{"label":"Demo", "href":"#"},
+						{"label":"QTI spec", "href":"#"}
+					]
+				},
+				{
+					"id": "project_3", "title": "3D Parallax",
+					"summary": "ThreeJS Application",
+					"detail": "More information coming soon.",
+					"tech": "OO Javascript, ScrollMagic, ThreeJS, HTML",
+					"links": [
+						{"label":"Demo", "href":"#"}
+					]
+				}
+			]
+		}
+	},
+	{
+		"id":"contact",
+		"hide_title": "true",
+		"hide_footer": "true",
+		"template":"templates/contact",
+		"transition": {
+			"type":"scroll-3d",
+			"duration":"1"
+		},
+		"label": "Contact",
+		"backScreenId":"false",
+		"nextScreenId": "false",
+		"background":"",
+		"mobile-menu":[
+			{"id":"main"},
+			{"id":"skills"},
+			{"id":"projects"},
+			{"id":"contact"}
+		],
+		"content":{
+			"title":"Contact",
+			"text":"",
+			"send_method": "POST",
+			"service_url": "//formspree.io/",
+			"contact_email": "etavener@hotmail.com",
+			"placeholder_email":"Your email address",
+			"placeholder_message":"Enter your message here.",
+			"sending_message": "Sending your message.",
+			"error_message": "There was a problem when sending your message.",
+			"success_message": "Your message has been sent."
+		}
+	}
+
+]
+

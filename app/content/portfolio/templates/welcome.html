@@ -1,0 +1,40 @@
+<div class="template-text">
+
+	<script>
+
+	//this is how we get the unique screen id and template id from inside the template
+    var screenId = '#template-' + $('.content:last .template').attr('data-id');
+    
+    //called once per screen when initialised before any other events.
+    $(screenId).on('onCreation', function(event, id){
+        this.screenId = id;
+    });
+
+    $(screenId).on('onShowStart', function(event){
+        //
+    });
+
+    $(screenId).on('onHideStart', function(event){
+        //
+    });
+
+    $(screenId).on('onShowComplete', function(event){
+        //go to the next page.
+        var hello = $('#hello');
+        function animComplete(){
+            engine.mainView.gotoScreenId('main');
+        }
+        TweenMax.to(hello, 1, {color: '#999999', onComplete: animComplete})
+    });
+
+    $(screenId).on('onHideComplete', function(event){
+        //
+    });
+
+	</script>
+
+    <div id="welcome-container" class="valign-wrapper">
+      <h1 id="hello" class="valign center">{{{title}}}</h1>
+    </div>
+
+</div>

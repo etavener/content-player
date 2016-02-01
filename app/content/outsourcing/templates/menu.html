@@ -1,0 +1,87 @@
+<div class="template-menu">
+
+	<script>
+
+	//this is how we get the unique screen id and template id from inside the template
+    var screenId = '#template-' + $('.content:last .template').attr('data-id');
+    
+    //called once per screen when initialised before any other events.
+    $(screenId).on('onCreation', function(event, id){
+        this.screenId = id;
+        menuItems = $( ".menu-item" );
+        menuItems.addClass('disabled');
+        //get the items previously clicked on........
+    });
+
+    $(screenId).on('onShowStart', function(event) {
+
+        var menuItems = $( ".menu-item" );
+
+        if(event.response && event.response.count) {
+            this.count = event.response.count;
+        }
+
+        for(var m = 0; m < this.count; m++){
+            menuItems.eq(m).addClass("complete").removeClass("incomplete").removeClass('disabled');
+        }
+    });
+
+    $(screenId).on('onShowComplete', function(event) {
+
+        var menuItems = $( ".menu-item" ),
+            nextIndex = 0;
+
+        //make the next menu item active and unlocked.
+        menuItems.each(function(index) {
+            if($(this).hasClass('complete')){
+                nextIndex++;
+            }
+        });
+
+        //delay it by a fraction of a second.
+        var interval = setInterval(function(){ 
+            menuItems.eq(nextIndex).removeClass('disabled');
+            clearInterval(interval);
+        }, 300);
+
+
+    });
+
+    $(screenId).on('onHideStart', function(event){
+        //because the click / navigation is handled by the content player I don't have access to the click event.
+        //however, i do have the currentId and previousId available in the event.
+        //so i can identify the clicked menu item by using the current id.
+        var btnClicked = $('.menu-item[data-target='+event.currentId+']');
+        var alreadyVisited = btnClicked.hasClass('complete');
+        //if transition direction is forward and the current (new) screen is not complete
+        if(event.direction === 'forward' && !alreadyVisited){
+            var completeItems = $('.menu-item.complete');
+            //create the object that we want to save for the screen.
+            //in this case i'm saving the number of visitied items..
+            this.sData = {count:(completeItems.length + 1)};
+            //tell the content player to save it (via SCORM suspend data).
+            engine.screenView.trigger('setResponse', [this.screenId, this.sData]);
+        }
+    });
+
+
+
+
+
+	</script>
+
+    <div>
+        <div class="row">
+        {{#options}}
+            <div class="col-md-4">
+                <a id="menu-item-{{id}}" class="menu-item action-toScreen keyboard-shortcut transition-offset" data-complete="{{complete}}" data-offset="{{offset}}" href="#{{../courseId}}/{{screen}}" data-target="{{../courseId}}/{{screen}}" data-keycode="{{keycode}}"  data-transition="{{transition}}">
+                    <h3 class="menu-item-label">{{label}}</h3>
+                    <img src="content/{{../courseId}}/images/right_arrow.png" class="arrow-icon" width="30" height="30" />
+                    <img src="content/{{../courseId}}/images/lock_icon.png" class="lock-icon" width="30" height="30" />
+                </a>
+            </div>
+        {{/options}}
+        </div>
+    </div>
+
+</div>

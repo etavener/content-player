@@ -1,0 +1,31 @@
+<div>
+	
+    <!-- <div class="fullscreen_image" style="background-image: url('{{imagePath}}');" /> -->
+
+    <div class="row">
+        <div class="col-md-6">
+            <h2>{{{title}}}<h2>
+        </div>
+    </div>
+    <div class="row">
+        {{#options}}
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    {{#if label}} <h3 class="panel-title">{{{label}}}</h3>{{/if}}
+                </div>
+                {{#if content}} <div class="panel-body">{{{content}}}</div>{{/if}}
+            </div>
+        </div>
+        {{/options}}
+    </div>
+    <div class="row">
+        <div class="navbar col-md-12">
+            {{#popups}}
+                <a class="internal-popup btn btn-info" href="#" data-resource="{{resourceId}}">
+                    <span>{{label}}</span>
+                </a>
+            {{/popups}}
+        </div>
+    </div>
+</div>

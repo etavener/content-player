@@ -1,0 +1,39 @@
+<div class="template-links">
+
+	<script>
+
+	//this is how we get the unique screen id and template id from inside the template
+    var screenId = '#template-' + $('.content:last .template').attr('data-id');
+    
+    //called once per screen when initialised before any other events.
+    $(screenId).on('onCreation', function(event, id){
+        this.screenId = id;
+    });
+
+    //called before transition in has started.
+    $(screenId).on('onShowStart', function(event){
+    });
+
+    //called when transition in has completed
+    $(screenId).on('onShowComplete', function(event){
+    });
+
+    //called when transition out has started
+    $(screenId).on('onHideStart', function(event){
+    });
+
+    //called when transition in has completed
+    $(screenId).on('onHideComplete', function(event){
+    });
+
+    $(screenId).on('onResponsesReceived', function(event){
+    });
+
+	</script>
+
+
+    {{#links}}
+    <a class="action-toScreen" href="#{{link}}">{{label}}</a>
+    {{/links}}
+
+</div>

@@ -1,0 +1,64 @@
+<div class="template-intro">
+
+	<script>
+
+	//this is how we get the unique screen id and template id from inside the template
+    var screenId = '#template-' + $('.content:last .template').attr('data-id');
+    
+    //called once per screen when initialised before any other events.
+    $(screenId).on('onCreation', function(event, id){
+        this.screenId = id;
+        // console.log('SCREEN onCreation......', this.screenId);
+    });
+
+    //called before transition in has started.
+    $(screenId).on('onShowStart', function(event){
+        // console.log('onShowStart........', this.screenId);
+        //if you want to load information from another screen then do it here.
+        engine.screenView.trigger('getResponse', [this.screenId]);
+    });
+
+    //called when transition in has completed
+    $(screenId).on('onShowComplete', function(event){
+        // console.log('onShowComplete........', this.screenId);
+    });
+
+    //called when transition out has started
+    $(screenId).on('onHideStart', function(event){
+        // console.log('onHideStart........', this.screenId);
+        var saveData = {hello:true, ewan:true};
+        //if you need to save the data on the application level (to be accessed by other templates) do it here.
+        engine.screenView.trigger('setResponse', [this.screenId, saveData]);
+    });
+
+    //called when transition in has completed
+    $(screenId).on('onHideComplete', function(event){
+        // console.log('onHideComplete........', this.screenId);
+    });
+
+    $(screenId).on('onResponsesReceived', function(event){
+    	//received a response for the screenId
+    	// console.log('onResponsesReceived', event.screenId, event.response);
+    });
+
+
+
+    //engine.screenView.trigger('lessonComplete'); //set the lesson as complete
+    //engine.mainView.trigger('goToScreenId', '0108'); //go to a specific screen
+
+	</script>
+
+<!-- 	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">{{{title}}}</h3>
+		</div>
+		<div class="panel-body">{{{text}}}</div>
+	</div> -->
+
+    <div class="jumbotron">
+      <h2>{{{title}}}</h2>
+      <p>{{{text}}}</p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">Start</a></p>
+    </div>
+
+</div>

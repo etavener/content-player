@@ -1,0 +1,199 @@
+[
+	{
+		"id":"functionalprocess",
+		"type":"internal",
+		"title":"Definition: Functional Process*",
+		"keyboardShortcut":"",
+		"template":"templates/resources/2_sections",
+		"menuId":"",
+		"content":{
+			"subtitle":"3. Functional Processes",
+			"subtitle_1":"3.1 Introduction",
+			"text_1":"<p>Functional Processes are measures designed to support Bayer employees in detecting Risk Cases and in preventing these Risk Cases from turning into infringements by employing methods which are integral and organic to the ordinary course of business, thereby securing compliance with minimum disruption to business operations. This Section 3.1: (i) summarizes those minimum Functional Processes which each country is required to implement, and (ii) provides guidance to country organizations on how to assess what further Functional Processes may be appropriate to address the Risk Cases relevant to that country.</p>",
+			"subtitle_2":"Functional Processes comprise:",
+			"text_2":"<ul><li>Mitigating Measures, i.e. internal processes, procedures and controls designed to mitigate the risk of occurrence of Risk Cases and </li><li>Compliance Monitoring, i.e. measures designed to monitor the effectiveness of specific Mitigating Measures and methods intended to detect potentially non-compliant conduct through use of advanced analytical monitoring solutions which enable the identification of unusual and potentially problematic behavior.</li></ul>",
+			"small": "* MARGO Regulation 2073 Antitrust Compliance"
+		}
+	},
+		{
+		"id":"trade",
+		"type":"internal",
+		"title":"Trade and Scientific Associations",
+		"keyboardShortcut":"",
+		"template":"templates/resources/2_columns",
+		"menuId":"",
+		"content":{
+			"text_1":"<p><b>Trade Associations are defined as:</b><br/>Associations, professional committees and other bodies participating  in public relations activities such as advertising, education, political donations, lobbying and publishing, with its main focus on collaboration between companies, or standardization.</p><p><b>Scientific Associations</b> are defined as educational, research and scientific bodies organized to raise the standards of the medical, technical or scientific practice.</p><p>These bodies can be <b>formal</b> e.g. national industry associations, or <b>informal</b>, e.g. working groups on technical or quality issues, eg:</p><ul><li>Medical Societies</li><li>Benchmarking organizations</li><li>Scientific Committees</li><li>Technical Committees</li><li>Quality Groups</li><li>Working Groups</li></ul>",
+			"text_2":"<p>If they meet on a regular (rather than a once-off) basis and <b>include representatives of companies active in the same business as the Bayer representative</b>, they should be regarded as 'trade associations/ scientific associations'.</p><p><b>Examples of Trade Associations / Scientific Associations:</b></p><ul><li>DIA (Drug Information Association, US organization)</li><li>ASCO (American Society of Clinical Oncology)</li><li>EURETINA (European Society of Retina Specialists)</li><li>Gesellschaft für Thrombose- und Hämostaseforschung</li><li>Deutsche Gesellschaft für Pharmakologie und Toxikologie</li><li>SQA (Society of Quality Assurance)</li><li>EFPIA (European Federation of Pharmaceutical Industries and Associations)</li><li>VFA (Verband Forschender Arzneimittelhersteller)</li></ul>"
+		}
+	},
+		{
+		"id":"whitelist",
+		"type":"internal",
+		"title":"Whitelist Definition",
+		"keyboardShortcut":"",
+		"template":"templates/resources/standard_pop",
+		"menuId":"",
+		"content":{
+			"text":"<p>Local LPC may, after due consultation with the affected colleagues, i.e. those active in the trade / scientific association, decide to “whitelist” certain trade associations where the existence of competition issues is highly unlikely.* Whitelists are lists of trade associations / scientific associations and similar groups which have already been approved by Bayer local LPC for involvement by Bayer employees.</p><p><b>For meetings organized at such whitelisted organizations, it is not necessary to submit agendas for legal review.</b></p><p class='small'>*ICM: Antitrust Risk Area Guidance on Implementation of Certain Functional Processes</p>"
+		}
+	},
+		{
+		"id":"Competitors-2.2.2",
+		"type":"internal",
+		"title":"MARGO Regulation 1926 Interaction with Competitors",
+		"keyboardShortcut":"",
+		"template":"templates/resources/standard_pop",
+		"menuId":"",
+		"content":{
+			"subtitle":"2.2.2 Involvement of Legal Department",
+			"text":"<p>The legal department has to be involved prior to taking any measures which will entail an interaction with competitors. Both human and financial resources can be saved if one at the earliest stage possible verifies that a co-operation is in principle feasible from a legal point of view. Involving the legal department at an early stage has the additional benefit of forcing those involved to be specific about their intentions.</p>"
+		}
+	},
+		{
+		"id":"Compliance-2.1",
+		"type":"internal",
+		"title":"MARGO Regulation 2073 Antitrust Compliance",
+		"keyboardShortcut":"",
+		"template":"templates/resources/standard_pop",
+		"menuId":"",
+		"content":{
+			"subtitle":"Section 2.1 Basic Concept",
+			"text":"<p>Companies are actual competitors for antitrust purposes if they are active on the same relevant market, e.g. as manufacturers of competing rice herbicides in China or as distributors of competing analgesics in Spain.</p><p>Companies are not competitors if they are active only at different levels of the manufacture and distribution chain, e.g.one as supplier and the other as wholesaler of products.</p><p>However, where a company, e.g. BMS, manufactures a product which it then sells both to third party distributors and directly to end customers (dual distribution), that company competes not only with rival manufacturers but also with third party distributors.</p>"
+		}
+	},
+		{
+		"id":"Compliance-2.2",
+		"type":"internal",
+		"title":"MARGO Regulation 2073 Antitrust Compliance",
+		"keyboardShortcut":"",
+		"template":"templates/resources/standard_pop",
+		"menuId":"",
+		"content":{
+			"subtitle":"Section 2.2 Interaction with Competitors",
+			"text":"<p>Antitrust laws worldwide prohibit agreements or understandings between competitors – actual or potential - which restrict, distort or prevent competition. Certain kinds of coordination between competitors, such as price-fixing, market-sharing, output restriction or bid-rigging, have such obviously harmful effects on competition that they are always regarded as most serious violations of antitrust law and punished accordingly. Other forms of cooperation, such as joint research or technical benchmarking studies, may be pro-competitive but require initial legal evaluation to ensure that they do not include unacceptable restrictions of competition.</p><p>Because there is always a risk that contact between competitors may lead to unlawful coordination of conduct, Bayer employees should avoid such contact unless necessary in order to achieve a legitimate purpose. Where contact is legitimately required, for example to participate in a trade association or to negotiate a transaction, the principles set out in this Regulation and in Bayer Group Regulation 1926 “Interaction with Competitors” must be strictly observed</p>"
+		}
+	},
+		{
+		"id":"Compliance-2.2b",
+		"type":"internal",
+		"title":"MARGO Regulation 2073 Antitrust Compliance",
+		"keyboardShortcut":"",
+		"template":"templates/resources/standard_pop",
+		"menuId":"",
+		"content":{
+			"subtitle":"Section 2.2 Interaction with Competitors",
+			"text":"Other forms of cooperation, such as joint research or technical <b>benchmarking studies</b>, may be pro-competitive but require initial legal evaluation to ensure that they do not include unacceptable restrictions of competition."
+		}
+	},
+		{
+		"id":"Compliance-2.2.2.3",
+		"type":"internal",
+		"title":"MARGO Regulation 2073 Antitrust Compliance",
+		"keyboardShortcut":"",
+		"template":"templates/resources/standard_pop",
+		"menuId":"",
+		"content":{
+			"subtitle":"2.2.2.3 Competitive Intelligence",
+			"text":"<p>Gathering competitive intelligence is a normal and necessary function for Bayer and other companies across all industries. Collecting information from genuinely public sources of information, e.g. newspapers, websites, press releases, SEC reports or market research reports issued by reputable sources such as IMS or ICIS is allowed. However, gathering non-public, commercially sensitive information from competitors (in all cases) and from suppliers and customers (in certain circumstances) can raise significant antitrust issues</p>"
+		}
+	},
+	{
+		"id":"ext001",
+		"type":"external",
+		"title":"MARGO",
+		"keyboardShortcut":"",
+		"url":"http://pharmatoday.bhc.cnb/apps/BSP/DE/BSP-Legal/BSP-Legal.nsf/id/EN_Margo_Legal",
+		"menuId":""
+	},
+	{
+		"id":"ext002",
+		"type":"external",
+		"title":"Antitrust compliance",
+		"keyboardShortcut":"",
+		"url":"https://by-margo.bayer-ag.com/view.aspx?id=09e2en0180081922",
+		"menuId":""
+	},
+	{
+		"id":"ext003",
+		"type":"external",
+		"title":"competitors",
+		"keyboardShortcut":"",
+		"url":"https://by-margo.bayer-ag.com/view.aspx?id=09e2en0180078623",
+		"menuId":""
+	},
+	{
+		"id":"ext004",
+		"type":"external",
+		"title":"LPC Rep",
+		"keyboardShortcut":"",
+		"url":"http://corporate-compliance.bayer-ag.com/uk/bagcorpcompliance.nsf/id/EN_Compliance_Officers",
+		"menuId":""
+	},
+	{
+		"id":"ext005",
+		"type":"external",
+		"title":"Procurement",
+		"keyboardShortcut":"",
+		"url":"https://by-margo.bayer-ag.com/view.aspx?id=09e2en0180081322",
+		"menuId":""
+	},
+	{
+		"id":"ext006",
+		"type":"external",
+		"title":"Contract management",
+		"keyboardShortcut":"",
+		"url":"https://by-margo.bayer-ag.com/view.aspx?id=09e2en018006f923",
+		"menuId":""
+	},
+	{
+		"id":"ext007",
+		"type":"external",
+		"title":"german whitelist",
+		"keyboardShortcut":"",
+		"url":"http://pharmatoday.bhc.cnb/apps/BSP/DE/BSP-GD/BSP-GD.nsf/id/EN_Compliance",
+		"menuId":""
+	},
+	{
+		"id":"",
+		"type":"external",
+		"title":"",
+		"keyboardShortcut":"",
+		"url":"",
+		"menuId":""
+	},
+	{
+		"id":"",
+		"type":"external",
+		"title":"",
+		"keyboardShortcut":"",
+		"url":"",
+		"menuId":""
+	},
+	{
+		"id":"",
+		"type":"external",
+		"title":"",
+		"keyboardShortcut":"",
+		"url":"",
+		"menuId":""
+	},
+	{
+		"id":"",
+		"type":"external",
+		"title":"",
+		"keyboardShortcut":"",
+		"url":"",
+		"menuId":""
+	},
+	{
+		"id":"",
+		"type":"external",
+		"title":"",
+		"keyboardShortcut":"",
+		"url":"",
+		"menuId":""
+	}
+
+]
+

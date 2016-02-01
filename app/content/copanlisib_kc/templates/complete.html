@@ -1,0 +1,38 @@
+<div class="template-complete">
+
+	<script>
+
+    var screenId = '#template-' + $('.content:last .template').attr('data-id');
+
+    $(screenId).on('onShowStart', function(event){
+        //set this module to complete.
+        engine.screenView.trigger('lessonComplete');
+
+     });
+
+	</script>
+
+	<div class="col-md-1"></div>
+	<div class="col-md-10">
+        <div class="panel panel-default">
+            <div class="panel-body">
+            	<div class="row">
+            		<div class="col-md-12">
+            			<h3 class="text-center">{{{title}}}</h3>
+	            		<p class="text-center">{{{text}}}</p>
+	            		<div class="text-center">
+	            			<a class="btn btn-primary btn-lg next-arrow txt-lng" href="http://baylearn.bayer-ag.com/courses/GTMD/BayLearn-STP/Index.html#cat=user;system=baylearn;resource=user4" target="_blank" role="button">Click here for a reminder on how to do this.</a>
+	            		</div><br/>
+                        <div class="text-center">
+                            <a class="btn btn-primary btn-lg next-arrow txt-lng" href="mailto:BayLearnFeedback@bayer.com?subject=Copanlisib Knowledge Check Feedback" target="_self" role="button">Click here if you have a technical problem, <br/>question or comment on the knowledge check</a>
+                        </div>
+            		</div>
+				</div>
+            </div>
+        </div>
+     </div>
+     <div class="col-md-1"></div>
+
+
+
+</div>

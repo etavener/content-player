@@ -1,0 +1,25 @@
+[
+	{
+		"id":"home",
+		"hide_title": "true",
+		"template":"templates/links",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"screen_indicator":" ",
+		"transition": {
+			"type":"slide",
+			"duration":"0.5"
+		},
+		"background":"/images/1_background.jpg",
+		"content":{
+			"title":"",
+			"text":"",
+			"links": [
+				{"link":"default/", "label":"Default"},
+				{"link":"outsourcing/", "label":"Outsourcing"},
+				{"link":"copanlisib_kc/", "label":"Copanlisib"}
+			]
+		}
+	}
+]
+

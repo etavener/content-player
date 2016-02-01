@@ -1,0 +1,30 @@
+<div class="template-buttons">
+
+	<script>
+
+	//this is how we get the unique screen id and template id from inside the template
+    var screenId = '#template-' + $('.content:last .template').attr('data-id');
+    
+    //called once per screen when initialised before any other events.
+    $(screenId).on('onCreation', function(event, id){
+        this.screenId = id;
+    });
+
+	</script>
+
+    <h2>{{title}}</h2>
+
+    <div>
+        {{text}}
+    </div>
+
+
+    <div class="row">
+        {{#options}}
+        <div class="col-md-4">
+            <a type="button" class="btn btn-primary reveal-button action-toScreen" href="#{{screen}}">{{label}}</a>
+        </div>
+        {{/options}}
+    </div>
+
+</div>

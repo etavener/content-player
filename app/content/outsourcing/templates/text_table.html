@@ -1,0 +1,98 @@
+<div class="template-text-tables">
+
+	<script>
+
+	//this is how we get the unique screen id and template id from inside the template
+    var screenId = '#template-' + $('.content:last .template').attr('data-id');
+    
+    //called once per screen when initialised before any other events.
+    $(screenId).on('onCreation', function(event, id){
+        this.screenId = id;
+
+        this.boxes = $(screenId).find('.glow-box');
+        
+        var currBox, marginWidth, startMargin, top, width, left, setWidth;
+        for(var b = 0; b < this.boxes.length; b++){
+            currBox = $(this.boxes[b]);
+            width = currBox.attr('data-width');
+
+            startMargin = currBox.css('margin-left').replace('px', '');
+            top = Number(currBox.attr('data-top')) | 0;
+            left = Number(currBox.attr('data-left')) ? Number(currBox.attr('data-left'))+'%' : '50%';
+
+            marginWidth = (left === '50%' && width !== '100%') ? startMargin-(Number(width)/2) : startMargin;
+
+            setWidth = (width !== '100%') ? width+'px' : '100%';
+
+            // console.log('setWidth', width, currBox.attr('data-width'));
+            if(width !== '100%'){
+                setWidth = width+'px';
+            }else{
+                setWidth = width;
+                left = '0px';
+            }
+
+            
+
+            currBox.css({'top': top+'px', 'width': setWidth, 'margin-left': marginWidth+'px', 'left': left });
+        }
+
+    });
+
+    $(screenId).on('onShowStart', function(event){
+        //this.setOffset('onShowStart',  event.direction, event.transition);
+    });
+
+    $(screenId).on('onHideStart', function(event){
+        //this.setOffset('onHideStart', event.direction, event.transition);
+    });
+
+    $(screenId).on('onShowComplete', function(event){
+    });
+
+    $(screenId).on('onHideComplete', function(event){
+    });
+
+    //onHideStart
+
+	</script>
+
+    {{#if title}}<h2>{{title}}</h2>{{/if}}
+
+    <div id="template-wrapper" class="{{classes}}">
+
+        <div class="main-text">
+            {{{text}}}
+        </div>
+
+        {{#boxes}}
+            <div class="glow-box glow-bg transition-offset {{classes}}" data-offset="{{offset}}" data-top="{{y}}" data-width="{{w}}" data-left="{{x}}">
+                <!-- <div class="pull-right glow-bg transition-offset" data-offset="100"><img src="{{image}}" /></div> -->
+                <div class="inner">
+
+                    <div class="col-md-5 text-col">
+                        {{#if title}}<h4>{{title}}</h4>{{/if}}
+                        {{{text}}}
+                    </div>
+                    <div class="col-md-7">
+                        <table>
+                            {{#rows}}
+                            <tr>
+                                {{#cols}}
+                                    {{#if title}}<th>{{{title}}}</th>{{/if}}
+                                    {{#if text}}<td>{{{text}}}</td>{{/if}}
+                                {{/cols}}
+                            </tr>
+                            {{/rows}}
+                        </table>
+                    </div>
+
+                </div>
+
+
+            </div>
+        {{/boxes}}
+
+    </div>
+
+</div>

@@ -1,0 +1,16 @@
+<div class="template-intro">
+
+{{#if title}}<h2>{{title}}</h2>{{/if}}
+
+<div class="main-text">
+    {{{text}}}
+</div>
+
+<div>
+	{{#buttons}}
+	<a id="btn-{{id}}" href="#{{../courseId}}/{{screen}}" class="btn btn-primary action-toScreen keyboard-shortcut transition-offset" data-offset="{{offset}}" data-target="{{../courseId}}/{{screen}}" >{{{label}}}
+	</a>
+	{{/buttons}}
+</div>
+
+</div>

@@ -1,0 +1,92 @@
+<div class="template-columns">
+
+	<script>
+
+	//this is how we get the unique screen id and template id from inside the template
+    var screenId = '#template-' + $('.content:last .template').attr('data-id');
+    
+    //called once per screen when initialised before any other events.
+    $(screenId).on('onCreation', function(event, id){
+        // this.screenId = id;
+
+        // this.boxes = $(screenId).find('.glow-box');
+        
+        // var currBox, marginWidth, top, width, left;
+        // for(var b = 0; b < this.boxes.length; b++){
+        //     currBox = $(this.boxes[b]);
+        //     width = Number(currBox.attr('data-width')) | 0;
+        //     top = Number(currBox.attr('data-top')) | 0;
+        //     left = Number(currBox.attr('data-left')) ? Number(currBox.attr('data-left'))+'%' : '50%';
+
+        //     marginWidth = (left === '50%') ? 0-(width/2) : 0;
+        //     // console.log('marginWidth', marginWidth);
+        //     currBox.css({'top': top+'px', 'width': width+'px', 'margin-left': marginWidth+'px', 'left': left });
+        // }
+
+        this.screenId = id;
+
+        this.boxes = $(screenId).find('.glow-box');
+
+        var currBox, marginWidth, startMargin, top, width, left, setWidth;
+        for(var b = 0; b < this.boxes.length; b++){
+            currBox = $(this.boxes[b]);
+            width = currBox.attr('data-width');
+            // console.log('width', width, currBox.attr('data-width'));
+
+            startMargin = currBox.css('margin-left').replace('px', '');
+            top = Number(currBox.attr('data-top')) | 0;
+            left = Number(currBox.attr('data-left')) ? Number(currBox.attr('data-left'))+'%' : '50%';
+
+            marginWidth = (left === '50%' && width !== '100%') ? startMargin-(Number(width)/2) : startMargin;
+
+            setWidth = (width !== '100%') ? width+'px' : '100%';
+
+            // console.log('setWidth', width, currBox.attr('data-width'));
+            if(width !== '100%'){
+                setWidth = width+'px';
+            }else{
+                setWidth = width;
+                left = '0px';
+            // console.log('setWidth', setWidth, width);
+            }
+
+            currBox.css({'top': top+'px', 'width': setWidth, 'margin-left': marginWidth+'px', 'left': left });
+        }
+
+    });
+
+    $(screenId).on('onShowStart', function(event){
+        //this.setOffset('onShowStart',  event.direction, event.transition);
+    });
+
+    $(screenId).on('onHideStart', function(event){
+        //this.setOffset('onHideStart', event.direction, event.transition);
+    });
+
+    $(screenId).on('onShowComplete', function(event){
+    });
+
+    $(screenId).on('onHideComplete', function(event){
+    });
+
+    //onHideStart
+
+	</script>
+
+    <h2>{{title}}</h2>
+
+<!--     <div class="main-text {{classes}}">
+        {{{text}}}
+    </div> -->
+
+    {{#boxes}}
+        <div class="columns-2 glow-box glow-bg transition-offset {{classes}}" data-offset="{{offset}}" data-top="{{y}}" data-width="{{w}}" data-left="{{x}}">
+            <h3>{{{title}}}</h3>
+            <div class="row">
+                <div class="col-md-6 first">{{{text}}}</div>
+                <div class="col-md-6 last">{{{text_2}}}</div>
+            </div>
+        </div>
+    {{/boxes}}
+
+</div>

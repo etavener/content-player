@@ -1,0 +1,115 @@
+<div class="template-skills">
+
+	<script>
+
+	//this is how we get the unique screen id and template id from inside the template
+    var screenId = '#template-' + $('.content:last .template').attr('data-id');
+    
+    //called once per screen when initialised before any other events.
+    $(screenId).on('onCreation', function(event, id){
+        this.screenId = id;
+        this.i = 0;
+        this.items = $('li.skill');
+
+
+
+        this.highlightComplete = function(index, that){
+            var i = index;
+            //TweenMax.to(that.item, 1, {transform: 'translate3d(0,0,0)'});
+            if(that.animate){
+                i++;
+                if(i > (that.items.length - 1)){
+                    i = 0;
+                }
+                that.hightlightAllItems(i, false);
+            }else{
+                // i = 0;
+            }
+        }
+
+        this.hightlightAllItems = function(index, delay){
+            //go through all items
+            var diff = 0, item, space = 0, max = 50, steps = Math.floor((this.items.length-1)/2);
+            for(var a = 0; a < this.items.length; a++){
+                item = this.items.eq(a);
+                diff = (a < index) ? (a-index)*-1 : (a-index);
+                space = max - (diff*steps);
+                // console.log(steps, diff, space);
+                var props = {
+                    transform: 'translate3d(0,0,'+space+'px)'
+                }
+                if(a ===  index){
+                    props.onComplete = this.highlightComplete;
+                    props.onCompleteParams = [index, this];
+                }
+                // if(delay){
+                //     props.delay = 1/a;
+                // }
+                TweenMax.to(item, 2, props);
+            }
+        }
+    });
+
+    $(screenId).on('onShowStart', function(event){
+        var item;
+        for(var a = 0; a < this.items.length; a++){
+            item = this.items.eq(a);
+            TweenMax.set(item, {transform: 'translate3d(0, 0, -500px)'});
+            var delay = a*(1/this.items.length);
+            TweenMax.to(item, 1, {transform: 'translate3d(0, 0, 0)', delay: delay });
+        }
+    });
+
+    $(screenId).on('onHideStart', function(event){
+        this.animate = false;
+        var item;
+        for(var a = 0; a < this.items.length; a++){
+            item = this.items.eq(a);
+            var delay = a*(1/this.items.length);
+            TweenMax.to(item, 1, {transform: 'translate3d(0, 0, -500px)', delay: delay });
+        }
+    });
+
+    $(screenId).on('onShowComplete', function(event){
+        this.animate = true;
+        this.hightlightAllItems(0);
+    });
+
+    $(screenId).on('onHideComplete', function(event){
+
+    });
+
+	</script>
+
+    {{#if title}}<h2>{{title}}</h2>{{/if}}
+
+    <div id="template-wrapper" class="{{classes}}">
+
+        <!-- <span class="main-text">
+            {{{text}}}
+        </span> -->
+
+        <div id="word-list">
+            <ul  class="collection row">
+                {{#skills}}
+                <li class="skill collection-item  col s12 m3">{{{text}}}</li>
+                {{/skills}}
+            </ul>
+        </div>
+
+        <a class="action-toScreen nav-btn go-left hide-on-small-only" href="#{{courseId}}/projects"
+        data-transition="slide-3d" data-direction="back">
+            <span class="lbl">Projects</span>
+        </a>
+        <a class="action-toScreen nav-btn go-right hide-on-small-only" href="#{{courseId}}/main"
+        data-transition="slide-3d" data-direction="forward">
+            <span class="lbl">Profile</span>
+        </a>
+        <a class="action-toScreen nav-btn go-down hide-on-small-only" href="#{{courseId}}/contact"
+        data-transition="scroll-3d" data-direction="forward">
+            <span class="lbl">Contact</span>
+        </a>
+
+    </div>
+
+</div>

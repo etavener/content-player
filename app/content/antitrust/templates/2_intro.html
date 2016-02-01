@@ -1,0 +1,50 @@
+<div  class="template-intro2 row">
+
+    <script>
+
+
+    //this is how we get the unique screen id and template id from inside the template
+    var screenId = '#template-' + $('.content:last .template').attr('data-id');
+    
+    //called once per screen when initialised before any other events.
+    $(screenId).on('onCreation', function(event, id){
+        this.screenId = id;
+        // console.log('SCREEN onCreation......', this.screenId, id);
+    });
+
+    //called before transition in has started.
+    $(screenId).on('onShowStart', function(event){
+        // this.screenId = $(this).attr('data-id')
+    //     console.log('SCREEN onShowStart........', this.screenId);
+    });
+
+    //called when transition in has completed
+    $(screenId).on('onShowComplete', function(event){
+        // console.log('SCREEN onShowComplete........', this.screenId);
+    });
+
+    //called when transition out has started
+    $(screenId).on('onHideStart', function(event){
+        // console.log('SCREEN onHideStart........', this.screenId);
+    });
+
+    //called when transition in has completed
+    $(screenId).on('onHideComplete', function(event){
+        // console.log('SCREEN onHideComplete........', this.screenId);
+    });
+
+    </script>
+	
+    <!-- <div class="fullscreen_image" style="background-image: url('{{imagePath}}');" /> -->
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{{title}}}</h3>
+            </div>
+            <div class="panel-body">{{{text}}}</div>
+        </div>
+    </div>
+    <div class="col-md-6"></div>
+    
+    
+</div>

@@ -1,0 +1,15 @@
+[
+	{
+		"id":"info",
+		"type":"internal",
+		"title":"Information",
+		"keyboardShortcut":"",
+		"template":"templates/info_pop",
+		"menuId":"",
+		"content":{
+			"text":"Info text"
+		}
+	}
+
+]
+

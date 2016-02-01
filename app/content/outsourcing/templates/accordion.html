@@ -1,0 +1,64 @@
+<div class="template-accordion">
+
+	<script>
+
+	//this is how we get the unique screen id and template id from inside the template
+    var screenId = '#template-' + $('.content:last .template').attr('data-id');
+    
+    //called once per screen when initialised before any other events.
+    $(screenId).on('onCreation', function(event, id){
+        this.screenId = id;
+
+        $(screenId+' .reveal-button').click(function(event){
+            event.preventDefault();
+            $(screenId+' .reveal-content').addClass('hidden');
+            $(screenId).find('#'+$(this).attr('data-target')).removeClass('hidden');
+        });
+
+        $(screenId+' .panel-collapse').first().addClass('in');
+    });
+
+    //called before transition in has started.
+    $(screenId).on('onShowStart', function(event){
+    });
+
+    //called when transition in has completed
+    $(screenId).on('onShowComplete', function(event){
+    });
+
+    //called when transition out has started
+    $(screenId).on('onHideStart', function(event){
+    });
+
+    //called when transition in has completed
+    $(screenId).on('onHideComplete', function(event){
+    });
+
+    $(screenId).on('onResponsesReceived', function(event){
+    });
+
+
+
+    //engine.screenView.trigger('lessonComplete'); //set the lesson as complete
+    //engine.mainView.trigger('goToScreenId', '0108'); //go to a specific screen
+
+	</script>
+
+
+
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
+        {{#options}}
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="head{{id}}">
+                <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{id}}" aria-expanded="true" aria-controls="collapse{{id}}">{{label}}</a>
+                </h4>
+            </div>
+            <div id="collapse{{id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="head{{id}}">
+                <div class="panel-body">{{{content}}}</div>
+            </div>
+        </div>
+        {{/options}}
+    </div>
+
+</div>

@@ -1,0 +1,67 @@
+<div class="template-buttons">
+
+	<script>
+
+	//this is how we get the unique screen id and template id from inside the template
+    var screenId = '#template-' + $('.content:last .template').attr('data-id');
+    
+    //called once per screen when initialised before any other events.
+    $(screenId).on('onCreation', function(event, id){
+        this.screenId = id;
+
+        $(screenId+' .reveal-button').click(function(event){
+            event.preventDefault();
+            $('.reveal-content').addClass('hidden');
+            $('#'+$(this).attr('data-target')).removeClass('hidden');
+            //console.log('clicked...', $(this).attr('data-target'), screenId);
+        });
+
+        $(screenId+' .reveal-content').first().removeClass('hidden');
+    });
+
+    //called before transition in has started.
+    $(screenId).on('onShowStart', function(event){
+    });
+
+    //called when transition in has completed
+    $(screenId).on('onShowComplete', function(event){
+    });
+
+    //called when transition out has started
+    $(screenId).on('onHideStart', function(event){
+    });
+
+    //called when transition in has completed
+    $(screenId).on('onHideComplete', function(event){
+    });
+
+    $(screenId).on('onResponsesReceived', function(event){
+    });
+
+
+
+    //engine.screenView.trigger('lessonComplete'); //set the lesson as complete
+    //engine.mainView.trigger('goToScreenId', '0108'); //go to a specific screen
+
+	</script>
+
+
+    <div>
+        {{#options}}
+        <div id="panel{{id}}" class="panel panel-default reveal-content hidden">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{{label}}}</h3>
+            </div>
+            <div class="panel-body">{{{content}}}</div>
+        </div>
+        {{/options}}
+    </div>
+
+
+    <div class="btn-group" role="group" aria-label="...">
+        {{#options}}
+        <button type="button" class="btn btn-primary reveal-button" data-target="panel{{id}}">{{label}}</button>
+        {{/options}}
+    </div>
+
+</div>

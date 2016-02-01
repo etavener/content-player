@@ -1,0 +1,26 @@
+{ 
+	"title": "",
+	"logo": "",
+	"copy": "",
+	"screenId": "",
+	"resourceId": "",
+	"tracking": "",
+	"bookmarking": "true",
+	"saveData": "true",
+	"scrollWheel": "true",
+	"popovers": "true",
+	"returningPopId": "returning",
+	"total_indicator": "false",
+	"indicator_seperator": "",
+	"feedbackLabel":"",
+	"debug":"true",
+	"background": "background",
+	"links": [
+		{"id": "yunojuno"},
+		{"id": "linked-in"},
+		{"id": "twitter"}
+	],
+	"menus": [
+		{"id":"mobile-menu", "offset":"0", "classes": "", "transition":"fade"}
+	]
+}

@@ -1,0 +1,204 @@
+video.bg { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+  /*background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;*/
+    background-size: cover;
+    /*transition: 1s opacity;*/
+}
+
+h2{
+  color: rgba(0,0,0, 0.5);
+}
+
+.nav-btn{
+  position: fixed;
+  /*transform: translateZ(50px);*/
+/*  width: 70px !important;
+  height: 70px !important;*/
+  text-transform: none;
+  font-size: 12px;
+  background-color: rgba(255,255,255, 0.5);
+  color: #222222;
+  padding: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+  width: 76px;
+  height: 28px;
+  text-align: center;
+  border-style: none;
+  border-width: 1px;
+  border-color: #888;
+}
+
+.go-left{
+  margin-top: -14px;
+  top: 50%;
+  left: 20px;
+}
+
+.go-right{
+  margin-top: -14px;
+  top: 50%;
+  right: 20px;
+}
+
+.go-down{
+  top: 100%;
+  left: 50%;
+  margin-top: -40px;
+  margin-left: -38px;
+}
+
+.go-up{
+  top: 20px;
+  left: 50%;
+  margin-left: -38px;
+}
+
+.template{
+	height: 100%;
+}
+
+#welcome-container{
+	height: 100%;
+}
+
+#welcome-container > *{
+  width: 100%;
+}
+
+#main-box h2{
+  margin: 0;
+  transform: translateZ(40px);
+}
+
+#main-box .main-text{
+  transform: translateZ(20px);
+}
+
+.info-containers{
+  position: relative;
+}
+
+.info-container{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -300px;
+/*  padding-top: 20px;*/
+}
+.info-box{
+  max-width: 600px;
+  background-color: rgba(255,255,255, 0.6);
+  border-radius: 10px;
+  color: rgba(0,0,0, 0.6);
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.chip{
+ background-color: rgba(255,255,255, 0.6);
+}
+
+#linkedin-box{
+  font-style: italic;
+}
+
+.tweet{
+  padding: 0;
+  margin: 0;
+}
+
+#social-bar{
+  padding-top: 5px;
+}
+.social-icon{
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+}
+#twitter_link.social-icon{
+  background-image: url('images/twitter.png');
+}
+#linkedin_link.social-icon{
+  background-image: url('images/linkedin.png');
+}
+.social-icon .lbl{
+  display: none !important;
+}
+
+
+
+#main-box{
+  height: 100%;
+}
+#main-box > *{
+  width: 100%;
+}
+
+.lbl{
+/*  display: none;*/
+}
+
+#word-list .collection{
+  border-style: none;
+  overflow: visible;
+}
+
+#word-list .collection-item{
+  min-height: 50px;
+  padding: 10px;
+  background-color: rgba(255,255,255, 0.5);
+  color: rgba(0,0,0, 0.5);
+}
+
+.project-list{
+  overflow: visible;
+  border-style: none;
+}
+
+.project-link{
+  transition: none !important;
+}
+
+.project-detail{
+  transition: none !important;
+  box-shadow: none;
+}
+
+#mobile-menu{
+  position: absolute;
+  background-color: #222222;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.menu-btn{
+  padding: 10px;
+  background-color: #222222;
+  color: #FFF;
+}
+
+#mobile-menu .link-menu{
+  margin: 0;
+}
+
+#mobile-menu .link-item{
+
+}
+
+#mobile-menu .link-item a{
+  color: #FFF;
+}
+
+
+

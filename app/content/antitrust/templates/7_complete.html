@@ -1,0 +1,145 @@
+<div>
+	
+
+    <style>
+
+    	.goal{
+    		padding: 0px;
+    		margin-bottom: 20px;
+    		width: 45%;
+    		float: left;
+    		margin-right: 20px;
+    		min-height: 140px;
+    		position: relative;
+    	}
+
+    	.goal .label{
+    		padding: 10px;
+    		padding-left: 15px;
+    		padding-right: 15px;
+    		font-family: 'Open Sans', sans-serif;
+    		font-size: 20px;
+    		font-weight: 400;
+    		width: auto;
+    		display: inline-block;
+    		position: absolute;
+    		top: 0;
+    		left: 0;
+    	}
+
+    	.goal .content-text{
+    		padding: 10px;
+    		padding-top: 20px;
+    		margin-left: 50px;
+    	}
+
+        .light-bg{
+            max-width: 500px;
+        }
+
+        .complete-btn{
+            background-color: #0090C5;
+            color: #FFF;
+            padding: 10px;
+            text-decoration: none;
+            display: inline-block;
+            font-family: 'Open Sans', sans-serif;
+            margin-right: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5); /* WebKit */
+            -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5); /* Firefox */
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5); /* Standard */
+            margin-top: 20px;
+        }
+
+        #HTML_form input{
+            margin-top: 10px;
+            padding: 5px;
+            width: 50%;
+        }
+
+        input.error{
+            border-style: solid;
+            border-color: red;
+            border-width: 1px;
+        }
+
+    </style>
+
+    <script>
+
+        $(document).ready(function() {
+
+            $(".html_only").hide();
+            $(".scorm_only").hide();
+
+            if(engine.tracking.trackingType == engine.tracking.HTML_TRACKING) {
+
+                $(".html_only").show();
+                $(".complete-btn").click(function(event){
+                    event.preventDefault();
+                    var first = $('#user_firstname').val();
+                    var last = $('#user_lastname').val();
+                    var cwid = $('#user_cwid').val();
+
+                    $('#user_cwid').removeClass('error');
+                    $('#user_lastname').removeClass('error');
+                    $('#user_firstname').removeClass('error');
+
+                    //CHECK FIELDS ARE VALID..
+                    if(first.length > 1 && last.length > 1 && cwid.length == 5) {
+                        engine.tracking.first = first;
+                        engine.tracking.last = last;
+                        engine.tracking.cwid = cwid;
+                        engine.mainView.trigger('goToScreenId', '0109');
+                    } else {
+                        if(cwid.length != 5){
+                            $('#user_cwid').addClass('error');
+                        }
+                        if(last.length < 2){
+                            $('#user_lastname').addClass('error');
+                        }
+                        if(first.length < 2){
+                            $('#user_firstname').addClass('error');
+                        }
+                    }
+                });
+            }
+            if(engine.tracking.trackingType == engine.tracking.SCORM_TRACKING) {
+                $(".scorm_only").show();
+                $(".complete-btn").click(function(event){
+                    event.preventDefault();
+                    engine.screenView.trigger('lessonComplete');
+                    engine.mainView.trigger('goToScreenId', '0108');
+                });
+            }
+        });
+    </script>
+
+    <div class="fullscreen_image" style="background-image: url('{{imagePath}}');" />
+
+    <div class="content-box">
+
+	    <h2 id="screen-title" class="content-title">{{{title}}}</h2>
+
+        <div class='light-bg scorm_only'>
+	       <div class="content-text">{{{text_scorm}}}</div>
+        </div>
+
+        <div class='light-bg html_only'>
+            <div class="content-text">{{{text_html}}}</div>
+        </div>
+
+        <div id="HTML_form" class='html_only'>
+            <input type="text" placeholder="First Name" id="user_firstname" maxlength="30" class="textbox" /><br />
+            <input type="text" placeholder="Last Name" id="user_lastname" maxlength="30" class="textbox" /><br />
+            <input type="text" placeholder="CWID" id="user_cwid" maxlength="5" class="textbox" /><br />
+        </div>
+
+        <a href='#' class='complete-btn'>Complete</a>
+
+	</div>
+    
+    
+</div>

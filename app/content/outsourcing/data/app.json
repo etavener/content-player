@@ -1,0 +1,37 @@
+{ 
+	"title": "Outsourcing",
+	"logo": "logo_small.png",
+	"copy": "Copyright &copy; Bayer AG",
+	"screenId": "",
+	"resourceId": "",
+	"tracking": "",
+	"bookmarking": "true",
+	"saveData": "true",
+	"scrollWheel": "false",
+	"popovers": "true",
+	"feedbackLink": "mailto:BayLearnFeedback@bayer.com?subject=Outsourcing",
+	"returningPopId": "returning",
+	"total_indicator": "false",
+	"indicator_seperator": "",
+	"feedbackLabel":"",
+	"debug":"true",
+	"background": "background",
+	"bookmark-pop": {
+		"title":"Returning",
+		"message":"Would you like to continue your previous session?",
+		"comfirm_label":"Yes",
+		"decline_label": "No"
+	},
+	"headBtns": [
+		{"id": "info", "label": "Info", "keycode": "73", "target": "info"}
+	],
+	"navBtns": [
+		{"id": "menu", "label": "Return to Menu", "keycode": "37", "target": "outsourcing/MENU", "hide":"INTRO,MENU"},
+		{"id": "back", "label": "Back", "keycode": "38", "target": "", "hide":"INTRO,MENU"},
+		{"id": "next", "label": "Next", "keycode": "40", "target": "", "hide":"INTRO,MENU"}
+	],
+	"menus": [
+		{"id":"scroll-menu", "offset":"40"},
+		{"id":"sub-menu", "offset":"-700"}
+	]
+}

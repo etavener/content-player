@@ -1,0 +1,158 @@
+<div class="template-main">
+
+	<script>
+
+	//this is how we get the unique screen id and template id from inside the template
+    var screenId = '#template-' + $('.content:last .template').attr('data-id');
+    
+    //called once per screen when initialised before any other events.
+    $(screenId).on('onCreation', function(event, id){
+        this.screenId = id;
+        this.animated = false;
+
+        function createTweets(tweets){
+            var x = tweets.length;
+            var n = 0;
+            var element = document.getElementById('twitter-update');
+            var html = '';
+            while(n < x) {
+                html += tweets[n];
+                n++;
+            }
+            element.innerHTML = html;
+        }
+
+        var config2 = {
+            "id": event.contentData.twitter_feed.wid,
+            "domId": 'twitter-container',
+            "maxTweets": event.contentData.twitter_feed.max,
+            "enableLinks": false,
+            "showUser": false,
+            "showTime": false,
+            "showRetweet": false,
+            "showInteraction": false,
+            "lang": 'en',
+            "customCallback": createTweets
+        };
+        twitterFetcher.fetch(config2);
+    });
+
+    $(screenId).on('onShowStart', function(event){
+        this.twitterBox = $('#twitter-box');
+        this.linkedinBox = $('#linkedin-box');
+
+        // TweenMax.set(this.linkedinBox, {rotationY:-180, opacity:0});
+        // TweenMax.set(this.twitterBox, {rotationY:0, opacity:1});
+
+        TweenMax.set(this.twitterBox, {transform: 'translate3d(0, 0, -500px)'});
+        TweenMax.to(this.twitterBox, 1, {transform: 'translate3d(0, 0, 0)', delay: 0.5});
+
+        TweenMax.set($('#title-text'), {transform: 'translate3d(0, 0, -500px)'});
+        TweenMax.to($('#title-text'), 1, {transform: 'translate3d(0, 0, 0)', delay: 0.2});
+    });
+
+    $(screenId).on('onHideStart', function(event){
+
+        TweenMax.to(this.twitterBox, 1, {transform: 'translate3d(0, 0, -800px)'});
+
+        TweenMax.to($('#title-text'), 1, {transform: 'translate3d(0, 0, -500px)'});
+    });
+
+    $(screenId).on('onShowComplete', function(event){
+
+        this.animated = true;
+        this.delay = 7;
+        var c = 0-Number($(document).width()/2);
+
+        TweenMax.set(this.linkedinBox, {transformOrigin:'50% 50% '+c});
+        TweenMax.set(this.twitterBox, {transformOrigin:'50% 50% '+c});
+
+        //rotate on the y axis....
+        function showLinkedIn(that){
+            if(that.animated){
+                that.linkedinBox.removeClass('hide');
+                TweenMax.set(that.linkedinBox, {rotationY:-180, opacity:0});
+                TweenMax.to(that.linkedinBox, 1, {rotationY:0, opacity:1, delay:that.delay, onComplete:hideLinkedIn, onCompleteParams:[that]});
+            }
+        }
+        function hideLinkedIn(that){
+            if(that.animated){
+                TweenMax.set(that.linkedinBox, {rotationY:0, opacity:1});
+                TweenMax.to(that.linkedinBox, 1, {rotationY:180, opacity:0, delay:that.delay, onComplete:showLinkedIn, onCompleteParams:[that]});
+            }
+        }
+
+        function showTwitter(that){
+            if(that.animated){
+                that.twitterBox.removeClass('hide');
+                TweenMax.set(that.twitterBox, {rotationY:-180, opacity:0});
+                TweenMax.to(that.twitterBox, 1, {rotationY:0, opacity:1, delay:that.delay, onComplete:hideTwitter, onCompleteParams:[that]});
+            }
+        }
+        function hideTwitter(that){
+            if(that.animated){
+                TweenMax.set(that.twitterBox, {rotationY:0, opacity:1});
+                TweenMax.to(that.twitterBox, 1, {rotationY:180, opacity:0, delay:that.delay, onComplete:showTwitter, onCompleteParams:[that]});
+            }
+        }
+
+        showLinkedIn(this);
+        hideTwitter(this);
+
+    });
+
+    $(screenId).on('onHideComplete', function(event){
+        this.animated = false
+    });
+
+	</script>
+
+    <div id="main-box" class="valign-wrapper">
+        <div class="valign center">
+            <h2>{{title}}</h2>
+            <div id="title-text" class="main-text chip">
+                {{{text}}}
+            </div>
+
+            <div id="social-bar">
+                <!-- <a id="twitter_link" href="{{linked_in.url}}" target="_blank" class="social-icon">
+                    <span class="lbl">Twitter</span>
+                </a>
+                <a id="linkedin_link" href="{{linked_in.url}}" target="_blank" class="social-icon">
+                    <span class="lbl">Linked In</span>
+                </a> -->
+            </div>
+
+            <div class="info-containers">
+                <div id="twitter-container" class="info-container">
+                    <div id="twitter-box" class="info-box">
+                        <span id="intro">@ewanTavener</span>
+                        <span id="twitter-update">{{{loading_message}}}</span>
+                    </div>
+                </div>
+                <div id="linkedin-container" class="info-container">
+                    <div id="linkedin-box" class="info-box hide">
+                        <span id="intro"></span>
+                        {{{linked_in.text}}}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <a class="action-toScreen nav-btn go-left hide-on-small-only" href="#{{courseId}}/skills"
+    data-transition="slide-3d" data-direction="back">
+        <span class="lbl">Skills</span>
+    </a>
+    <a class="action-toScreen nav-btn go-right hide-on-small-only" href="#{{courseId}}/projects"
+    data-transition="slide-3d" data-direction="forward">
+        <span class="lbl">Projects</span>
+    </a>
+    <a class="action-toScreen nav-btn go-down hide-on-small-only" href="#{{courseId}}/contact"
+    data-transition="scroll-3d" data-direction="forward">
+        <span class="lbl">Contact</span>
+    </a>
+
+
+</div>

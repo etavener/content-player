@@ -1,0 +1,74 @@
+<div>
+	
+
+    <style>
+
+    	.goal{
+    		padding: 0px;
+    		margin-bottom: 20px;
+    		width: 30%;
+    		float: left;
+/*            margin-left: 30px;*/
+    		margin-right: 20px;
+    		min-height: 200px;
+    		position: relative;
+    	}
+
+    	.goal .label{
+    		padding: 10px;
+    		padding-left: 15px;
+    		padding-right: 15px;
+    		font-family: 'Open Sans', sans-serif;
+    		font-size: 20px;
+    		font-weight: 400;
+    		width: auto;
+    		display: inline-block;
+/*    		position: absolute;
+    		top: 0;
+    		left: 0;*/
+    	}
+
+    	.goal .content-text{
+    		padding: 10px;
+/*    		padding-top: 20px;*/
+    		margin-left: 20px;
+    	}
+
+        .content-text{
+            margin-bottom: 20px;
+        }
+
+        .Green-bg{
+            background-color: #6cbd44;
+        }
+
+        .Orange-bg{
+            background-color: #bda844;
+        }
+
+        .Red-bg{
+            background-color: #bd4444;
+        }
+
+    </style>
+
+    <div class="fullscreen_image" style="background-image: url('{{imagePath}}');" />
+
+    <div class="content-box">
+
+	    <h2 id="screen-title" class="content-title">{{{title}}}</h2>
+
+        <div class="clearfloats">
+        			{{#table}}
+        			<div class="light-box goal" data-target="#item_{{id}}">
+        			        {{#if header}} <div class="label {{header}}-bg">{{{header}}}</div> {{/if}}
+        			        {{#if content}} <div class="content-text">{{{content}}}</div> {{/if}}
+        			</div>
+        			{{/table}}
+        </div>
+		
+
+	</div>
+    
+    
+</div>

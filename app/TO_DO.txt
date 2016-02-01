@@ -1,0 +1,40 @@
+TO DO ON OUTSOURCING...................
+
+
+EWANTAVENER.CO.UK - PORTFOLIO
+
+Content:
+-- projects - Add descriptions
+-- social links (twitter and linked in)
+
+Functions:
+-- Google analitics (track pages visited with javascript?)
+-- robots.txt
+-- meta data
+-- mobile version ? - have a mobile only menu with no transitions.
+-- browser support - detect on welcome page. if old stop and prompt.
+
+Style / Design:
+-- color pallette
+-- font sizes
+-- twitter box (bg and colour)
+-- buttons (transition, colour and over)
+-- icon for site
+
+Testing / functionality:
+
+
+Time Allowing:
+-- Animated preloader
+-- dynamic background
+
+DEPLOY
+
+
+
+---------------------------------
+Structure.
+Navigation
+Twitter feeds
+Contact form
+projects functions

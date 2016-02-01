@@ -1,0 +1,96 @@
+[
+	{
+		"id":"info",
+		"type":"internal",
+		"title":"Information",
+		"keyboardShortcut":"",
+		"template":"templates/info_pop",
+		"menuId":"",
+		"content":{
+			"text":"Info text"
+		}
+	},
+	{
+		"id":"9B4-example-1",
+		"type":"internal",
+		"title":"Example 1",
+		"keyboardShortcut":"",
+		"template":"templates/example_pop_lists",
+		"menuId":"",
+		"content":{
+			"image": "9b4_example_01.png",
+			"lists":[
+				{
+					"title": "Recent Accomplishments:",
+					"items": [
+						{"text":"Met timeless for first patient for amendment 3 after enrollment had been on hold."},
+						{"text":"Caugh up on SDV backlog at 2 of 3 sites"}
+					]
+				},
+				{
+					"title": "Upcoming Deliverables:",
+					"items": [
+						{"text":"SDV backlog caught up at MDACC  and site data entry to be caught"},
+						{"text":"Approval of amendment 3 and addition of 2 new sites (IRB approval at OKC, SIV scheduled for 20 Jan 2014, pending IRB approval at Karmanos)"},
+						{"text":"SIV’s for two new sites"}
+					]
+				},
+				{
+					"title": "Key Risks/Challenges:",
+					"items": [
+						{"text":"Amendment 3 dosing is chaning from every 3 weeks to weekly dosing (essentially new protocol)"},
+						{"text":"Increased time for site training during RMV. Backlog of data entry and SDV at one site (resolution plan is in place)•"}
+					]
+				}
+			]
+		}
+	},
+	{
+		"id":"9B4-example-2",
+		"type":"internal",
+		"title":"Example 2",
+		"keyboardShortcut":"",
+		"template":"templates/example_pop_text",
+		"menuId":"",
+		"content":{
+			"image": "9b4_example_02.png"
+		}
+	},
+	{
+		"id":"9B4-example-3",
+		"type":"Example 3",
+		"title":"Example 3",
+		"keyboardShortcut":"",
+		"template":"templates/example_pop_text",
+		"menuId":"",
+		"content":{
+			"image": "9b4_example_03.png"
+		}
+	},
+	{
+		"id":"9B5-example-1",
+		"type":"internal",
+		"title":"Example 1",
+		"keyboardShortcut":"",
+		"template":"templates/example_pop_text",
+		"menuId":"",
+		"content":{
+			"text":"If the blind is broken, it would trigger an action by the Bayer team to review why the subject’s blind was broken.",
+			"image": "9b5_example_01.png"
+		}
+	},
+	{
+		"id":"9B5-example-2",
+		"type":"internal",
+		"title":"Example 2",
+		"keyboardShortcut":"",
+		"template":"templates/example_pop_text",
+		"menuId":"",
+		"content":{
+			"text":"Another example is if data backlog metrics continue to be above the established threshold for more than 2 reporting cycles, Bayer could request weekly updates on Covance action plans.",
+			"image": "9b5_example_02.png"
+		}
+	}
+
+]
+

@@ -1,0 +1,59 @@
+<div>
+
+    <style>
+
+    	.goal{
+    		padding: 0px;
+    		margin-bottom: 20px;
+    		width: 45%;
+    		float: left;
+    		margin-right: 20px;
+    		min-height: 275px;
+    		position: relative;
+    	}
+
+    	.goal .label{
+    		padding: 10px;
+    		padding-left: 15px;
+    		padding-right: 15px;
+    		font-family: 'Open Sans', sans-serif;
+    		font-size: 20px;
+    		font-weight: 400;
+    		width: auto;
+            min-height: 75px;
+/*    		display: inline-block;
+    		position: absolute;
+    		top: 0;
+    		left: 0;*/
+    	}
+
+    	.goal .content-text{
+    		padding: 10px;
+    	}
+
+    </style>
+
+    <div class="fullscreen_image" style="background-image: url('{{imagePath}}');" />
+
+    <div class="content-box">
+
+	    <h2 id="screen-title" class="content-title">{{{title}}}</h2>
+	    <div class="content-text">{{{text}}}</div>
+
+	    <div class="clearfloats">
+			{{#options}}
+			<div class="light-box goal" data-target="#item_{{id}}">
+			        {{#if label}} <div class="label green-bg">{{{label}}}</div> {{/if}}
+			        {{#if content}} <div class="content-text">{{{content}}}</div> {{/if}}
+			</div>
+			{{/options}}
+		</div>
+
+        <div class='dark-box'>
+		  <div class="content-text small">{{{small}}}</div>
+        </div>
+
+
+	</div>
+    
+</div>

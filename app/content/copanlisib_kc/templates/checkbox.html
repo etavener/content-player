@@ -1,0 +1,207 @@
+<div class="template-checkbox">
+
+	<script>
+
+	 var screenId = '#template-' + $('.content:last .template').attr('data-id');
+
+	$(screenId).on('onCreation', function(event, id){
+        this.screenId = id;
+    });
+
+	$(screenId).on('onShowStart', function(event){
+		//set up functionality.
+		var that = this, responses;
+		var submitBtn = $(this).find('#submitBtn');
+		var feedbackBox = $(this).find('.feedback').hide();
+        var interactiveElements = $(this).find('.interact').show();
+
+		$(submitBtn).prop('disabled', true);
+		$(feedbackBox).addClass('out');
+        $(interactiveElements).addClass('in');
+
+		$(submitBtn).click(function(event){
+			event.preventDefault();
+			that.submitAnswers();
+		});
+		$('input[type="checkbox"]').change(function () {
+            var numReq = interactiveElements.attr('data-minrequired') || 2;
+            that.itemClicked($(this), numReq);
+        });
+        $('input[type="radio"]').change(function () {
+            var numReq = interactiveElements.attr('data-minrequired') || 1;
+            that.itemClicked($(this), numReq);
+        });
+
+        if(event.mode === 'review'){
+            $(this).find('#continueBtn').addClass('hidden');
+            $(this).find('#summaryBtn').removeClass('hidden');
+        }else{
+            $(this).find('#continueBtn').removeClass('hidden');
+            $(this).find('#summaryBtn').addClass('hidden');
+        }
+
+        this.itemClicked = function(item, numRequired){
+        	var name = item.val();
+            var check = item.prop('checked');
+
+            var responses = $(this).find('input:checked')
+        	if(responses.length > (numRequired-1)) {
+            	$(submitBtn).prop('disabled', false);
+            } else{
+            	$(submitBtn).prop('disabled', true);
+            }
+            this.showSelectedLabels();
+        }
+
+        this.showSelectedLabels = function(){
+            $(this).find('input').parent().find('.lbl').removeClass('selected');
+            $(this).find('input:checked').parent().find('.lbl').addClass('selected');
+        }
+
+        this.submitAnswers = function(){
+
+        	var correctInputs = $(this).find('input[value=true]');
+            var selectedInputs = $(this).find('input:checked');
+        	var incorrectAnswers = $(this).find('input:checked[value=false]');
+        	var correctAnswers = $(this).find('input:checked[value=true]');
+
+        	var correct = correctAnswers.length;
+        	var incorrect = incorrectAnswers.length;
+        	var max = correctInputs.length;
+
+        	$(feedbackBox).find('.correct_feedback').addClass('hidden').removeClass('show');
+        	$(feedbackBox).find('.incorrect_feedback').addClass('hidden').removeClass('show');
+        	$(feedbackBox).find('.partial_feedback').addClass('hidden').removeClass('show');
+        	var result = 0, 
+                htmlResponse = '';
+        	if(correct > 0) {
+	        	if(correct === max && incorrect === 0){
+	        		result = 1;
+	        		$(feedbackBox).find('.correct_feedback').addClass('show').removeClass('hidden');
+	        	}else{
+	        		//$(feedbackBox).find('.partial_feedback').addClass('show').removeClass('hidden');
+                    htmlResponse = $(feedbackBox).find('.partial_feedback').html();
+	        	}
+        	} else{
+        		//$(feedbackBox).find('.incorrect_feedback').addClass('show').removeClass('hidden');
+                htmlResponse = $(feedbackBox).find('.incorrect_feedback').html();
+        	}
+
+            var selected = [];
+            for(var s = 0; s < selectedInputs.length; s++){
+                selected.push($(selectedInputs[s]).attr('id'));
+            }
+
+        	engine.screenView.trigger('setResponse', [this.screenId, {correct:correct, incorrect:incorrect, result:result, selected:selected}]);
+
+            if(result === 1) {
+                $(feedbackBox).find('.correct_answer').addClass('hidden');
+            } else {
+                $(feedbackBox).find('.correct_answer').removeClass('hidden');
+                //console.log('htmlResponse', htmlResponse);
+                $(feedbackBox).find('.correct_answer').html( htmlResponse + ' ' + this.createList(correctInputs, 'correct') );
+            }
+
+        	$(feedbackBox).find('.response_answer').html( this.createList(selectedInputs, 'answers') );
+
+            $(interactiveElements).hide(0).addClass('out').removeClass('in');
+            $(feedbackBox).show(0).addClass('in').removeClass('out');
+
+            $(this).resize();
+        }
+
+        this.createList = function(elements, listType){
+            var input, label, string, num;
+            var str = '';
+            if(elements.length > 1){
+                if(listType === 'answers') str += 'Your answers:';
+                // if(listType === 'correct') str += '<h4>The correct answers are:</h4>';
+            	str += '<ul>';
+            	for(var r = 0; r < elements.length; r++) {
+            		input = $(elements[r]);
+            		label = input.parent();
+            		string = label.find('.lbl').text();
+            		num = label.attr('data-index');
+            		str += '<li>' + (Number(num)+1) + '. ' + string + '</li>';
+            	}
+            	str += '</ul>';
+            } else {
+                str += '';
+                if(listType === 'answers') str += 'You answered ';
+                // if(listType === 'correct') str += 'The correct answer is ';
+                str += '"<b>';
+                input = $(elements[0]);
+                label = input.parent();
+                string = label.find('.lbl').text();
+                num = label.attr('data-index');
+                str +=  (Number(num)+1) + '. ' + string;
+                str += '"</b>';
+            }
+        	return str
+        }
+
+        if(event.response){
+            if(event.response.selected){
+                //set the selected checkboxes to checked..
+                for(var s = 0; s < event.response.selected.length; s++){
+                    $(this).find('#'+event.response.selected[s]).prop("checked", true);
+                }
+            }
+            this.showSelectedLabels();
+            if(event.response.result === 1 || event.response.result === 0){
+                //set the submit button to enabled..
+                $(submitBtn).prop('disabled', false);
+            } 
+        }
+
+	});
+
+	</script>
+    <div class="col-md-1"></div>
+	<div class="col-md-10">
+        <div class="panel panel-default">
+        	<div class="panel-heading">
+                <h3 class="panel-title">{{{title}}}</h3>
+            </div>
+            <div class="panel-body">
+            	<div class="question">{{{text}}}</div>
+                <div class="panel-states">
+    				<form class="interact fade in" data-minrequired="{{min-required}}">
+                        <div><p><b>{{{instruction}}}</b></p></div>
+    					<div class="form-group">
+                            <ol>
+    						{{#options}}
+    						<li>
+                                {{#numberCount @index}}{{/numberCount}}
+                                <div class="{{type}} pull-right">
+            						<label data-index="{{@index}}">
+            						  <input type="{{type}}" data-res="{{correct}}" value="{{value}}" name="{{type}}group" id="i{{@index}}"> 
+            						  <span class="lbl">{{label}}</span>
+            						</label>
+                                </div>
+    						</li>
+    						{{/options}}
+                            </ol>
+    					</div>
+                        
+    					<div class="text-center"><button id="submitBtn" type="submit" class="btn btn-primary btn-lg next-arrow" >Submit</button></div>
+    				</form>
+    				<div class="feedback fade">
+                        <div class="feedback-content">
+        					<p class="response_answer"></p>
+                            <p class="correct_feedback">{{{correct_feedback}}}</p>
+                            <p class="incorrect_feedback">{{{incorrect_feedback}}}</p>
+                            <p class="partial_feedback">{{{partial_feedback}}}</p>
+        					<p class="correct_answer"></p>
+        					<div class="information">{{{feedback}}}</div>
+                        </div>
+    					<div class="text-center"><a id="continueBtn" class="action-next btn btn-primary btn-lg next-arrow" href="#" role="button">Next</a></div>
+                        <div class="text-center"><a id="summaryBtn" class="action-toScreen btn btn-primary btn-lg next-arrow" href="#summary" role="button">Summary</a></div>
+    				</div>
+                </div>
+            </div>
+        </div>
+     </div>
+     <div class="col-md-1"></div>
+
+</div>

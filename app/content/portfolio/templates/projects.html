@@ -1,0 +1,157 @@
+<div class="template-projects">
+
+	<script>
+
+	//this is how we get the unique screen id and template id from inside the template
+    var screenId = '#template-' + $('.content:last .template').attr('data-id');
+
+    //called once per screen when initialised before any other events.
+    $(screenId).on('onCreation', function(event, id){
+        this.screenId = id;
+
+        highlight = function(element){
+            var btns = $('.project-link'), btn;
+            for(var b = 0; b < btns.length; b++){
+                btn = btns.eq(b);
+                var props = {
+                    transform: 'translate3d(0,0,0)'
+                }
+                if(btn.attr('href') === element.attr('href')){
+                    $(btn).addClass('active');
+                    props.transform = 'translate3d(0, 0, -50px)';
+                }else{
+                    $(btn).removeClass('active');
+                }
+                TweenMax.to(btn, 1, props);
+            }
+        }
+
+        showContent = function(element){
+            var selectedId = element.attr('href').replace('#', '');
+            $( '.project-detail' ).each(function( index ) {
+              if($(this).attr('id') === selectedId){
+                //show
+                $(this).removeClass('hide');
+                TweenMax.set($(this), {transform: 'translate3d(0, 0, -1000px)', opacity: 0});
+                TweenMax.to($(this), 1, {transform: 'translate3d(0, 0, 0)', opacity: 1});
+              }else{
+                //hide
+                $(this).addClass('hide');
+              }
+            });
+        }
+
+        this.showContent = function(){
+            var btns = $('.project-link'), btn;
+            for(var b = 0; b < btns.length; b++){
+                btn = btns.eq(b);
+                TweenMax.to(btn, 0.5, {transform: 'translate3d(0, 0, 0)', opacity: 1});
+            }
+            var contents = $('.project-detail'), content;
+            for(var c= 0; c < contents.length; c++){
+                content = contents.eq(c);
+                TweenMax.set(content, {transform: 'translate3d(0, 0, -1000px)', opacity: 0});
+                //TweenMax.to(content, 1, {transform: 'translate3d(0, 0, 0)', opacity: 1});
+            }
+        }
+
+        this.hideContent = function(){
+            var btns = $('.project-link'), btn;
+            for(var b = 0; b < btns.length; b++){
+                btn = btns.eq(b);
+                TweenMax.to(btn, 0.5, {transform: 'translate3d(0, 0, -1000px)', opacity: 1});
+            }
+            var contents = $('.project-detail'), content;
+            for(var c= 0; c < contents.length; c++){
+                content = contents.eq(c);
+                TweenMax.to(content, 0.5, {transform: 'translate3d(0, 0, -1000px)', opacity: 1});
+            }
+        }
+
+        this.showFirst = function(){
+            highlight($($('.project-link').eq(0)));
+            showContent($($('.project-link').eq(0)));
+        }
+
+        function clickItem(event){
+            event.preventDefault();
+            highlight($(this));
+            showContent($(this))
+        }
+
+        $('.project-link').click(clickItem);
+
+
+    });
+
+    $(screenId).on('onShowStart', function(event){
+        this.showContent();
+    });
+
+    $(screenId).on('onHideStart', function(event){
+        this.hideContent();
+    });
+
+    $(screenId).on('onShowComplete', function(event){
+        this.showFirst();
+
+    });
+
+    $(screenId).on('onHideComplete', function(event){
+    });
+
+	</script>
+
+    {{#if title}}<h2>{{title}}</h2>{{/if}}
+
+    <div id="template-wrapper" class="{{classes}}">
+
+        <!-- <div class="main-text col s12">
+            {{{text}}}
+        </div> -->
+        <div class="row">
+            <div class="col s3">
+                <div class="collection project-list">
+                    {{#projects}}
+                    <a href="#{{id}}" class="collection-item project-link transition-offset" data-offset="400">
+                        <div class="heading">{{title}}</div>
+                        <div class="text">{{summary}}</div>
+                    </a>
+                    {{/projects}}
+                </div>
+            </div>
+
+            <div class="col s9">
+                {{#projects}}
+                <div id="{{id}}" class="card project-detail hide fade out transition-offset" data-offset="-400">
+                    <div class="card-content">
+                        <div class="card-title">{{title}}</div>
+                        <div class="summary">{{{tech}}}</div>
+                        <div class="detail">{{{detail}}}</div>
+                    </div>
+                    <div class="card-action">
+                        {{#links}}
+                        <a href="{{href}}">{{label}}</a>
+                        {{/links}}
+                    </div>
+                </div>
+                {{/projects}}
+            </div>
+        </div>
+
+        <a class="action-toScreen nav-btn go-left hide-on-small-only" href="#{{courseId}}/main"
+        data-transition="slide-3d" data-direction="back">
+            <span class="lbl">Profile</span>
+        </a>
+        <a class="action-toScreen nav-btn go-right hide-on-small-only" href="#{{courseId}}/skills"
+        data-transition="slide-3d" data-direction="forward">
+            <span class="lbl">Skills</span>
+        </a>
+        <a class="action-toScreen nav-btn go-down hide-on-small-only" href="#{{courseId}}/contact"
+        data-transition="scroll-3d" data-direction="forward">
+            <span class="lbl">Contact</span>
+        </a>
+
+    </div>
+
+</div>

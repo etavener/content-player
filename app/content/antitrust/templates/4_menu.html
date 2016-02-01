@@ -1,0 +1,98 @@
+<div>
+	
+    <script>
+
+    	//this is how we get the unique screen id and template id from inside the template
+    	var screenId = '#template-' + $('.content:last .template').attr('data-id');
+
+    	//this only ever happens once
+    	$(screenId).on('onCreation', function(event, id){
+        	this.screenId = id;
+        	$(".process").click(function(event) {
+					event.preventDefault();
+					var selectedId = $(this).attr("data-link");
+					// $(this).removeClass('over');
+					engine.mainView.trigger('goToScreenId', selectedId);
+        	});
+    	});
+
+    	//This is called whenever just before we go to the screen.
+    	//called before transition in has started.
+	    $(screenId).on('onShowStart', function(event) {
+			var completed = true;
+			$( ".panel-option" ).each(function() {
+				$(this).removeClass("intro-comp").addClass("intro-start");
+			});
+			//loop through all the options
+			$( ".process" ).each(function() {
+				var check = engine.app.checkCompleted($(this).attr('data-completeCheck'));
+				if(!check) {
+					$(this).addClass("btn-primary").removeClass("btn-info");
+					completed = false;
+				} else {
+					$(this).addClass("btn-info").removeClass("btn-primary");
+				}
+			});
+			//if all completed then activate the next button.
+			if(completed) {
+				engine.mainView.trigger('setNextScreenId', '0106');
+			}
+	    });
+
+	    $(screenId).on('onShowComplete', function(event) {
+	    	//this is a good point to animate something in....
+	    	$( ".panel-option" ).each(function() {
+				$(this).removeClass("intro-start").addClass("intro-comp");
+			});
+	    });
+
+    </script>
+
+    <style>
+
+    .panel-option {
+    	margin-top: -20px;
+    	opacity: 0;
+    	transition: margin-top 1s, opacitiy 1s;
+    }
+
+    .panel-option.intro-start {
+
+    }
+
+    .panel-option.intro-comp {
+    	margin-top: 0px;
+    	opacity: 1;
+    }
+
+    </style>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2>{{{title}}}</h2>
+            <div>{{{text}}}</div>
+        </div>
+    </div>
+
+    {{#options}}
+    	{{#checkStartRow @index 0}} <div class="row"> {{/checkStartRow}}
+    	{{#checkStartRow @index 3}} <div class="row"> {{/checkStartRow}}
+	    	<div class="col-md-4">
+				<div class="panel panel-default panel-option">
+					<div class="panel-heading">
+						<h3 class="panel-title">{{{label}}}</h3>
+					</div>
+					<div class="panel-body">
+						<div>{{{content}}}</div>
+						<a class="btn btn-primary pull-right process" data-link="{{link}}" data-completeCheck="{{completeCheck}}">Find out more</a>
+					</div>
+				</div>
+			</div>
+    	{{#checkEndRow @index 3}} </div> {{/checkEndRow}}
+    {{/options}}
+
+    <div class="row">
+    	<div class="col-md-12">{{{text_2}}}</div>
+    </div>
+    
+</div>

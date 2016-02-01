@@ -1,0 +1,90 @@
+<div class="template-text">
+
+	<script>
+
+	//this is how we get the unique screen id and template id from inside the template
+    var screenId = '#template-' + $('.content:last .template').attr('data-id');
+    
+    //called once per screen when initialised before any other events.
+    $(screenId).on('onCreation', function(event, id){
+        this.screenId = id;
+
+        this.boxes = $(screenId).find('.glow-box');
+        
+        var currBox, marginWidth, startMargin, margin, top, width, left, setWidth;
+        for(var b = 0; b < this.boxes.length; b++){
+            currBox = $(this.boxes[b]);
+            width = currBox.attr('data-width');
+            // console.log('width', width, currBox.attr('data-width'));
+
+            margin = currBox.css('margin-left').replace('px', '');
+            startMargin = (margin === 'auto') ? 0 : Number(margin);
+            top = Number(currBox.attr('data-top')) | 0;
+            left = Number(currBox.attr('data-left')) ? Number(currBox.attr('data-left'))+'%' : '50%';
+            // console.log('startMargin', startMargin);
+            // console.log('left', left);
+            // console.log('top', top);
+            // console.log('width', width);
+
+            marginWidth = (left === '50%' && width !== '100%') ? startMargin-(Number(width)/2) : startMargin;
+            // console.log('marginWidth', marginWidth);
+
+            setWidth = (width !== '100%') ? width+'px' : '100%';
+
+            if(width !== '100%'){
+                setWidth = width+'px';
+            }else{
+                setWidth = width;
+                left = '0px';
+            }
+
+            currBox.css({'top': top+'px', 'width': setWidth, 'margin-left': marginWidth+'px', 'left': left });
+        }
+
+    });
+
+    $(screenId).on('onShowStart', function(event){
+        if(String(this.screenId).toLowerCase() === 'complete'){
+            engine.screenView.trigger('lessonComplete');
+        }
+    });
+
+    $(screenId).on('onHideStart', function(event){
+    });
+
+    $(screenId).on('onShowComplete', function(event){
+    });
+
+    $(screenId).on('onHideComplete', function(event){
+    });
+
+	</script>
+
+    {{#if title}}<h2>{{title}}</h2>{{/if}}
+
+    <div id="template-wrapper" class="{{classes}}">
+
+        <div class="main-text">
+            {{{text}}}
+        </div>
+
+        {{#boxes}}
+            <div class="glow-box glow-bg transition-offset {{classes}}" data-offset="{{offset}}" data-top="{{y}}" data-width="{{w}}" data-left="{{x}}">
+                {{#if image}}
+                <div class="pull-right glow-bg transition-offset" data-offset="100"><img src="content/{{../../courseId}}/images/{{image}}" /></div>
+                {{/if}}
+                <div class="inner">
+                    {{#if title}}<h4>{{title}}</h4>{{/if}}
+                    {{{text}}}
+                    <div class="example-links">
+                        {{#resource-links}}
+                        <a href="#{{id}}" class="internal-popup">{{label}} <img src="content/{{../../courseId}}/images/resource_icon.png" width="20" height="20" /></a>
+                        {{/resource-links}}
+                    </div>
+                </div>
+            </div>
+        {{/boxes}}
+
+    </div>
+
+</div>

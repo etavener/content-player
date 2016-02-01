@@ -1,0 +1,332 @@
+[
+	{
+		"id":"0101",
+		"hide_title": "true",
+		"template":"templates/1_intro",
+		"auto_complete":"true",
+		"track_progress":"false",
+		"screen_indicator":" ",
+		"transition": {
+			"type":"slide",
+			"duration":"0.5"
+		},
+		"background":"content/dev/images/1_background.jpg",
+		"content":{
+			"title":"Operational Guidance:<br/>Processes for Antitrust Compliance in GD",
+			"text":"As defined in:<br/><a class='ext-link' href='http://pharmatoday.bhc.cnb/apps/BSP/DE/BSP-Legal/BSP-Legal.nsf/id/EN_Margo_Legal' target='_blank'>MARGO Regulations<a><br/><a class='ext-link' href='https://by-margo.bayer-ag.com/view.aspx?id=09e2en0180081922' target='_blank'>2073 Antitrust Compliance</a> and<br/><a class='ext-link' href='https://by-margo.bayer-ag.com/view.aspx?id=09e2en0180078623' target='_blank'>1926 Interaction with Competitors</a>",
+			"image_alt":"Alt text for image..."
+		}
+	},
+	{
+		"id":"0102",
+		"template":"templates/2_intro",
+		"auto_complete":"true",
+		"track_progress":"true",
+		"screen_indicator":"",
+		"transition": {
+			"type":"scroll",
+			"duration":"0.5"
+		},
+		"background":"content/dev/images/1_background.jpg",
+		"content":{
+			"title":"Introduction",
+			"text":"<p>Compliance is a crucial success factor for Bayer.  In line with our LIFE values, we need to set a good example.  Each of you takes responsibility for compliant behaviour within your sphere of competence.  Our company's reputation is a valuable asset that all of us must protect, and we are relying on each one of you to play your part.</p><p>Bayer has designed a new compliance program, Integrated Compliance Management (ICM)@Bayer.  This new program supports us to further integrate compliance laws and standards into our businesses - to protect us, our business and our reputation.</p>",
+			"text_2":"<p>Antitrust compliance is one of several key compliance areas covered in the ICM program, and company-wide Antitrust Compliance training is ongoing to address the topics in MARGO Regulation 2073</p><p>The e-training that you will take momentarily is an additional Antitrust training prepared specifically for Global Development personnel.  The purpose of this training is to provide you with additional information on the Antitrust risk areas that are especially important for Global Development, and to provide you with operational guidance to ensure compliance with required processes.</p>",
+			"image_alt":"Alt text for image..."
+		}
+	},
+	{
+		"id":"0103",
+		"template":"templates/3_goals",
+		"auto_complete":"true",
+		"track_progress":"true",
+		"screen_indicator":"",
+		"transition": {
+			"type":"slide",
+			"duration":"0.5"
+		},
+		"background":"content/dev/images/1_background.jpg",
+		"content":{
+			"title":"Goals",
+			"text":"",
+			"options":[
+				{ "id":"1", "label":"1", "content": "To provide an overview of the six Antitrust Functional Processes that are applicable to the Antitrust (AT) risk areas* for Global Development, in accordance with MARGO Regulations 2073 Antitrust Compliance and 1926 'Interaction with Competitors'" },
+				{ "id":"2", "label":"2", "content": "To provide operational guidance on the steps to follow to ensure compliance with these Functional Processes in accordance with the 'Antitrust Risk Area Guidance on Implementation of Certain Functional Processes'**" }
+			],
+			"popups":[
+				{"label":"Functional Processes", "resourceId":"functionalprocess"}
+			],
+			"abbreviations":[
+				{"small":"AT", "description": "Antitrust"},
+				{"small":"CDA", "description": "Confidential Disclosure Agreement"},
+				{"small":"GD", "description": "Global Development"},
+				{"small":"FP", "description": "Functional Process"},
+				{"small":"HR", "description": "Human Resources"},
+				{"small":"LPC", "description": "Law, Patent & Compliance"},
+				{"small":"MR", "description": "Market Research"},
+				{"small":"MSA", "description": "Master Service Agreement"}
+			],
+			"small":"<h6>* Risk areas for GD:</h6><ol><li>Interaction with Competitors<ul><li>Output/Development/Investment Limitation</li><li>Certain Information Exchanges</li></ul></li><li>Abuse of Dominance<ul><li>Abuse of Administrative / Regulatory Processes</li></ul></li></ol><p>** The purpose of this document is to provide practical guidance to LPC members on methods of implementing those minimum Functional Processes set out in Sections 3.2 (Interaction with Competitors) and 3.4 (Abuse of Market Dominant Position) of MARGO Regulation 2073</p>",
+			"image_alt":"Alt text for image..."
+		}
+	},
+	{
+		"id":"0104",
+		"template":"templates/4_menu",
+		"auto_complete":"false",
+		"track_progress":"true",
+		"screen_indicator":"",
+		"nextScreenId":"false",
+		"backScreenId":"",
+		"background":"content/dev/images/2_background.jpg",
+		"content":{
+			"title":"Summary of the Six Functional Processes<br/>Applicable to Global Development",
+			"text":"Click on each of the processes below.",
+			"options":[
+				{ "id":"1", "completeCheck":"0105-1a", "link":"0105-1a", "label":"FP01", "content": "Involvement of LPC prior to obtaining membership in a trade association" },
+				{ "id":"2", "completeCheck":"0105-2a", "link":"0105-2a", "label":"FP02", "content": "Submission of agenda to LPC before participation in trade association meetings" },
+				{ "id":"3", "completeCheck":"0105-3a", "link":"0105-3a", "label":"FP03", "content": "LPC counseling prior to approaching competitors for any kind of cooperation" },
+				{ "id":"4", "completeCheck":"0105-4b", "link":"0105-4a", "label":"FP04", "content": "LPC counseling on participation / initiation of benchmarking exercises" },
+				{ "id":"5", "completeCheck":"0105-5a", "link":"0105-5a", "label":"FP05", "content": "LPC counseling upon competitive intelligence gathering" },
+				{ "id":"6", "completeCheck":"0105-6b", "link":"0105-6a", "label":"FP06", "content": "Consultation prior entering into interaction with suppliers or customers who are also competitors ('vertical agreement')" }
+			],
+			"text_2": "<p><b>Note:</b>  The operational steps described in this training are a guidance for GD personnel globally.  Note that adherence to country requirements is required and therefore you must contact your local <a class='ext-link' href='http://corporate-compliance.bayer-ag.com/uk/bagcorpcompliance.nsf/id/EN_Compliance_Officers' target='_blank'>LPC representative</a>  to determine if there are additional steps that need to be taken.</p><p><b>Note: All employees must comply with all requirements in the AT Directives:</b> <a class='ext-link' href='https://by-margo.bayer-ag.com/view.aspx?id=09e2en0180081922' target='_blank'>MARGO Regulations 2073 Antitrust Compliance</a> , <a class='ext-link' href='https://by-margo.bayer-ag.com/view.aspx?id=09e2en0180078623' target='_blank'>1926 Interaction with Competitors</a> , <a class='ext-link' href='https://by-margo.bayer-ag.com/view.aspx?id=09e2en0180081322' target='_blank'>2067 Procurement</a>  and  <a class='ext-link' href='https://by-margo.bayer-ag.com/view.aspx?id=09e2en018006f923' target='_blank'>1785 Principles of Contract Management at Bayer</a></p>",
+			"image_alt":"Alt text for image..."
+		}
+	},
+	{
+		"id":"0105-1a",
+		"template":"templates/5-1a_diagram",
+		"auto_complete":"true",
+		"track_progress":"true",
+		"screen_indicator":"",
+		"menuId":"",
+		"nextScreenId":"0104",
+		"backScreenId":"false",
+		"groupId":"",
+		"background":"content/dev/images/2_background.jpg",
+		"content":{
+			"title":"FP-01<br/>Obtaining Membership in a Trade or Scientific Association",
+			"text":"If you want to become a member of a trade association, working committee and / or similar body, you must first complete the web-based training on Antitrust offered through HR Online, and then follow the process below:",
+			"image":"content/images/diagram.png",
+			"image_alt":"Alt text for image...",
+			"popups":[
+				{"label":"White List definition", "resourceId":"whitelist"},
+				{"label":"Definition of Trade / Scientific Association", "resourceId":"trade"}
+			],
+			"small": "<p>Please refer also to the guidance in MARGO <a class='ext-link' href='https://by-margo.bayer-ag.com/view.aspx?id=09e2en0180078623' target='_blank'>Regulation 1926 Interaction with Competitors</a>, Section 2.1.2</p><ul><li>Please contact your local <a class='ext-link' href='http://corporate-compliance.bayer-ag.com/uk/bagcorpcompliance.nsf/id/EN_Compliance_Officers' target='_blank'>LPC representative</a> with questions </li><li>GD personnel in Germany (Bayer Pharma AG):<ul><li>Your global legal contacts are <a class='ext-link' href='http://connections.bayer.com/profiles/html/profileView.do?email=sigrid.achenbach@bayer.com&lang=en_us' target='_blank'>Sigrid Achenbach</a>  and <a class='ext-link' href='http://connections.bayer.com/profiles/html/profileView.do?key=37bfca63-a892-4a12-8de4-8ead525f97d3&lang=en_us' target='_blank'>Anna Stuetzle</a></li><li><a class='ext-link' href='http://pharmatoday.bhc.cnb/apps/BSP/DE/BSP-GD/BSP-GD.nsf/id/EN_Compliance' target='_blank'>Click here for access to Whitelist for GD Germany</a> (Bayer Pharma AG)</li></ul></li></ul>"
+		}
+	},
+	{
+		"id":"0105-2a",
+		"template":"templates/5-2a_meetings",
+		"auto_complete":"true",
+		"track_progress":"true",
+		"screen_indicator":"",
+		"menuId":"",
+		"nextScreenId":"0104",
+		"backScreenId":"false",
+		"background":"content/dev/images/2_background.jpg",
+		"content":{
+			"title":"FP-02<br/>Participation in Trade or Scientific Association Meetings",
+			"text":"",
+			"image_alt":"Alt text for image...",
+			"options":[
+				{"label":"Prior to the meeting:", "content":"<ul><li>Contact your local <a class='ext-link' href='http://corporate-compliance.bayer-ag.com/uk/bagcorpcompliance.nsf/id/EN_Compliance_Officers' target='_blank'>LPC representative</a> to determine if the meeting agenda and any associated information (participants, presentations, information on any outside legal counsel presented at the meeting, etc.) needs to be submitted for LPC  review.</li><li>For GD personnel in Germany (Bayer Pharma AG), if the Trade / Scientific Association is on the GD Germany White List you do not need to submit an agenda for LPC review.</li></ul>"},
+				{"label":"During any meeting with competitors (e.g. in a trade association):", "content":"<ul><li>If issues are raised and data discussed which are not in compliance with competition laws, the attending Bayer employee must request the immediate end of such discussions.</li><li>If the discussion continues, leave the meeting and notify your local LPC representative immediately.</li><li>Make sure that your objection and your leaving is recorded in the minutes.</li></ul>"}
+			],
+			"small": "<p>Please refer to the guidance in MARGO <a class='ext-link' href='https://by-margo.bayer-ag.com/view.aspx?id=09e2en0180078623' target='_blank'>Regulation 1926 Interaction with Competitors</a>, Section 2.1.2</p><p><b>Note:</b> All personnel should receive managerial approval to attend Trade / Scientific meetings.</p>"
+		}
+	},
+	{
+		"id":"0105-3a",
+		"template":"templates/5-3a_competitors",
+		"auto_complete":"true",
+		"track_progress":"true",
+		"screen_indicator":"",
+		"menuId":"",
+		"nextScreenId":"0104",
+		"backScreenId":"false",
+		"background":"content/dev/images/2_background.jpg",
+		"content":{
+			"title":"FP-03<br/>Approaching Competitors for Any Kind of Cooperation",
+			"text":"If you would like to approach a <b>competitor</b> for <b>any</b> kind of <b>cooperation</b> with respect to production, R&D or commercialization, including specialization or R&D agreements you first must define a specific legitimate purpose of the intended meeting(s) and consult your local <a href='http://corporate-compliance.bayer-ag.com/uk/bagcorpcompliance.nsf/id/EN_Compliance_Officers' class='ext-link' target='_blank'>LPC representative</a> to ensure the procedure set out in Section 2.2 of Regulation 1926 is observed (requiring the set up of a project team, the implementation of meetings and the definition/limitation of information exchange).",
+			"image_alt":"Alt text for image...",
+			"table": [
+				{"id":"1", "header": "DO", "content": "<ul><li>decide independently on production, development, commercialization and investment plans.</li><li>consult with Legal Counsel before discussing with a competitor any potential collaboration with respect to production, R&D or commercialization, including specialization or R&D agreements</li></ul>"},
+				{"id":"2", "header": "DON'T", "content": "<ul><li>discuss or agree with any competitor how much product Bayer or a competitor will produce or sell or what improvements, developments or (technical) investments are planned</li><li>discuss or coordinate with competitors R&D, launch plans or capacity investments</li></ul>"}
+			],
+			"popups":[
+				{"label":"Competitors", "resourceId":"Compliance-2.1"},
+				{"label":"Interaction", "resourceId":"Compliance-2.2"}
+			],
+			"small":"Please refer also to the guidance in MARGO <a href='https://by-margo.bayer-ag.com/view.aspx?id=09e2en0180078623' class='ext-link' target='_blank'>Regulations 1926 Interaction with Competitors</a>, Section 2.2 and <a href='https://by-margo.bayer-ag.com/view.aspx?id=09e2en0180081922' class='ext-link' target='_blank'>2073 Antitrust Compliance</a> , Section 2.2.1 "
+		}
+	},
+	{
+		"id":"0105-4a",
+		"template":"templates/5-4a_benchmarking",
+		"auto_complete":"true",
+		"track_progress":"true",
+		"screen_indicator":"",
+		"menuId":"",
+		"nextScreenId":"0105-4b",
+		"backScreenId":"false",
+		"background":"content/dev/images/2_background.jpg",
+		"content":{
+			"title":"FP-04<br/>Participation / Initiation of Benchmarking Exercises",
+			"text":"If you would like to become a member of a benchmarking group, or involved in any benchmarking or similar activities, and obtain competitive information, you must first consult your <a href='http://corporate-compliance.bayer-ag.com/uk/bagcorpcompliance.nsf/id/EN_Compliance_Officers' class='ext-link' target='_blank' >local LPC representative</a>  and ensure that the procedure set out in Section 2.2 of Regulation 1926 and the rules set out in Section 2.2.2 are followed.",
+			"table": [
+				{"header": "DO's", "content": "<ul><li>Limit benchmarking activities to technical, safety, scientific and similar initiatives.</li><li>Ensure that a written plan is prepared in advance clearly setting out the purpose of the exercise, the participants, the kind of data to be exchanged, the improvements to be gained and the agreed process for carrying out the benchmarking exercise.</li><li>Ensure that only participants suitably qualified to discuss the legitimate subject matter of the exercise participate, e.g. that sales and marketing personnel do not participate in a study on quality controls.</li></ul>"}
+			],
+			"image_alt":"Alt text for image...",
+			"popups":[
+				{"label":"Benchmarking", "resourceId":"Compliance-2.2b"}
+			],
+			"small":"Please refer to the guidance in Bayer <a href='https://by-margo.bayer-ag.com/view.aspx?id=09e2en0180078623' class='ext-link' target='_blank'>Group Regulation 1926 Interaction with Competitors</a>, Sections 2 and 3"
+		}
+	},
+	{
+		"id":"0105-4b",
+		"template":"templates/5-4b_benchmarking",
+		"auto_complete":"true",
+		"track_progress":"true",
+		"screen_indicator":"",
+		"menuId":"",
+		"nextScreenId":"0104",
+		"backScreenId":"0105-4a",
+		"background":"content/dev/images/2_background.jpg",
+		"content":{
+			"title":"FP-04<br/>Participation / Initiation of Benchmarking Exercises",
+			"text":"<p>Ensure that, if non-public data is being collected as part of the exercise: </p><ul><li>Data is collected from at least five participants for each category of information collected with no one company accounting for more than 25% of the total for any category, unless otherwise approved by your Compliance Partner.</li><li>Participation is voluntary.</li><li>Data is collected in writing by an independent third party with no exchange of data or other contact between individual competitors.</li><li>Data is aggregated by the third party in such a way as to prevent recognition of any individual participant’s data, and only those aggregated results are made available to participants.</li></ul>",
+			"image_alt":"Alt text for image..."
+		}
+	},
+	{
+		"id":"0105-5a",
+		"template":"templates/5-5a_intelligence",
+		"auto_complete":"true",
+		"track_progress":"true",
+		"screen_indicator":"",
+		"menuId":"",
+		"nextScreenId":"0104",
+		"backScreenId":"false",
+		"background":"content/dev/images/2_background.jpg",
+		"content":{
+			"title":"FP-05<br/>Competitive Intelligence Gathering",
+			"text":"<p>If you are gathering competitive intelligence, note that:</p><ul><li>No confidential information should be exchanged with competitors, even if it is historical or aggregated information.</li><li>An exchange of information may only take place if there is a compelling reason for this. There are only limited scenarios in which such compelling reasons for the exchange of information exists.</li><li>However, even in one of these situations, the exchange of information must never allow conclusions to the relevant companies’ current or future competitive behavior, as far as such is not officially published.</li><li>Please contact your local <a hef='http://corporate-compliance.bayer-ag.com/uk/bagcorpcompliance.nsf/id/EN_Compliance_Officers' class='ext-link' target='_blank'>LPC representative</a> with questions</li></ul>",
+			"image_alt":"Alt text for image...",
+			"table": [
+				{"header": "", "content": "<p>Gathering competitive intelligence is <b>allowed</b> from sources like:</p><ul><li>Newspapers</li><li>Websites</li><li>Press releases</li><li>Stock exchange reports</li><li>Market research resports issued by reputable sources</li></ul>"},
+				{"header": "", "content": "<p>Always <b>prohibited</b>:</p><ul><li>Gathering non-public information from competitors</li></ul>"}
+			],
+			"small":"Please refer also to the guidance in <a href='https://by-margo.bayer-ag.com/view.aspx?id=09e2en0180078623' class='ext-link' target='_blank'>Group Regulation 1926 Interaction with Competitors</a> , Section 3 and <a href='https://by-margo.bayer-ag.com/view.aspx?id=09e2en0180081922' class='ext-link' target='_blank'>Group Regulation 2073 Antitrust Compliance</a> , Section 2.2.1."
+		}
+	},
+	{
+		"id":"0105-6a",
+		"template":"templates/5-6a_vertical",
+		"auto_complete":"true",
+		"track_progress":"true",
+		"screen_indicator":"",
+		"menuId":"",
+		"nextScreenId":"0105-6b",
+		"backScreenId":"false",
+		"background":"content/dev/images/2_background.jpg",
+		"content":{
+			"title":"FP-06<br/>Interaction with Suppliers/Customers<br/>who are also Competitors (“Vertical” Agreements)",
+			"text":"<p>Global Development does not usually enter into vertical agreements with suppliers or customers who are competitors.</p> <p>However, if you find yourself in this situation, before entering into any such agreement you must consult with global procurement and your local <a href='http://corporate-compliance.bayer-ag.com/uk/bagcorpcompliance.nsf/id/EN_Compliance_Officers' class='ext-link' target='_blank'>LPC representative</a>.</p>",
+			"image_alt":"Alt text for image...",
+			"small":"Please refer also to Group Regulations <a href='https://by-margo.bayer-ag.com/view.aspx?id=09e2en0180081322' class='ext-link' target='_blank'>2067 Procurement</a> and <a href='https://by-margo.bayer-ag.com/view.aspx?id=09e2en018006f923' class='ext-link' target='_blank'>1785 Principles of Contract Management at Bayer</a>"
+		}
+	},
+	{
+		"id":"0105-6b",
+		"template":"templates/5-6b_horizontal",
+		"auto_complete":"true",
+		"track_progress":"true",
+		"screen_indicator":"",
+		"menuId":"",
+		"nextScreenId":"0104",
+		"backScreenId":"0105-6a",
+		"background":"content/dev/images/2_background.jpg",
+		"content":{
+			"title":"Agreements / Concerted Practices<br/>between Competitors ('Horizontal' Agreements)",
+			"text":"",
+			"table": [
+				{"header": "Green", "content": "Lawful cooperations between competitors without appreciable restrictions, e.g. 'pure' research agreements, benchmarking agreements, etc."},
+				{"header": "Orange", "content": "Lawful cooperations between competitors which may have a restrictive effect on competition but which benefit from individual or block exemption, e.g. certain R&D agreements, joint purchasing etc."},
+				{"header": "Red", "content": "'Hard-core' cartels, i.e. forms of cooperation between competitors whose anti-competitive effects are beyond question, e.g. price-fixing, output restriction, bid-rigging etc."}
+			],
+			"image_alt":"Alt text for image..."
+		}
+	},
+	{
+		"id":"0106",
+		"template":"templates/6_regulations",
+		"auto_complete":"true",
+		"track_progress":"true",
+		"screen_indicator":"4 of 5",
+		"menuId":"",
+		"nextScreenId":"0107",
+		"backScreenId":"0104",
+		"background":"content/dev/images/1_background.jpg",
+		"content":{
+			"title":"RELATED BAYER REGULATIONS",
+			"text":"<a href='https://by-margo.bayer-ag.com/view.aspx?id=09e2en0180081922' class='ext-link' target='_blank'>MARGO Regulation 2073 Antitrust Compliance</a><br/><br/><a href='https://by-margo.bayer-ag.com/view.aspx?id=09e2en0180078623' class='ext-link' target='_blank'>MARGO Regulation 1926 Interaction with Competitors</a><br/><br/>ICM: Antitrust Risk Area Guidance on Implementation of Certain Functional Processes<br/><br/><a href='https://by-margo.bayer-ag.com/view.aspx?id=09e2en0180081322' class='ext-link' target='_blank'>MARGO Regulation 2067 Procurement</a><br/><br/><a href='https://by-margo.bayer-ag.com/view.aspx?id=09e2en018006f923' class='ext-link' target='_blank'>MARGO Regulation 1785 Principles of Contract Management at Bayer</a>",
+			"image_alt":"Alt text for image...",
+			"subtitle":"Questions?",
+			"text_2":"<br/><a href='http://sp-coll-bhc.bayer-ag.com/sites/220368/_layouts/DocIdRedir.aspx?ID=FFEZ7PURJPAS-3-1435' class='ext-link' target='_blank'>Local Legal Contact Link</a><br/><br/><a href='http://corporate-compliance.bayer-ag.com/uk/bagcorpcompliance.nsf/id/EN_Compliance_Officers#' class='ext-link' target='_blank'>Local Compliance Contact Link:</a>"
+		}
+	},
+	{
+		"id":"0107",
+		"template":"templates/7_complete",
+		"auto_complete":"true",
+		"track_progress":"true",
+		"screen_indicator":"5 of 5",
+		"menuId":"",
+		"nextScreenId":"false",
+		"backScreenId":"0106",
+		"background":"content/dev/images/3_background.jpg",
+		"content":{
+			"title":"Module Completion",
+			"text_scorm":"<p>You have reached the end of this training module.</p><p>Please click the button below to complete this training module.</p>",
+			"text_html":"<p>You have reached the end of this training module.</p><p>To verify the training, please enter your details below and click on the 'Complete' button to create a certificate of completion:</p>",
+			"image_alt":"Alt text for image..."
+		}
+	},
+	{
+		"id":"0108",
+		"template":"templates/8_complete_scorm",
+		"auto_complete":"true",
+		"track_progress":"true",
+		"screen_indicator":"5 of 5",
+		"menuId":"",
+		"nextScreenId":"false",
+		"backScreenId":"0106",
+		"background":"content/dev/images/3_background.jpg",
+		"content":{
+			"title":"Module Completion",
+			"text":"<p>You have now completed the module.</p><p>Please verify the training in BayLearn.</p><a href='http://baylearn.bayer-ag.com/courses/GTMD/BayLearn-STP/Index.html#cat=user;system=baylearn;resource=user4' target='_blank'>Click here for a reminder on how to verify</a><br/><br/><a href='mailto:BayLearnFeedback@bayer.com' target='_self'>Click here if you have a technical problem, question or comment on the training material.</a>",
+			"image_alt":"Alt text for image..."
+		}
+	},
+	{
+		"id":"0109",
+		"template":"templates/9_complete_html",
+		"auto_complete":"true",
+		"track_progress":"true",
+		"screen_indicator":"5 of 5",
+		"menuId":"",
+		"nextScreenId":"false",
+		"backScreenId":"0106",
+		"background":"content/dev/images/3_background.jpg",
+		"content":{
+			"title":"Module Completion",
+			"text":"<p>You have now completed the module.</p><a id='certlink' href='#' target='_blank'>Click here to print a certificate of completion</a><br/><br/><a href='mailto:BayLearnFeedback@bayer.com' target='_self'>Click here if you have a technical problem, question or comment on the training material.</a>",
+			"image_alt":"Alt text for image..."
+		}
+	}
+]
+

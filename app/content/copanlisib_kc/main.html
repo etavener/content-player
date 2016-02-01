@@ -1,0 +1,72 @@
+<div id="main">
+
+  <link rel="stylesheet" href="content/{{courseId}}/skin.css">
+
+  <div id="screen">
+
+
+      <!-- Top menu bar -->
+      <div id="header" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <img class="pull-right" src="content/{{courseId}}/images/logo.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- contains screen content -->
+      <div id="screen-holder">
+        <!-- screens.js:"template" -->
+      </div>
+
+
+      <!-- Bottom navigation bar -->
+      <div id="footer" class="navbar navbar-default hidden fade">
+        <div id="nav-buttons" class="container">
+          <a id="feedback-btn" tabindex="0" href="{{feedbackLink}}" target="_self" class="pull-left icon-feedback" role="button" title="Feedback" data-toggle="popover" data-content="{{feedbackLabel}}">Feedback / Help</a>
+          <div class="text-right">{{{copy}}}</div>
+
+  <!--         <a id="back-btn" class="btn btn-primary pull-left" title="Back" href="#">Back</a>
+          <a id="next-btn" class="btn btn-primary pull-right" title="Next" href="#">Next</a> -->
+
+        </div>
+      </div>
+
+  </div>
+
+  <!-- Resource popup -->
+  <div id="popup" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+            <button id="popclose" type="button" data-dismiss="modal" class="close" aria-label="Close" tabindex="1" href="#close">x</button>
+            <h4 id="resource-title" class="modal-title"><!-- resources.js:"title" --></h4>
+          </div>
+          <div id="resource-holder" class="modal-body"><!-- resources.js:"template" --></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bookmark popup -->
+  <div id="bookmark-popup" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+            <button id="popclose" type="button" data-dismiss="modal" class="close" aria-label="Close" tabindex="1" href="#close">x</button>
+            <h4 class="modal-title">Returning</h4>
+          </div>
+          <div class="modal-body">Would you like to continue your previous session?</div>
+          <div class="modal-footer">
+            <button id="btn-new" type="button" class="btn btn-default" data-dismiss="modal">No</button>
+            <button id="btn-return" type="button" class="btn btn-default">Yes</button>
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>

@@ -1,0 +1,40 @@
+
+
+Content Player
+Backbone Application
+
+<p>I originally developed my 'Content Player' as a means to quickly develop interactive and engaging e-learning material. However, It has become something that I use to develop other proejcts too. I'm always looking to tweak and develop this further and I used it to develop this web site.</p>
+
+<p>It's a re-usable Javascript application that controls navigation, transitions, loading content, html templates, menus, lifecycle events and lots more functionality. The content which includes html, settings, styling, text, images are kept seperate from the player and loaded seperatly by the application. This means the same player can be used on very different projects.</p>
+
+<p>The player is built with BackboneJS. It loads JSON data and then loads exernal handlebar templates and binds the JSON data to theses templates.</p>
+
+<p>In the future I aim to offer this an an open source bower component. I'm also planning to remove the jQuery.</p>
+
+BackboneJS, Handlebars, Materialize, Greensock, Gulp, SASS, jQuery
+
+________________________________________________________________
+QTI Player
+Polymer Application
+
+<p>The "QTI Player" was a very large project developed for a publishing company. The application was to present a large number of complex QTI xml files as engaging interactions.</p>
+
+<p>Before we started the development we reasearched various options which included AngularJS directives, Polymer web components and custom Javascript. We found that using Polmer web components combined with OO Javascript and XSLT gave us results we desired.</p>
+
+<p>The QTI player transforms the xml element names with XSLT. Then Polymer components are created from these element names. Each Polymer web component has a Javascript class which inherits simliar to the QTI specification.</p>
+
+Polymer Web Components, OO Javascript, SASS, CSS, Gulp
+
+________________________________________________________________
+3D Parallax
+ThreeJS Application
+
+<p>This is an experiment. I wanted to combine ThreeJS with ScrollMagicJS.</p>
+
+<p>My original idea was to have a number of 3d objects making up a logo in a 3d background and have these controlled, animated and transoformed by the scroll positions.</p>
+
+<p>As you would expect, the first issue I came across was performance. When you have a number of 3d objects animated as you scroll this really does slow down the peformance. I moved all calculations for the transoformations into web workers. This made a large improvement. I changed the 3d objects to particles. However, the 3d object lost it's impact.</p>
+
+ThreeJS, OO Javascript, ScrollMagic, Gulp, Web Workers
+
+verson 1 and version 2.

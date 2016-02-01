@@ -1,0 +1,86 @@
+<div class="template-summary">
+
+	<script>
+
+	 var screenId = '#template-' + $('.content:last .template').attr('data-id');
+
+	 $(screenId).on('onCreation', function(event, id){
+        this.screenId = id;
+    });
+
+	 $(screenId).on('onShowStart', function(event){
+	 	//get all screens
+	 	engine.screenView.trigger('getAllResponses');
+
+	 	$('.summary-link a').click(function(event){
+	 		event.preventDefault();
+	 		engine.screenView.trigger('setMode', 'review');
+	 		var targetId = $(this).attr('href');
+	 		var gotoId = targetId.substring(1, targetId.length);
+	 		engine.mainView.trigger('goToScreenId', gotoId);
+	 	});
+
+	 });
+
+	 $(screenId).on('onAllResponsesReceived', function(event){
+    	//received responses for all screens.
+    	var score = 0,
+    		max = 0;
+    	for(var r = 0; r < event.responses.length; r++) {
+    		var id = event.responses[r].id;
+    		var option = $(this).find('#option_' + id);
+    		if(option.length > 0) {
+    			option.find('.tick').addClass('hidden').removeClass('show');
+    			option.find('.cross').addClass('hidden').removeClass('show');
+	    		var response = event.responses[r].response;
+	    		if(response.result && response.result === 1){
+	    			score++;
+	    			option.find('.tick').addClass('show').removeClass('hidden');
+	    		} else {
+	    			option.find('.cross').addClass('show').removeClass('hidden');
+	    		}
+	    		max++;
+    		}
+    	}
+    	$(this).find('#score').html(score + '/' + max);
+    });
+
+	 </script>
+	 <div class="col-md-1"></div>
+	 <div class="col-md-10">
+        <div class="panel panel-default">
+        	<div class="panel-heading">
+                <h3 class="panel-title">{{{title}}} <span id="score"></span></h3>
+            </div>
+            <div class="panel-body">
+            	<div class="row">
+            		<div class="col-md-12">
+	            		<p><b>{{{text}}}</b></p>
+	            		<p><b>{{{instruction}}}</b></p>
+	            		{{#modules}}
+	            		<ol class="clearfix">
+	            			{{#map}}
+	            			<li class='summary-link pull-left'>
+	            				<span class="num">{{num}}</span>
+	            				<a id="option_{{id}}" href="#{{id}}">
+	            					<span class="lbl hidden">{{id}}</span>
+	            					<img class="cross hidden" src="content/copanlisib_kc/images/icons/cross.png" width="40" height="40" />
+	            					<img class="tick hidden" src="content/copanlisib_kc/images/icons/tick.png" width="40" height="40" />
+	            				</a>
+	            			</li>
+	            			{{/map}}
+	            		</ol>
+	            		<span class="reference">{{{title}}}</span>
+	            		{{/modules}}
+	            		<div class="text-center">
+	            			<a class="action-next btn btn-primary btn-lg next-arrow" href="#" role="button">Complete</a>
+	            		</div>
+            		</div>
+				</div>
+            </div>
+            
+        </div>
+     </div>
+     <div class="col-md-1"></div>
+
+</div>

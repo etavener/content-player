@@ -1,0 +1,93 @@
+<div id="main" style="">
+  <!-- background-image:url(background-image:url('content/{{courseId}}/images/{{background}}.png'); -->
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,600italic,400italic,300italic,300|Montserrat' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="content/{{courseId}}/skin.css">
+
+  <div id="screen">
+
+    <video id="bgvid" class="bg hidden" poster="content/{{courseId}}/images/{{background}}.png" loop>
+      <source src="content/{{courseId}}/images/{{background}}.mp4" type="video/mp4">
+    </video>
+
+    <!-- Top menu bar -->
+    <div id="header" class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-xs-4">
+            {{#headBtns}}
+            <a id="{{id}}-btn" class="btn btn-primary keyboard-shortcut internal-popup" data-keycode="{{keycode}}" title="{{label}}" href="#{{target}}" >
+              <span class="button-label">{{label}}</span>
+            </a>
+            {{/headBtns}}
+          </div>
+          <div class="col-md-4 col-xs-4">
+            <h4 id="course-title">{{{title}}}</h4>
+          </div>
+          <div class="col-md-4 col-xs-4">
+            <img id="course-logo" class="pull-right" src="content/{{courseId}}/images/{{logo}}" />
+          </div>
+          <!-- <div id="top-nav-holder"></div> -->
+          <!--  <h2 id="chapter-title">app.js:"groups":"title"</h2> -->
+          <!-- <div class="breadcrumb">&nbsp;&gt;</div> -->
+          <!-- <h3 id="topic-title">app.js:"groups":"title"</h3> -->
+          <!-- <div id="top-nav-holder" class="menu-hor"></div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+    <div id="menus-container">
+    {{#menus}}
+    <div id="{{id}}" data-offset="{{offset}}" class="screen-links transition-offset "></div>
+    {{/menus}}
+    </div>
+    </div>
+
+    <!-- contains screen content -->
+    <div id="screen-holder">
+      <!-- screens.js:"template" -->
+    </div>
+
+    <!-- Bottom navigation bar -->
+    <div id="nav" class="navbar navbar-default navbar-fixed-bottom hidden">
+      <div id="nav-buttons" class="container">
+        {{#navBtns}}
+        <a id="{{id}}-btn" class="btn btn-primary keyboard-shortcut action-toScreen" data-hide="{{hide}}" data-keycode="{{keycode}}" title="{{label}}" href="#{{target}}" data-target="{{target}}">
+          <span class="button-label">{{label}}</span>
+        </a>
+        {{/navBtns}}
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Resource popup -->
+  <div id="popup" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+            <button id="popclose" type="button" data-dismiss="modal" class="close" aria-label="Close" tabindex="1" href="#close">x</button>
+            <h4 id="resource-title" class="modal-title"><!-- resources.js:"title" --></h4>
+          </div>
+          <div id="resource-holder" class="modal-body"><!-- resources.js:"template" --></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bookmark popup -->
+  <div id="bookmark-popup" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+            <button id="popclose" type="button" data-dismiss="modal" class="close" aria-label="Close" tabindex="1" href="#close">x</button>
+            <h4 class="modal-title">{{bookmark-pop.title}}</h4>
+          </div>
+          <div class="modal-body">{{{bookmark-pop.message}}}</div>
+          <div class="modal-footer">
+            <button id="btn-new" type="button" class="btn btn-default" data-dismiss="modal">{{bookmark-pop.decline_label}}</button>
+            <button id="btn-return" type="button" class="btn btn-primary">{{bookmark-pop.comfirm_label}}</button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

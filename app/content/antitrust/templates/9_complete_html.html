@@ -1,0 +1,73 @@
+<div>
+	
+
+    <style>
+
+    	.goal{
+    		padding: 0px;
+    		margin-bottom: 20px;
+    		width: 45%;
+    		float: left;
+    		margin-right: 20px;
+    		min-height: 140px;
+    		position: relative;
+    	}
+
+    	.goal .label{
+    		padding: 10px;
+    		padding-left: 15px;
+    		padding-right: 15px;
+    		font-family: 'Open Sans', sans-serif;
+    		font-size: 20px;
+    		font-weight: 400;
+    		width: auto;
+    		display: inline-block;
+    		position: absolute;
+    		top: 0;
+    		left: 0;
+    	}
+
+    	.goal .content-text{
+    		padding: 10px;
+    		padding-top: 20px;
+    		margin-left: 50px;
+    	}
+
+        .light-bg{
+            max-width: 400px;
+        }
+
+    </style>
+
+    <script>
+
+        $(document).ready(function() {
+            //first=DFGDFG&last=DFF&cwid=GGGRT
+            var first = engine.tracking.first;
+            var last = engine.tracking.last;
+            var cwid = engine.tracking.cwid;
+            var course = engine.app.get('title');
+            var url = 'certificate.html?' + 'first=' + first + '&last=' + last + '&cwid=' + cwid + '&course=' + course;
+
+            $('#certlink').attr('href', url);
+
+        });
+
+    </script>
+
+    <div class="fullscreen_image" style="background-image: url('{{imagePath}}');" />
+
+    <div class="content-box">
+
+	    <h2 id="screen-title" class="content-title">{{{title}}}</h2>
+
+        <div class='light-bg'>
+	       <div class="content-text">{{{text}}}</div>
+        </div>
+
+        
+
+	</div>
+    
+    
+</div>

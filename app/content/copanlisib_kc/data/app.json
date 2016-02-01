@@ -1,0 +1,17 @@
+{ 
+	"title": "Copanlisib Knowledge Check",
+	"logo": "content/dev/images/logo.png",
+	"copy": "Copyright &copy; Bayer AG",
+	"screenId": "",
+	"resourceId": "",
+	"tracking": "",
+	"bookmarking": "true",
+	"saveData": "true",
+	"popovers": "true",
+	"feedbackLink": "mailto:BayLearnFeedback@bayer.com?subject=Copanlisib Knowledge Check Feedback",
+	"returningPopId": "returning",
+	"total_indicator": "false",
+	"indicator_seperator": "",
+	"feedbackLabel":"Click here if you have a technical problem, question or comment on the knowledge check",
+	"debug":"true"
+}

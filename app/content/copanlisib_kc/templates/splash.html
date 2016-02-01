@@ -1,0 +1,32 @@
+<div class="template-splash">
+
+    <script>
+
+     var screenId = '#template-' + $('.content:last .template').attr('data-id');
+
+    $(screenId).on('onCreation', function(event, id){
+        this.screenId = id;
+    });
+
+    $(screenId).on('onShowStart', function(event){
+        engine.mainView.gotoScreenId('intro', 5000);
+    });
+
+    </script>
+
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <img src="{{image}}" class="img-responsive center-block" />
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-12"><h4 class="text-center">{{{title}}}</h4></div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center">{{{text}}}</div>
+    </div>
+
+
+</div>

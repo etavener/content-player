@@ -1,0 +1,74 @@
+<div id="main">
+
+  <link rel="stylesheet" href="{{baseUrl}}content/{{courseId}}/skin.css">
+
+  <div id="screen">
+
+    <!-- Top menu bar -->
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <h4 id="course-title">{{{title}}}</h4>
+        <!-- <img id="course-logo" src="assets/logo.png" /> -->
+        <!-- <div id="top-nav-holder"></div> -->
+        <!--  <h2 id="chapter-title">app.js:"groups":"title"</h2> -->
+        <!-- <div class="breadcrumb">&nbsp;&gt;</div> -->
+        <!-- <h3 id="topic-title">app.js:"groups":"title"</h3> -->
+        <!-- <div id="top-nav-holder" class="menu-hor"></div> -->
+      </div>
+    </div>
+
+    <!-- contains screen content -->
+    <div id="screen-holder">
+      <!-- screens.js:"template" -->
+    </div>
+
+
+    <!-- Bottom navigation bar -->
+    <div id="nav" class="navbar navbar-default navbar-fixed-bottom">
+      <div id="nav-buttons" class="container">
+
+        <a id="back-btn" class="btn btn-primary pull-left" title="Back" href="#">Back</a>
+        <a id="next-btn" class="btn btn-primary pull-right" title="Next" href="#">Next</a>
+
+        <!-- Progress bar -->
+        <div id="module-progress">
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Resource popup -->
+  <div id="popup" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+            <button id="popclose" type="button" data-dismiss="modal" class="close" aria-label="Close" tabindex="1" href="#close">x</button>
+            <h4 id="resource-title" class="modal-title"><!-- resources.js:"title" --></h4>
+          </div>
+          <div id="resource-holder" class="modal-body"><!-- resources.js:"template" --></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bookmark popup -->
+  <div id="bookmark-popup" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+            <button id="popclose" type="button" data-dismiss="modal" class="close" aria-label="Close" tabindex="1" href="#close">x</button>
+            <h4 class="modal-title">Returning</h4>
+          </div>
+          <div class="modal-body">Would you like to continue your previous session?</div>
+          <div class="modal-footer">
+            <button id="btn-new" type="button" class="btn btn-default" data-dismiss="modal">No</button>
+            <button id="btn-return" type="button" class="btn btn-primary">Yes</button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

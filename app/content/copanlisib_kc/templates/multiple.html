@@ -1,0 +1,231 @@
+<div class="template-multiple">
+
+	<script>
+
+	 var screenId = '#template-' + $('.content:last .template').attr('data-id');
+
+	 $(screenId).on('onCreation', function(event, id){
+        this.screenId = id;
+    });
+
+	$(screenId).on('onShowStart', function(event){
+		//set up functionality.
+		var that = this, responses;
+		var submitBtn = $(this).find('#submitBtn');
+		var feedbackBox = $(this).find('.feedback').hide();
+        var interactiveElements = $(this).find('.interact').show();
+
+		$(submitBtn).prop('disabled', true);
+		$(feedbackBox).addClass('out');
+        $(interactiveElements).addClass('in');
+
+		$(submitBtn).click(function(event){
+			event.preventDefault();
+			that.submitAnswers();
+		});
+		$('input[type="checkbox"]').change(function () {
+            that.itemClicked($(this));
+        });
+        $('input[type="radio"]').change(function () {
+            that.itemClicked($(this));
+        });
+
+        if(event.mode === 'review'){
+            $(this).find('#continueBtn').addClass('hidden');
+            $(this).find('#summaryBtn').removeClass('hidden');
+        }else{
+            $(this).find('#continueBtn').removeClass('hidden');
+            $(this).find('#summaryBtn').addClass('hidden');
+        }
+
+        this.itemClicked = function(item){
+        	var name = item.val();
+            var check = item.prop('checked');
+            //each .form-group is a question
+            var questions = $(this).find('.form-group'),
+            	disableSubmit = false,
+            	type,
+            	question,
+            	responses;
+            
+            for(var c = 0; c < questions.length; c++){
+            	question = $(questions[c]);
+                $(question).find('input').removeClass('checked');
+            	responses = $(question).find('input:checked').addClass('checked');
+            	if(responses.length > 0){
+					type = $(responses[0]).attr('type');
+					numRequired = (type === 'radio') ? 1 : 2;
+					if(responses.length <= (numRequired-1)) {
+						disableSubmit = true;
+					}
+            	} else {
+            		disableSubmit = true;
+            	}
+            }
+            //Set the submit button to disabled or not.
+            $(submitBtn).prop('disabled', disableSubmit);
+
+        }
+
+        this.submitAnswers = function(){
+        	var questions = $(this).find('.form-group');
+
+            var selectedInputs = $(this).find('input:checked');
+        	var maxAnswers = $(this).find('input[value=true]').length;
+        	var incorrectAnswers = $(this).find('input:checked[value=false]').length;
+        	var correctAnswers = $(this).find('input:checked[value=true]').length;
+
+            $(feedbackBox).find('.correct_feedback').addClass('hidden').removeClass('show');
+            $(feedbackBox).find('.incorrect_feedback').addClass('hidden').removeClass('show');
+            $(feedbackBox).find('.partial_feedback').addClass('hidden').removeClass('show');
+
+        	var result = 0;
+        	if(correctAnswers > 0) {
+	        	if(correctAnswers === maxAnswers && incorrectAnswers === 0){
+	        		result = 1;
+	        		$(feedbackBox).find('.correct_feedback').addClass('show').removeClass('hidden');
+	        	}else{
+	        		$(feedbackBox).find('.partial_feedback').addClass('show').removeClass('hidden');
+	        	}
+        	} else{
+        		$(feedbackBox).find('.incorrect_feedback').addClass('show').removeClass('hidden');
+        	}
+
+            var selected = [];
+            for(var s = 0; s < selectedInputs.length; s++){
+                selected.push($(selectedInputs[s]).attr('id'));
+            }
+
+        	engine.screenView.trigger('setResponse', [this.screenId, {correct:correctAnswers, incorrect:incorrectAnswers, result:result, selected:selected}]);
+
+            if(result === 1) {
+                $(feedbackBox).find('.correct_answer').addClass('hidden');
+            } else {
+                $(feedbackBox).find('.correct_answer').removeClass('hidden');
+        	   //$(feedbackBox).find('.correct_answer .inner').html(this.createList(questions, 'input[value=true]'));
+            }
+        	$(feedbackBox).find('.response_answer').html(this.createList(questions, 'input:checked', 'input[value=true]'));
+
+        	$(interactiveElements).hide(0).addClass('out').removeClass('in');
+            $(feedbackBox).show(0).addClass('in').removeClass('out');
+
+            $(this).resize();
+        }
+
+        this.createList = function(elements, AnswerSelector, CorrectSelector){
+        	var str = '<table class="table table-bordered">';
+            str += '<tr><th></th><th>Your Answer</th><th>Correct Answer</th></tr>';
+        	for(var c = 0; c < elements.length; c++){
+        		var question = $(elements[c]);
+        		
+                //get answer info
+                var answerInput = question.find(AnswerSelector);
+                var answerlabelElement = $(elements).find('label[for="' + $(answerInput).attr('id')+'"]');
+        		var answerlabel = answerlabelElement.find('.lbl').html();
+        		var answerval = answerlabelElement.find('.val').html();
+                //get correct info
+                var correctInput = question.find(CorrectSelector);
+                var correctlabelElement = $(elements).find('label[for="' + $(correctInput).attr('id')+'"]');
+                var correctlabel = correctlabelElement.find('.lbl').html();
+                var correctval = correctlabelElement.find('.val').html();
+
+                str += '<tr><td>' +answerval + '</td><td>' + answerlabel + '</td><td>' + correctlabel + '</td></tr>';
+
+        		//str += '<li>' +answerval + ' - <b>' + answerlabel + '</b> <b>' + correctlabel + '</b></li>';
+        	}
+        	str += '</table>';
+        	return str
+        }
+
+        if(event.response){
+            if(event.response.selected){
+                //set the selected checkboxes to checked..
+                for(var s = 0; s < event.response.selected.length; s++){
+                    $(this).find('#'+event.response.selected[s]).prop("checked", true).addClass('checked');
+                }
+            }
+            if(event.response.result === 1 || event.response.result === 0){
+                //set the submit button to enabled..
+                $(submitBtn).prop('disabled', false);
+            } 
+        }
+	});
+
+	</script>
+    <div class="col-md-1"></div>
+	<div class="col-md-10">
+        <div class="panel panel-default">
+        	<div class="panel-heading">
+                <h3 class="panel-title">{{{title}}}</h3>
+            </div>
+            <div class="panel-body">
+            	<div class="question">{{text}}</div>
+                <div class="panel-states">
+    				<form class="interact fade in">
+                        <div><p><b>{{{instruction}}}</b></p></div>
+                        <ol>
+    						{{#options}}
+                            <li id="option_{{@index}}">
+                                <span class="titles clearfix">
+                                    <span class="col-title pull-right">{{labelB}}</span>
+                                    <span class="col-title pull-right">{{labelA}}</span>
+                                </span>
+                                {{#numberCount @index}}{{/numberCount}}
+    							<div class="form-group pull-right">
+    								<span class="lbl">{{{label}}}</span>
+                                    <div class="pull-right">
+                                        <div class="custom-check pull-right">
+                                            <input type="{{type}}" value="{{valueB}}" name="{{../screenid}}_{{type}}_group{{@index}}" id="{{../screenid}}_b_i{{@index}}"/>
+                                            <label for="{{../screenid}}_b_i{{@index}}">
+                                                <span class="val hidden">{{label}}</span>
+                                                <span class="lbl hidden">{{labelB}}</span>
+                                                <span class="icon"></span>
+                                            </label>
+                                        </div>
+        								<div class="custom-check pull-right">
+        									<input type="{{type}}" value="{{valueA}}" name="{{../screenid}}_{{type}}_group{{@index}}" id="{{../screenid}}_a_i{{@index}}"/>
+                                            <label for="{{../screenid}}_a_i{{@index}}">
+                                                <span class="val hidden">{{label}}</span>
+                                                <span class="lbl hidden">{{labelA}}</span>
+                                                <span class="icon"></span>
+                                            </label>
+        								</div>
+                                    </div>
+    							</div>
+                            </li>
+    						{{/options}}
+                        </ol>
+                        
+    					<div class="text-center"><button id="submitBtn" type="submit" class="btn btn-primary btn-lg next-arrow" >Submit</button></div>
+    				</form>
+    				<div class="feedback fade">
+                        <div class="feedback-content">
+                            <p class="correct_feedback">{{{correct_feedback}}}</p>
+                            <p class="incorrect_feedback">{{{incorrect_feedback}}}</p>
+                            <p class="partial_feedback">{{{partial_feedback}}}</p>
+
+        					<div class="response_answer"></div>
+        					<!-- <div class="correct_answer"></div> -->
+
+        					<!-- <div class="information">{{{feedback}}}</div> -->
+
+                            <div class="information">
+                                <div class="row">
+                                    <div class="col-md-6">{{{feedback_1}}}</div>
+                                    <div class="col-md-6">{{{feedback_2}}}</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">{{{feedback_3}}}</div>
+                                </div>
+                            </div>
+                        </div>
+    					<div class="text-center"><a id="continueBtn" class="action-next btn btn-primary btn-lg next-arrow" href="#" role="button">Next</a></div>
+                        <div class="text-center"><a id="summaryBtn" class="action-toScreen btn btn-primary btn-lg next-arrow" href="#summary" role="button">Summary</a></div>
+    				</div>
+                </div>
+			</div>
+        </div>
+     </div>
+     <div class="col-md-1"></div>
+
+</div>

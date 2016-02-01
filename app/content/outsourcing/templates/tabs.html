@@ -1,0 +1,93 @@
+<div class="template-tabs">
+
+	<script>
+
+	//this is how we get the unique screen id and template id from inside the template
+    var screenId = '#template-' + $('.content:last .template').attr('data-id');
+    
+    //called once per screen when initialised before any other events.
+    $(screenId).on('onCreation', function(event, id){
+        this.screenId = id;
+        // console.log('SCREEN onCreation......', this.screenId);
+        var tabpane = $(screenId+' .tab-pane'),
+            tabs = $(screenId+' .tab'),
+            navTabs = $(screenId+' .nav-tabs'),
+            navLi = $(screenId+' .nav-tabs > li'),
+            tabcontent = $(screenId+' .tab-content');
+
+        tabpane.first().addClass('active').addClass('first'); 
+        navLi.first().addClass('active').addClass('first');
+
+        tabpane.last().addClass('last'); 
+        navLi.last().addClass('last');
+
+        var tabWidth = Number(100 / tabs.length);
+        for(var t = 0; t < navLi.length; t++){
+            var item = $(navLi[t]);
+            item.css({'width':tabWidth+'%'});
+            // if(t === navLi.length-1) item.addClass('last');
+            // if(t === 0) item.addClass('first');
+        }
+
+    });
+
+    //called before transition in has started.
+    $(screenId).on('onShowStart', function(event){
+    });
+
+    //called when transition in has completed
+    $(screenId).on('onShowComplete', function(event){
+        // console.log('onShowComplete........', this.screenId);
+    });
+
+    //called when transition out has started
+    $(screenId).on('onHideStart', function(event){
+        // console.log('onHideStart........', this.screenId);
+    });
+
+    //called when transition in has completed
+    $(screenId).on('onHideComplete', function(event){
+        // console.log('onHideComplete........', this.screenId);
+    });
+
+    $(screenId).on('onResponsesReceived', function(event){
+    	//received a response for the screenId
+    	// console.log('onResponsesReceived', event.screenId, event.response);
+    });
+
+
+
+    //engine.screenView.trigger('lessonComplete'); //set the lesson as complete
+    //engine.mainView.trigger('goToScreenId', '0108'); //go to a specific screen
+
+	</script>
+
+    <h2>{{title}}</h2>
+
+    <div class="transition-offset"  data-offset="400" >
+        <ul class="nav nav-tabs" role="tablist">
+            {{#options}}
+            <li role="presentation" >
+                <a href="#item{{id}}" aria-controls="{{id}}" role="tab" class="tab" data-toggle="tab">{{label}}</a>
+            </li>
+            {{/options}}
+        </ul>
+
+        
+        <div class="tab-content">
+        {{#options}}
+            <div role="tabpanel" class="tab-pane" id="item{{id}}">
+                <div class="row">
+                {{#columns}}
+                <div class="col-md-6 column">
+                    <h4>{{title}}</h4>
+                    {{{content}}}
+                </div>
+                {{/columns}}
+                </div>
+                <div class="row"><div class="col-md-12 foot">{{{foot}}}</div></div>
+            </div>
+        {{/options}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+[
+	{
+		"id":"",
+		"type":"internal",
+		"title":"",
+		"keyboardShortcut":"",
+		"template":"templates/",
+		"menuId":"",
+		"content":{
+			"subtitle":"",
+			"text":""
+		}
+	},
+	{
+		"id":"",
+		"type":"external",
+		"title":"",
+		"keyboardShortcut":"",
+		"url":"",
+		"menuId":""
+	}
+]
+
