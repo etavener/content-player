@@ -1,6 +1,6 @@
 # E-learning Content Player #
 
-This content player is a code base for developing responsive interactive e-learning material.
+This content player is a code base for developing responsive interactive e-learning material. I've used this successfully on many e-learning development projects.
 
 This functions includes:
 - Navigation between screens
@@ -8,7 +8,7 @@ This functions includes:
 - Routing to screens
 - HTML Template management (loading and destroying)
 - Binding JSON data to HTML templates with Handlebars
-- Trnsitions between screen
+- Transitions between screens (slide, scroll, fade, parallax effect, 3d transitions) with gsap
 - Dispatching of HTML template lifecycle events (created, transition started, transition completed etc)
 - Basic layout styling
 - LMS communication (SCORM functionality) - saving, bookmarking, completion.
