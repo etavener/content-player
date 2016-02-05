@@ -25,13 +25,15 @@ This functions includes:
 - Debugging
 
 How does it work?
-- Loads the App.json
+- Loads the content/*/data/App.json
 - Loads the template for the chrome / general UI
 - Binds App.json data to the UI with Handlebars
-- Loads the Screens.json
-- Loads all the HTML templates required
+- Loads the content/*/data/Screens.json
+- Loads all the HTML templates required (content/*/templates/*.html)
 - Bind screens.json content object to each template
+- Trigger created lifecycle event in template
 - Go to required screen
 - Start transition to chosen screen (from URL)
+- Trigger transition started lifecycle event in template
 
 
