@@ -36,4 +36,4 @@ How does it work?
 - Start transition to chosen screen (from URL)
 - Trigger transition started lifecycle event in template
 
-
+Links to working examples to follow.....
