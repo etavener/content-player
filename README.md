@@ -15,7 +15,7 @@ This functions includes:
 - Showing progress
 - Debugging
 
-How does it work
+How does it work?
 1. Loads the App.json
 2. Loads the template for the chrome / general UI
 3. Binds App.json data to the UI with Handlebars
@@ -24,3 +24,5 @@ How does it work
 4. Bind screens.json content object to each template
 5. Go to required screen
 6. Start transition to chosen screen (from URL)
+
+
